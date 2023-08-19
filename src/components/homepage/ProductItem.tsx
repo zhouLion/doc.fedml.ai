@@ -9,7 +9,10 @@ export function ProductLinkItem({ title, text, icon: Icon, link }: Product) {
   return (
     <Link
       to={link}
-      className="group inline-flex cursor-pointer items-start gap-2 rounded-lg border-2 border-transparent p-3 text-inherit transition-colors hover:border-primary hover:text-primary"
+      className={clsx(
+        'group flex cursor-pointer items-start gap-2 rounded-lg p-3 text-inherit transition-colors',
+        'border-2 border-solid border-white bg-secondary-900 hover:!border-primary dark:border-primary',
+      )}
     >
       <Icon className="h-6 w-6" style={{ '--stagger': '2' }} data-animate />
 
@@ -51,7 +54,7 @@ export function ProductCardItem({
         'group relative cursor-pointer overflow-clip rounded-3xl',
         'from-primary/30 via-transparent to-transparent text-black transition-all',
         'hover:bg-gradient-to-tr hover:text-primary hover:no-underline dark:text-white',
-        'border-secondary-700 bg-secondary-900 hover:!border-primary dark:border-secondary-800',
+        'border-2 border-solid border-white bg-secondary-900 hover:!border-primary dark:border-primary',
       )}
     >
       <div className="p-6 mb-24 !pb-0 z-2 static">

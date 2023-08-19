@@ -1,4 +1,5 @@
 import { VideoRegular } from '@fluentui/react-icons';
+import React from 'react';
 
 export type Product = {
   title: string;
@@ -7,27 +8,27 @@ export type Product = {
   icon: any;
   lightImage: string;
   darkImage: string;
-  text: string;
+  text: any;
 };
 
 export const MLOPS_PRODUCTS: Product[] = [
   {
-    title: 'LLM Studio',
+    title: 'FEDML® LLM Studio',
     beta: true,
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: '- FEDML® LLM Studio is an easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
+    text: 'An easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
   },
   {
-    title: 'FLops',
+    title: 'FEDML® FLOps',
     link: '/guides/todo',
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: 'Incorporate high-quality real-time audio into your application. Build voice calls, audio conferences, voice chats in games and more',
+    text: 'the world’s first federated learning Ops platform; low-code experience; scale up to large number of devices.',
   },
 ];
 
@@ -39,7 +40,16 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: '- FEDML® Train focuses on distributed training of large and foundational models.',
+    text: (
+      <>
+        <b>Model training framework </b>
+        <ul>
+          <li>Large & foundational models</li>
+          <li>Fast and efficient</li>
+          <li>Scalable to any cluster</li>
+        </ul>
+      </>
+    ),
   },
   {
     title: 'Serve',
@@ -48,7 +58,17 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: '- FEDML® Serve is a model serving platform for high scalability and low latency.',
+    text: (
+      <>
+        <b>Model serving framework</b>
+        <ul>
+          <li>Scalability </li>
+          <li>Low latency Low cost </li>
+          <li>Observability & Refinement </li>
+        </ul>
+      </>
+    ),
+    // text: '- FEDML® Serve is a model serving platform for high scalability and low latency.',
   },
   {
     title: 'Federate',
@@ -56,7 +76,16 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: '- FEDML® Federate is a federated learning platform backed by the most popular federated learning open-source library and the world’s first FLOps (federated learning Ops), offering on-device training on smartphones and cross-cloud GPU servers.',
+    text: (
+      <>
+        <b>Federated Learning framework </b>
+        <ul>
+          <li>Top open-source library</li>
+          <li>training across edge nodes, smartphone, & cloud</li>
+          <li>Maximum privacy & personalization</li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -68,6 +97,22 @@ export const IaaS: Product[] = [
     icon: VideoRegular,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: '- FEDML® Launch is a quick launcher for running any AI job on any public and/or decentralized GPU cloud, offering lower prices and user-friendly MLOps infrastructure.',
+    text: (
+      <>
+        <b>
+          <pre className="prism-code py-1">
+            <b className="text-primary">fedml</b> launch job.yaml
+          </pre>
+        </b>
+        <ul>
+          <li>
+            1-line CLI as a quick launcher for running any AI job on any public
+            and/or decentralized GPU cloud
+          </li>
+          <li>Offering lower prices, higher GPU availability</li>
+          <li>Support FedML® Train, FedML® Serve, FedML® Federate</li>
+        </ul>
+      </>
+    ),
   },
 ];
