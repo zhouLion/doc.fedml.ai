@@ -1,4 +1,4 @@
-import { VideoRegular } from "@fluentui/react-icons";
+import { VideoRegular } from '@fluentui/react-icons';
 
 export type Product = {
   title: string;
@@ -13,6 +13,7 @@ export type Product = {
 export const MLOPS_PRODUCTS: Product[] = [
   {
     title: 'LLM Studio',
+    beta: true,
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
     icon: VideoRegular,

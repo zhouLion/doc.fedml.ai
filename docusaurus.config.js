@@ -136,6 +136,15 @@ const config = {
             position: 'left',
           },
           {
+            label: 'Blogs',
+            to: '/blog',
+          },
+          {
+            label: 'Support',
+            href: 'https://fedml.ai/contact',
+            position: 'right',
+          },
+          {
             type: 'search',
             position: 'right',
           },
