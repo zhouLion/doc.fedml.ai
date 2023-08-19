@@ -1,44 +1,82 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
+const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+const { defaultSettings } = require('./plugins/doc-plugin.cjs');
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const code_themes = {
+  light: require('prism-react-renderer/themes/github'),
+  dark: require('prism-react-renderer/themes/vsDark'),
+};
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'FEDML™: Build and Scale AI Anywhere at Any Scale',
-  tagline: 'FEDML® AI Platform provides a foundational ecosystem design for machine learning that helps data scientists and machine learning engineers to train, serve, and deploy AI models easily, economically, and securely, with holistic support of high-performance ML libraries, user-friendly AIOps, and a well-managed distributed GPU Cloud.',
-  favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+const meta = {
+  title: 'FEDML© Docs',
+  tagline:
+    'FEDML® AI Platform provides a foundational ecosystem design for machine learning that helps data scientists and machine learning engineers to train, serve, and deploy AI models easily, economically, and securely, with holistic support of high-performance ML libraries, user-friendly AIOps, and a well-managed distributed GPU Cloud.',
+  url: 'https://docs.fedml.ai',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+};
 
+const resources = [
+  {
+    label: 'Blog',
+    href: 'https://blog.fedml.ai',
+  },
+  {
+    label: 'Medium',
+    href: 'https://medium.com/@FedML',
+  },
+  {
+    label: 'Press',
+    href: 'https://fedml.ai/press',
+  },
+];
+
+const plugins = [
+  tailwindPlugin,
+  // ...docs_plugins,
+  webpackPlugin,
+  // TODO: set some redirects rules
+  // [
+  //   "@docusaurus/plugin-client-redirects",
+  //   {
+  //     createRedirects(path) {
+  //       // @example return path list
+  //       // if (path.startsWith("/guides/capabilities/webhooks")) {
+  //       //   return [
+  //       //     path.replace("/guides/capabilities/webhooks", "/guides/webhooks"),
+  //       //     path.replace(
+  //       //       "/guides/capabilities/webhooks",
+  //       //       "/guides/features/webhooks"
+  //       //     ),
+  //       //   ];
+  //       // }
+  //       return undefined; // Return a falsy value: no redirect created
+  //     },
+  //   },
+  // ],
+];
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  ...meta,
+  plugins,
+
+  trailingSlash: false,
+  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          ...defaultSettings,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -54,6 +92,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // googleTagManager: {
+        //   containerId: "GTM-XXXXX",
+        // },
       }),
     ],
   ],
@@ -61,13 +102,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
-        title: 'FedML Docs',
+        title: 'FEDML Docs',
         logo: {
-          alt: 'FedML Docs Logo',
-          src: 'img/logo.svg',
+          href: '/',
+          src: 'img/logo.png',
+          // TODO: design a icon for dark mode.
+          // srcDark: 'img/logo-dark.png',
+          alt: 'FEDML Docs',
+          height: '40px',
+          width: '40px',
         },
         items: [
           {
@@ -76,94 +129,127 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            label: 'Resources',
+            type: 'dropdown',
+            items: [...resources],
+            position: 'left',
+          },
+          {
+            type: 'search',
             position: 'right',
+          },
+          {
+            label: 'Sign Up',
+            href: 'https://portal.fedml.ai',
+            position: 'right',
+            className: 'dev-portal-signup dev-portal-link',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        logo: {
+          href: '/',
+          src: '/img/logo.png',
+          // TODO:
+          // srcDark: '/img/logo-dark.png',
+          alt: 'FEDML Docs',
+          width: '40px',
+          height: '40px',
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Product',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Demo',
+                href: 'https://fedml.ai',
+              },
+              {
+                label: 'Developer Portal',
+                href: 'https://fedml.ai',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Company',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'About Us',
+                href: 'https://fedml.ai',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Join Us',
+                href: 'https://fedml.ai',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Privacy Policy',
+                href: 'https://fedml.ai',
+              },
+              {
+                label: 'Contact Us',
+                href: 'https://fedml.ai',
               },
             ],
           },
           {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+            title: 'Resources',
+            items: [...resources],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: 'Copyright © FEDML since 2023. All rights reserved.',
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: code_themes.light,
+        darkTheme: code_themes.dark,
+        additionalLanguages: [
+          'dart',
+          'ruby',
+          'groovy',
+          'kotlin',
+          'java',
+          'swift',
+          'objectivec',
+        ],
+        magicComments: [
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: { start: 'highlight-start', end: 'highlight-end' },
+          },
+          {
+            className: 'code-block-error-line',
+            line: 'highlight-next-line-error',
+          },
+        ],
       },
-      // ...
+      // TODO: support algolia for high level document query
       // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: 'YOUR_APP_ID',
-
-      //   // Public API key: it is safe to commit it
-      //   apiKey: 'YOUR_SEARCH_API_KEY',
-
-      //   indexName: 'YOUR_INDEX_NAME',
-
-      //   // Optional: see doc section below
+      //   appId: '$algolia_appId',
+      //   apiKey: '$algolia_apiKey',
+      //   indexName: 'docs',
       //   contextualSearch: true,
-
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   externalUrlRegex: 'external\\.com|domain\\.com',
-
-      //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      //   replaceSearchResultPathname: {
-      //     from: '/docs/', // or as RegExp: /\/docs\//
-      //     to: '/',
-      //   },
-
-      //   // Optional: Algolia search parameters
       //   searchParameters: {},
-
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: 'search',
-
-      //   //... other Algolia params
       // },
     }),
+
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('swc-loader'),
+      options: {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
+          },
+          target: 'es2017',
+        },
+        module: {
+          type: isServer ? 'commonjs' : 'es6',
+        },
+      },
+    }),
+  },
 };
 
 module.exports = config;
