@@ -1,14 +1,14 @@
-import { VideoRegular } from '@fluentui/react-icons';
+import { Icon } from '@iconify/react';
 import React from 'react';
 
 export type Product = {
   title: string;
   link: string;
   beta?: boolean;
-  icon: any;
+  icon: () => React.JSX.Element;
   lightImage: string;
   darkImage: string;
-  text: any;
+  text: (() => React.JSX.Element) | string | React.JSX.Element;
 };
 
 export const MLOPS_PRODUCTS: Product[] = [
@@ -17,7 +17,7 @@ export const MLOPS_PRODUCTS: Product[] = [
     beta: true,
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
-    icon: VideoRegular,
+    icon: () => <Icon icon="carbon:ibm-watson-studio" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: 'An easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
@@ -25,7 +25,7 @@ export const MLOPS_PRODUCTS: Product[] = [
   {
     title: 'FEDML® FLOps',
     link: '/guides/todo',
-    icon: VideoRegular,
+    icon: () => <Icon icon="simple-icons:opslevel" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: 'the world’s first federated learning Ops platform; low-code experience; scale up to large number of devices.',
@@ -37,7 +37,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Train',
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
-    icon: VideoRegular,
+    icon: () => <Icon icon="carbon:machine-learning-model" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
@@ -55,7 +55,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Serve',
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
-    icon: VideoRegular,
+    icon: () => <Icon icon="codicon:server-process" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
@@ -73,7 +73,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
   {
     title: 'Federate',
     link: '/guides/voice-conf/intro-voice-conf',
-    icon: VideoRegular,
+    icon: () => <Icon icon="lucide:combine" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
@@ -94,7 +94,7 @@ export const IaaS: Product[] = [
     title: 'Launch',
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
-    icon: VideoRegular,
+    icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
