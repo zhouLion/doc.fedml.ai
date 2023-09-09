@@ -20,12 +20,12 @@ export default function Home() {
 
       <HeroSection />
 
-      <FeatureSection />
+      {/* <FeatureSection /> */}
 
       <main className="noise-bg mt-4">
         <ProductLayerSection />
 
-        <ProductColSection />
+        {/* <ProductColSection /> */}
       </main>
     </Layout>
   );

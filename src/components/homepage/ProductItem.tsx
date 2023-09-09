@@ -62,7 +62,6 @@ export function ProductCardItem({
           <Icon className="h-7 w-7" style={{ '--stagger': '2' }} data-animate />
           <div style={{ '--stagger': '3' }} data-animate>
             {title}
-            {beta && <span className="font-normal text-text-400"> (Beta)</span>}
           </div>
         </h3>
         <p

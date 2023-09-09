@@ -10,8 +10,7 @@ const code_themes = {
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'FEDML© Docs',
-  tagline:
-    'FEDML® AI Platform provides a foundational ecosystem design for machine learning that helps data scientists and machine learning engineers to train, serve, and deploy AI models easily, economically, and securely, with holistic support of high-performance ML libraries, user-friendly AIOps, and a well-managed distributed GPU Cloud.',
+  // tagline: 'FEDML® AI Pla',
   url: 'https://docs.fedml.ai',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -160,12 +159,8 @@ const config = {
             position: 'left',
           },
           {
-            label: 'Blogs',
-            to: '/blog',
-          },
-          {
-            label: 'Support',
-            href: 'https://fedml.ai/contact',
+            label: 'GitHub',
+            href: 'https://github.com/FedML-AI/FedML',
             position: 'right',
           },
           {
@@ -173,8 +168,8 @@ const config = {
             position: 'right',
           },
           {
-            label: 'Sign Up',
-            href: 'https://portal.fedml.ai',
+            label: 'Login',
+            href: 'https://open.fedml.ai',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },

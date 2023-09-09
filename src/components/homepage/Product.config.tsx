@@ -13,7 +13,7 @@ export type Product = {
 
 export const MLOPS_PRODUCTS: Product[] = [
   {
-    title: 'FEDML® LLM Studio',
+    title: 'FEDML® Machine Learning Platform',
     beta: true,
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
@@ -23,12 +23,29 @@ export const MLOPS_PRODUCTS: Product[] = [
     text: 'An easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
   },
   {
-    title: 'FEDML® FLOps',
+    title: 'Launch: Run Any Job on Any GPU Cloud',
+    // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
-    icon: () => <Icon icon="simple-icons:opslevel" />,
+    icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: 'the world’s first federated learning Ops platform; low-code experience; scale up to large number of devices.',
+    text: (
+      <>
+        <b>
+          <pre className="prism-code py-1">
+            <b className="text-primary">fedml</b> launch job.yaml
+          </pre>
+        </b>
+        <ul>
+          <li>
+            1-line CLI as a quick launcher for running any AI job on any public
+            and/or decentralized GPU cloud
+          </li>
+          <li>Offering lower prices, higher GPU availability</li>
+          <li>Support FedML® Train, FedML® Serve, FedML® Federate</li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -52,7 +69,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     ),
   },
   {
-    title: 'Serve',
+    title: 'Deploy',
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
     icon: () => <Icon icon="codicon:server-process" />,
@@ -91,7 +108,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
 
 export const IaaS: Product[] = [
   {
-    title: 'Launch',
+    title: 'FEDML®Launch: Distributed GPU Cloud',
     // TODO: Supplement with the correct documentation links
     link: '/guides/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
