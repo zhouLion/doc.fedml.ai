@@ -3,21 +3,21 @@
  */
 const _demo_docs = [
   {
-    id: "tutorial-basics",
-    path: "docs/tutorial-basics",
-    routeBasePath: "/tutorial-basics",
+    id: 'tutorial-basics',
+    path: 'docs/tutorial-basics',
+    routeBasePath: '/tutorial-basics',
   },
 ];
 
-const sidebarPath = require.resolve("../sidebars-default.js");
+const sidebarPath = require.resolve('../sidebars-default.js');
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
-  editUrl: "https://github.com/FedML-AI/docs.fedml.ai/tree/main/",
+  editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
   showLastUpdateTime: true,
   remarkPlugins: [
-    [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
+    [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
   ],
   sidebarPath,
 };
@@ -31,7 +31,7 @@ const defaultSettings = {
  */
 function create_doc_plugin({ sidebarPath = sidebarPath, ...options }) {
   return [
-    "@docusaurus/plugin-content-docs",
+    '@docusaurus/plugin-content-docs',
     /** @type {import('@docusaurus/plugin-content-docs').Options} */
     {
       ...defaultSettings,

@@ -125,9 +125,33 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'guide',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Platform Guide',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'launch',
+            position: 'left',
+            label: 'Launch',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'train',
+            position: 'left',
+            label: 'Train',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'deploy',
+            position: 'left',
+            label: 'Deploy',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'federate',
+            position: 'left',
+            label: 'Federate',
           },
           {
             label: 'Resources',
