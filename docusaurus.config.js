@@ -126,7 +126,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'guide',
+            sidebarId: 'platform',
             position: 'left',
             label: 'Platform Guide',
           },

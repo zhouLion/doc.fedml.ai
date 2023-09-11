@@ -16,7 +16,7 @@ export const MLOPS_PRODUCTS: Product[] = [
     title: 'FEDML® Machine Learning Platform',
     beta: true,
     // TODO: Supplement with the correct documentation links
-    link: '/guides/todo',
+    link: '/platform/todo',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -25,7 +25,7 @@ export const MLOPS_PRODUCTS: Product[] = [
   {
     title: 'Launch: Run Any Job on Any GPU Cloud',
     // TODO: Supplement with the correct documentation links
-    link: '/guides/todo',
+    link: '/platform/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -53,7 +53,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
   {
     title: 'Train',
     // TODO: Supplement with the correct documentation links
-    link: '/guides/todo',
+    link: '/platform/todo',
     icon: () => <Icon icon="carbon:machine-learning-model" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -71,7 +71,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
   {
     title: 'Deploy',
     // TODO: Supplement with the correct documentation links
-    link: '/guides/todo',
+    link: '/platform/todo',
     icon: () => <Icon icon="codicon:server-process" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -110,7 +110,7 @@ export const IaaS: Product[] = [
   {
     title: 'FEDML®Launch: Distributed GPU Cloud',
     // TODO: Supplement with the correct documentation links
-    link: '/guides/todo',
+    link: '/platform/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
