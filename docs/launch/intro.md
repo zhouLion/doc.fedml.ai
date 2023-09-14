@@ -15,3 +15,5 @@ This is Al making some minor line add to test process from Code
 that last change i used sync from VS code.
 
 but probably better to do only a push, then run a pull from github
+
+test direct commit and push from ci.
