@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+# Introduction
+
+Federate
+=======
 # Overview
 
 Thank you for visiting our site. This documentation provides you with everything you need to know about using the FedML platform.

@@ -15,17 +15,15 @@ export const MLOPS_PRODUCTS: Product[] = [
   {
     title: 'FEDML® Machine Learning Platform',
     beta: true,
-    // TODO: Supplement with the correct documentation links
-    link: '/platform/todo',
+    link: '/platform',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: 'An easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
   },
   {
-    title: 'Launch: Run Any Job on Any GPU Cloud',
-    // TODO: Supplement with the correct documentation links
-    link: '/platform/todo',
+    title: 'FEDML®Launch: Run Any Job on Any GPU Cloud',
+    link: '/launch',
     icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -52,8 +50,7 @@ export const MLOPS_PRODUCTS: Product[] = [
 export const COMPUTE_FRAMEWORK: Product[] = [
   {
     title: 'Train',
-    // TODO: Supplement with the correct documentation links
-    link: '/platform/todo',
+    link: '/train',
     icon: () => <Icon icon="carbon:machine-learning-model" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -70,8 +67,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
   },
   {
     title: 'Deploy',
-    // TODO: Supplement with the correct documentation links
-    link: '/platform/todo',
+    link: '/deploy',
     icon: () => <Icon icon="codicon:server-process" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
@@ -89,7 +85,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
   },
   {
     title: 'Federate',
-    link: '/guides/voice-conf/intro-voice-conf',
+    link: '/federate',
     icon: () => <Icon icon="lucide:combine" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',
