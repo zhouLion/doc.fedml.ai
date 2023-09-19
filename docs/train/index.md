@@ -8,28 +8,34 @@ sidebar_position: 1
 
 Projects
 
-Launch and Run Projects Anywhere
+- Launch and Run Projects Anywhere
 
-Experimental Tracking, including LLM Tracking (input, output, prompt)
+1. Run projects in FEDML Cloud
+2. Run projects in on-premises cluster
 
-Train As a Service
+- Experimental Tracking:
+
+1. Metrics, Logs, System Monitoring, Artifacts (Models and datasets)
+2. Model versioning
+3. GitHub Source Code
+4. Visualization in Tables and Figures (\*)
+5. LLM Tracking (input, output, prompt management\*)
+6. Multi-step Workflow
+
+- GPU Cluster Management
+
+1. Building a GPU Cluster with On-premises Machines (\*)
+2. Team Member Collaboration
+3. Queue Priority (\*)
+4. Elastic Training (\*)
+5. Fault Tolerance (\*)
+6. Failover (\*)
+
+- Train As a Service
 
 1. Zero-code LLM Fine-tuning
 2. United LLM for distributed GPUs
 3. Federated LLM for distributed data
 4. Distributed Training on low-end GPUs
 
-GPU Cluster Management
-
-1. Building a GPU Cluster with On-premises Machines
-2. Team Member Collaboration
-3. Queue Priority
-4. Elastic Training
-5. Fault Tolerance
-6. Failover
-
-Advanced:
-
-1. Multi-step Workflow
-2. Run projects in FEDML Cloud
-3. Run projects in on-premises cluster
+- On-premise Deployment
