@@ -35,9 +35,11 @@ launch job at the MLOps platform
 
 #### Options
 
-| Option        | Description  |
-|---------------|--------------|
-| -k, --api_key | User api key |
+| Option        | Description                                                                                                                                                   |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -k, --api_key | User api key                                                                                                                                                  |
+| -c, --cluster | launch job to which version of MLOps platform. It should be dev, test or release                                                                              |
+| -v, --version | Please provide a cluster name. If a cluster with that name already exists, it will be used; otherwise, a new cluster with the provided name will be created.  |
 
 #### Notes
 
