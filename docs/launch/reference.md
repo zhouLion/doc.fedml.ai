@@ -1,15 +1,47 @@
+# Command Line Interface
 
-## Launch jobs with customized commands in the job yaml
-```
-Usage: fedml launch [OPTIONS] [YAML_FILE]...
+## Usage
+
+`fedml launch [OPTIONS] COMMAND [ARGS]...`
+
+## Summary
+
+Launch jobs on the FedML® Launch platform (open.fedml.ai).
+
+## Options
+
+| Option          | Description                |
+|-----------------|----------------------------|
+| -h, --help      | Show this message and exit |
+
+## Commands
+
+| Command | Description         |
+|---------|---------------------|
+| cancel  | Cancel job          |
+| default | Launch job          |  
+| log     | View the job logs   |
+| queue   | View the job queue  |
+
+### Launch Command
+
+#### Usage
+
+`fedml launch [OPTIONS] [YAML_FILE]...`
+
+#### Summary
 
 launch job at the MLOps platform
 
-Options:
--k, --api_key TEXT        user api key.
---help                    Show this message and exit.
-```
-At first, you need to define your job properties in the job yaml file, e.g. entry file, config file, command arguments, etc.
+#### Options
+
+| Option        | Description  |
+|---------------|--------------|
+| -k, --api_key | User api key |
+
+#### Notes
+
+Before launch any job, at first, you need to define your job properties in the job yaml file, e.g. entry file, config file, command arguments, etc.
 
 The job yaml file is as follows:
 ```
@@ -105,7 +137,7 @@ For querying the realtime status of your job, please run the following command.
 fedml launch log 1696947481910317056
 ```
 
-## Login as the GPU supplier
+##### Login as the GPU supplier
 If you want to login as the role of GPU supplier and join into the FedML launch payment system. You just need to run the following command.
 ```
 fedml login $YourUserId -k $YourApiKey -r gpu_supplier
