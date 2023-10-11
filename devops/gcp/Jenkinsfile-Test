@@ -1,0 +1,155 @@
+pipeline {
+  agent {
+    kubernetes {
+      inheritFrom 'nodejs base'
+      containerTemplate {
+        name 'nodejs'
+        image 'node:18.15.0'
+        resourceRequestMemory '5G'
+      }
+    }
+  }
+
+  environment {
+        GITHUB_CREDENTIAL_ID = 'github-id'
+
+        AWS_IAM_CREDENTIAL_ID_TEST = 'aws-iam-id-test'
+        AWS_ECR_CREDENTIAL_ID_TEST = 'aws-ecr-id-test'
+        TEST_KUBECONFIG_CREDENTIAL_ID = 'fedml-test-kubeconfig'
+
+        REGISTRY_TEST = '127317375267.dkr.ecr.us-west-1.amazonaws.com'
+        HTTPS_REGISTRY_TEST = 'https://127317375267.dkr.ecr.us-west-1.amazonaws.com'
+        AWS_REGION_NAME_TEST = 'us-west-1'
+        DEPLOY_NAMESPACE_TEST = 'fedml-mlops'
+        VERSION_TEST = 'test'
+        BRANCH_TEST = 'test'
+
+        DOCKER_NAMESPACE = ''
+        APP_NAME = 'falcon-admin-web'
+        DEPLOY_NAME = 'docs-fedml-ai'
+        GIT_URL = 'https://github.com/FedML-AI/docs.fedml.ai.git'
+        SONAR_HOST = ''
+        SONAR_CREDENTIAL_ID = 'sonar-token'
+        TAG_NAME = "SNAPSHOT-$BUILD_NUMBER"
+        FEDML_MAIL_SUCCESS_SUBJECT = 'FedMLDevOPS Succeeded Pipeline'
+        FEDML_MAIL_FAILURE_SUBJECT = 'FedMLDevOPS Failed Pipeline'
+        FEDML_MAIL_BODY1 = "Build Display Name: "
+        FEDML_MAIL_BODY2 = ", Please check build details by the following URL: http://kube.fedml.ai/workspaces/fedml-devops-services/devops"
+    }
+
+   stages {
+    stage('checkout for test') {
+      when {
+        branch env.BRANCH_TEST
+      }
+      agent none
+      steps {
+        git(branch: env.BRANCH_TEST, url: env.GIT_URL, credentialsId: env.GITHUB_CREDENTIAL_ID, changelog: true, poll: false)
+      }
+    }
+
+    stage('mlops build for test') {
+      when {
+        branch env.BRANCH_TEST
+      }
+      steps {
+        container('nodejs') {
+          sh 'npm --version;node --version'
+          sh 'node --max-old-space-size=4096 `which npm` install'
+          sh 'export;export NODE_OPTIONS=--max-old-space-size=4096;export;npm run build'
+        }
+      }
+    }
+
+    stage('docker build for test') {
+      when {
+        branch env.BRANCH_TEST
+      }
+      steps {
+        container('base') {
+          sh 'podman build --network=host -f ./devops/gcp/test/Dockerfile -t $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST-SNAPSHOT-$BUILD_NUMBER .'
+        }
+      }
+    }
+
+    stage('push latest for test') {
+      when {
+        branch env.BRANCH_TEST
+      }
+      steps {
+        container('base') {
+          withCredentials([usernamePassword(passwordVariable : 'AWS_IAM_ACCESS_ID' ,usernameVariable : 'AWS_ECR_USERNAME' ,credentialsId : "$AWS_ECR_CREDENTIAL_ID_TEST" ,)]) {
+             withCredentials([usernamePassword(passwordVariable : 'AWS_IAM_ACCESS_KEY' ,usernameVariable : 'AWS_REGION' ,credentialsId : "$AWS_IAM_CREDENTIAL_ID_TEST" ,)]) {
+                sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
+                sh 'unzip awscliv2.zip'
+                sh './aws/install'
+                sh 'chmod a+x ./devops/set-aws-credentials.sh;./devops/set-aws-credentials.sh $AWS_IAM_ACCESS_ID $AWS_IAM_ACCESS_KEY $AWS_REGION'
+                sh 'podman login $REGISTRY_TEST -u $AWS_ECR_USERNAME -p $(/usr/local/bin/aws ecr get-login-password --region $AWS_REGION)'
+             }
+          }
+          sh 'podman tag  $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST-SNAPSHOT-$BUILD_NUMBER $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST'
+          sh 'podman push  $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST'
+        }
+      }
+    }
+
+    stage('deploy for test') {
+      when {
+        branch env.BRANCH_TEST
+      }
+      steps {
+         container('base') {
+            withCredentials([
+                kubeconfigFile(
+                credentialsId: env.TEST_KUBECONFIG_CREDENTIAL_ID,
+                variable: 'KUBECONFIG')
+                ]) {
+                sh 'kubectl rollout restart -n $DEPLOY_NAMESPACE_TEST deployment/$DEPLOY_NAME'
+            }
+         }
+      }
+    }
+  }
+
+  post {
+    always {
+      echo 'One way or another, I have finished'
+    }
+    success {
+       echo 'I succeeded!'
+       echo "branch name: " + env.BRANCH_NAME
+       script {
+            if (env.BRANCH_NAME == env.BRANCH_TEST) {
+                def mail_list = ['alexliang.kh@gmail.com','chaoyanghe.com@gmail.com','yideran@gmail.com','Yanfangli.fedml@gmail.com', 'zhouquan147369@gmail.com']
+                mail_list.each { x ->
+                    echo "mail item: ${x}"
+                    mail (to: "${x}",
+                          subject: env.FEDML_MAIL_SUCCESS_SUBJECT,
+                          body: env.FEDML_MAIL_BODY1 + "${currentBuild.fullDisplayName}" + env.FEDML_MAIL_BODY2);
+                }
+            }
+       }
+    }
+    unstable {
+       echo 'I am unstable :/'
+    }
+    failure {
+       echo 'I failed :('
+       echo "branch name: " + env.BRANCH_NAME
+       script {
+            if (env.BRANCH_NAME == env.BRANCH_TEST) {
+                def mail_list = ['alexliang.kh@gmail.com','chaoyanghe.com@gmail.com','yideran@gmail.com','Yanfangli.fedml@gmail.com', 'zhouquan147369@gmail.com']
+                mail_list.each { x ->
+                    echo "mail item: ${x}"
+                    mail (to: "${x}",
+                          subject: env.FEDML_MAIL_FAILURE_SUBJECT,
+                          body: env.FEDML_MAIL_BODY1 + "${currentBuild.fullDisplayName}" + env.FEDML_MAIL_BODY2);
+                }
+            }
+       }
+    }
+    changed {
+       echo 'Things were different before...'
+    }
+  }
+}
