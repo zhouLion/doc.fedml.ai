@@ -1,0 +1,141 @@
+pipeline {
+  agent {
+    kubernetes {
+      inheritFrom 'nodejs base'
+      containerTemplate {
+        name 'nodejs'
+        image 'node:18.15.0'
+        resourceRequestMemory '5G'
+      }
+    }
+  }
+
+  environment {
+        GITHUB_CREDENTIAL_ID = 'github-id'
+        AWS_IAM_CREDENTIAL_ID_DEV = 'aws-iam-id-dev'
+        AWS_ECR_CREDENTIAL_ID_DEV = 'aws-ecr-id-dev'
+        DEV_KUBECONFIG_CREDENTIAL_ID = 'fedml-dev-kubeconfig'
+
+        REGISTRY_DEV = '127317375267.dkr.ecr.us-west-1.amazonaws.com'
+        HTTPS_REGISTRY_DEV = 'https://127317375267.dkr.ecr.us-west-1.amazonaws.com'
+        AWS_REGION_NAME_DEV = 'us-west-1'
+        DEPLOY_NAMESPACE_DEV = 'fedml-mlops'
+        VERSION_DEV = 'dev'
+        BRANCH_DEV = 'dev'
+
+        DOCKER_NAMESPACE = ''
+        APP_NAME = 'falcon-admin-web'
+        DEPLOY_NAME = 'docs-fedml-ai'
+        GIT_URL = 'https://github.com/FedML-AI/docs.fedml.ai.git'
+        SONAR_HOST = ''
+        SONAR_CREDENTIAL_ID = 'sonar-token'
+        TAG_NAME = "SNAPSHOT-$BUILD_NUMBER"
+        FEDML_MAIL_SUCCESS_SUBJECT = 'FedMLDevOPS Succeeded Pipeline'
+        FEDML_MAIL_FAILURE_SUBJECT = 'FedMLDevOPS Failed Pipeline'
+        FEDML_MAIL_BODY1 = "Build Display Name: "
+        FEDML_MAIL_BODY2 = ", Please check build details by the following URL: http://kube.fedml.ai/workspaces/fedml-devops-services/devops"
+    }
+
+   stages {
+    stage('checkout for dev') {
+      when {
+        branch env.BRANCH_DEV
+      }
+      agent none
+      steps {
+        git(branch: env.BRANCH_DEV, url: env.GIT_URL, credentialsId: env.GITHUB_CREDENTIAL_ID, changelog: true, poll: false)
+      }
+    }
+
+    stage('docker build for dev') {
+      when {
+        branch env.BRANCH_DEV
+      }
+      steps {
+        container('base') {
+          sh 'podman build --network=host -f ./devops/Dockerfile -t $REGISTRY_DEV/$DOCKER_NAMESPACE$APP_NAME:$VERSION_DEV-SNAPSHOT-$BUILD_NUMBER .'
+        }
+      }
+    }
+
+    stage('push latest for dev') {
+      when {
+        branch env.BRANCH_DEV
+      }
+      steps {
+        container('base') {
+          withCredentials([usernamePassword(passwordVariable : 'AWS_IAM_ACCESS_ID' ,usernameVariable : 'AWS_ECR_USERNAME' ,credentialsId : "$AWS_ECR_CREDENTIAL_ID_DEV" ,)]) {
+             withCredentials([usernamePassword(passwordVariable : 'AWS_IAM_ACCESS_KEY' ,usernameVariable : 'AWS_REGION' ,credentialsId : "$AWS_IAM_CREDENTIAL_ID_DEV" ,)]) {
+                sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
+                sh 'unzip awscliv2.zip'
+                sh './aws/install'
+                sh 'chmod a+x ./devops/set-aws-credentials.sh;./devops/set-aws-credentials.sh $AWS_IAM_ACCESS_ID $AWS_IAM_ACCESS_KEY $AWS_REGION'
+                sh 'podman login $REGISTRY_DEV -u $AWS_ECR_USERNAME -p $(/usr/local/bin/aws ecr get-login-password --region $AWS_REGION)'
+             }
+          }
+          sh 'podman tag  $REGISTRY_DEV/$DOCKER_NAMESPACE$APP_NAME:$VERSION_DEV-SNAPSHOT-$BUILD_NUMBER $REGISTRY_DEV/$DOCKER_NAMESPACE$APP_NAME:$VERSION_DEV'
+          sh 'podman push  $REGISTRY_DEV/$DOCKER_NAMESPACE$APP_NAME:$VERSION_DEV'
+        }
+      }
+    }
+
+    stage('deploy for dev') {
+      when {
+        branch env.BRANCH_DEV
+      }
+      steps {
+         container('base') {
+            withCredentials([
+                kubeconfigFile(
+                credentialsId: env.DEV_KUBECONFIG_CREDENTIAL_ID,
+                variable: 'KUBECONFIG')
+                ]) {
+                sh 'kubectl rollout restart -n $DEPLOY_NAMESPACE_DEV deployment/$DEPLOY_NAME'
+            }
+         }
+      }
+    }
+  }
+
+  post {
+    always {
+      echo 'One way or another, I have finished'
+    }
+    success {
+       echo 'I succeeded!'
+       echo "branch name: " + env.BRANCH_NAME
+       script {
+            if (env.BRANCH_NAME == env.BRANCH_DEV) {
+                def mail_list = ['alexliang.kh@gmail.com','chaoyanghe.com@gmail.com','yideran@gmail.com','Yanfangli.fedml@gmail.com', 'zhouquan147369@gmail.com']
+                mail_list.each { x ->
+                    echo "mail item: ${x}"
+                    mail (to: "${x}",
+                          subject: env.FEDML_MAIL_SUCCESS_SUBJECT,
+                          body: env.FEDML_MAIL_BODY1 + "${currentBuild.fullDisplayName}" + env.FEDML_MAIL_BODY2);
+                }
+            }
+       }
+    }
+    unstable {
+       echo 'I am unstable :/'
+    }
+    failure {
+       echo 'I failed :('
+       echo "branch name: " + env.BRANCH_NAME
+       script {
+            if (env.BRANCH_NAME == env.BRANCH_DEV) {
+                def mail_list = ['alexliang.kh@gmail.com','chaoyanghe.com@gmail.com','yideran@gmail.com','Yanfangli.fedml@gmail.com', 'zhouquan147369@gmail.com']
+                mail_list.each { x ->
+                    echo "mail item: ${x}"
+                    mail (to: "${x}",
+                          subject: env.FEDML_MAIL_FAILURE_SUBJECT,
+                          body: env.FEDML_MAIL_BODY1 + "${currentBuild.fullDisplayName}" + env.FEDML_MAIL_BODY2);
+                }
+            }
+       }
+    }
+    changed {
+       echo 'Things were different before...'
+    }
+  }
+}
