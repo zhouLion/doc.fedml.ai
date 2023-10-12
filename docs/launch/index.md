@@ -17,3 +17,7 @@ sidebar_position: 1
 6. Strong reliability via handling failover, fault-tolerant, preemption, etc.
 
 7. Scheduling strategies to save money or request resources in a higher priority
+
+# CLIs
+
+fedml login -h
