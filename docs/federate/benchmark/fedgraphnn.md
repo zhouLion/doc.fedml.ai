@@ -15,7 +15,7 @@ For FedGraphNN, we require the latest version of PyG.
 ### Node-Level Federated Graph Neural Networks 
 
 - [Federated Ego-Network Node Classification](./fedgraphnn/egonet_nodeclf.md): An example to classify nodes in social networks in federated settings via ego-network representations.
-
+    
 - [Federated Ego-Network Link Prediction](./fedgraphnn/egonet_linkpred.md): An example to determine link/connection types in social networks in federated settings via ego-network representations.
  
 ### Federated OGB and OGB-LSC Datasets

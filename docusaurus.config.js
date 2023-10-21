@@ -128,7 +128,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'platform',
             position: 'left',
-            label: 'Platform Guide',
+            label: 'Nexus AI Platform',
           },
           {
             type: 'docSidebar',
