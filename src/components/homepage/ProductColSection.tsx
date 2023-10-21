@@ -36,7 +36,7 @@ export default function ProductColSection() {
 
       <div className="flex-1">
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="m-0">Compute Framework</h3>
+          <h3 className="m-0">FEDML® Unified and Scalable Machine Learning Library</h3>
         </div>
 
         <div className="flex flex-col gap-4">

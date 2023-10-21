@@ -83,13 +83,13 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -121,7 +121,7 @@ const config = {
           // srcDark: 'img/logo-dark.png',
           alt: 'FEDML Docs',
           height: '40px',
-          width: '40px',
+          // width: '40px',
         },
         items: [
           {
@@ -129,6 +129,12 @@ const config = {
             sidebarId: 'platform',
             position: 'left',
             label: 'Nexus AI Platform',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'opensource',
+            position: 'left',
+            label: 'Open Source',
           },
           {
             type: 'docSidebar',
