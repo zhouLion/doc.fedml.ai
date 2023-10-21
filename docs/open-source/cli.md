@@ -4,81 +4,41 @@ description: Docusaurus provides a set of scripts to help you generate, serve, a
 
 # Command Line Interface (CLI)
 
-Docusaurus provides a set of scripts to help you generate, serve, and deploy your website.
+FEDML provides a set of CLIs to help you develop, launch, train, and deploy your model. To get the latest version of the CLI, run `fedml -h` or `fedml --help`:
 
-Once your website is bootstrapped, the website source will contain the Docusaurus scripts that you can invoke with your package manager:
+```
+Usage: fedml [OPTIONS] COMMAND [ARGS]...
 
-```json title="package.json"
-{
-  // ...
-  "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
-  }
-}
+Options:
+  -h, --help  Show this message and exit.
+
+Commands:
+  login     Login the FedML® Nexus AI Platform
+  logout    Logout from the FedML® Nexus AI Platform
+  launch    Launch job at the FedML® Nexus AI platform
+  cluster   Manage clusters on FedML® Nexus AI Platform
+  run       Manage runs on the FedML® Nexus AI Platform.
+  device    Bind/unbind devices to the FedML® Nexus AI Platform
+  model     Deploy and infer models.
+  build     Build packages for the FedML® Nexus AI Platform
+  logs      Display logs for ongoing runs
+  train     Manage training resources on FedML® Nexus AI Platform
+  federate  Manage federated learning resources on FedML® Nexus AI Platform
+  env       Get environment info such as versions, hardware, and networking
+  network   Check the Nexus AI backend network connectivity
+  version   Display FEDML library version
 ```
 
-## Docusaurus CLI commands {#docusaurus-cli-commands}
-
-Below is a list of Docusaurus CLI commands and their usages:
-
-### `docusaurus start [siteDir]` {#docusaurus-start-sitedir}
-
-Builds and serves a preview of your site locally with [Webpack Dev Server](https://webpack.js.org/configuration/dev-server).
-
-#### Options {#options}
-
-| Name | Default | Description |
-| --- | --- | --- |
-| `--dev` |  | Builds in dev mode, including full React error messages. |
-| `--port` | `3000` | Specifies the port of the dev server. |
-| `--host` | `localhost` | Specify a host to use. For example, if you want your server to be accessible externally, you can use `--host 0.0.0.0`. |
-| `--hot-only` | `false` | Enables Hot Module Replacement without page refresh as a fallback in case of build failures. More information [here](https://webpack.js.org/configuration/dev-server/#devserverhotonly). |
-| `--no-open` | `false` | Do not open the page automatically in the browser. |
-| `--config` | `undefined` | Path to Docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
-| `--poll [optionalIntervalMs]` | `false` | Use polling of files rather than watching for live reload as a fallback in environments where watching doesn't work. More information [here](https://webpack.js.org/configuration/watch/#watchoptionspoll). |
-| `--no-minify` | `false` | Build website without minimizing JS/CSS bundles. |
-
-:::info
-
-Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
-
+:::tip
+Before you run CLIs, it's better to do sanity check of the environment setup by running `fedml env`. You will get versions of the library, OS, CPU/GPU hardwares and network connectivity.
 :::
 
-:::info Development over network
+All CLI commands and their usages are as follows:
 
-When forwarding port 3000 from a remote server or VM (e.g. GitHub Codespaces), you can run the dev server on `0.0.0.0` to make it listen on the local IP.
 
-```bash npm2yarn
-npm run start -- --host 0.0.0.0
-```
 
-:::
 
-#### Enabling HTTPS {#enabling-https}
-
-There are multiple ways to obtain a certificate. We will use [mkcert](https://github.com/FiloSottile/mkcert) as an example.
-
-1. Run `mkcert localhost` to generate `localhost.pem` + `localhost-key.pem`
-
-2. Run `mkcert -install` to install the cert in your trust store, and restart your browser
-
-3. Start the app with Docusaurus HTTPS env variables:
-
-```bash
-HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem yarn start
-```
-
-4. Open `https://localhost:3000/`
-
-### `docusaurus build [siteDir]` {#docusaurus-build-sitedir}
+### `fedml login [OPTIONS] <API_KEY>`
 
 Compiles your site for production.
 
@@ -86,101 +46,64 @@ Compiles your site for production.
 
 | Name | Default | Description |
 | --- | --- | --- |
-| `--bundle-analyzer` | `false` | Analyze your bundle with the [webpack bundle analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer). |
-| `--out-dir` | `build` | The full path for the new output directory, relative to the current workspace. |
-| `--config` | `undefined` | Path to Docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
-| `--no-minify` | `false` | Build website without minimizing JS/CSS bundles. |
+| `--client` or `-c` | `true` | bind as a client in FEDML Nexus AI Cloud |
+| `--server` or `-s` | `false` | bind as a server in FEDML Nexus AI Cloud |
+| `--version` or `-v` | `false` | The backend environment of FEDML Nexus AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by FEDML team for internal development. |
+
+#### Arguments {#argument-1}
+| Name | Default | Description |
+| --- | --- | --- |
+| `--api_key` or `-c` |  | You can find your API Key at https://nexus.fedml.ai. Click your avatar on top-right area and then click "Profile". |
+
+#### Examples {#example-1}
+
+Login as a client in FEDML Nexus AI Cloud:
+```
+fedml login -c <API_KEY>
+```
+
+
+### `fedml env`
+
+Do sanity check of the FEDML library's current running environment information, including versions of the library, OS, CPU/GPU hardwares and network connectivity (HTTPS, S3, MQTT). 
+
+#### Options {#options}
+
+| Name | Default | Description |
+| --- | --- | --- |
+| `--version` or `-v` | `release` | The backend environment of FEDML Nexus AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by FEDML team for internal development. |
 
 :::info
 
-For advanced minification of CSS bundle, we use the [advanced cssnano preset](https://github.com/cssnano/cssnano/tree/master/packages/cssnano-preset-advanced) (along with additional several PostCSS plugins) and [level 2 optimization of clean-css](https://github.com/jakubpawlowicz/clean-css#level-2-optimizations). If as a result of this advanced CSS minification you find broken CSS, build your website with the environment variable `USE_SIMPLE_CSS_MINIFIER=true` to minify CSS with the [default cssnano preset](https://github.com/cssnano/cssnano/tree/master/packages/cssnano-preset-default). **Please [fill out an issue](https://github.com/facebook/docusaurus/issues/new?labels=bug%2C+needs+triage&template=bug.md) if you experience CSS minification bugs.**
+If the environment setup is correct, `fedml env` will print a message similar as follows:
 
-You can skip the HTML minification with the environment variable `SKIP_HTML_MINIFICATION=true`.
-
-:::
-
-### `docusaurus swizzle [themeName] [componentName] [siteDir]` {#docusaurus-swizzle}
-
-[Swizzle](./swizzling.mdx) a theme component to customize it.
-
-```bash npm2yarn
-npm run swizzle [themeName] [componentName] [siteDir]
-
-# Example (leaving out the siteDir to indicate this directory)
-npm run swizzle @docusaurus/theme-classic Footer -- --eject
 ```
 
-The swizzle CLI is interactive and will guide you through the whole [swizzle process](./swizzling.mdx).
+======== FedML (https://fedml.ai) ========
+FedML version: 0.8.8a153
+FedML ENV version: release
+Execution path:/Users/chaoyanghe/sourcecode/FedML-inc/FedML-all-in-one-dev/FedML/python/fedml/__init__.py
 
-#### Options {#options-swizzle}
+======== Running Environment ========
+OS: macOS-13.4-arm64-arm-64bit
+Hardware: arm64
+Python version: 3.9.15 | packaged by conda-forge | (main, Nov 22 2022, 08:48:25) 
+[Clang 14.0.6 ]
+PyTorch version: 2.0.1
+MPI4py is installed
 
-| Name | Description |
-| --- | --- |
-| `themeName` | The name of the theme to swizzle from. |
-| `componentName` | The name of the theme component to swizzle. |
-| `--list` | Display components available for swizzling |
-| `--eject` | [Eject](./swizzling.mdx#ejecting) the theme component |
-| `--wrap` | [Wrap](./swizzling.mdx#wrapping) the theme component |
-| `--danger` | Allow immediate swizzling of unsafe components |
-| `--typescript` | Swizzle the TypeScript variant component |
-| `--config` | Path to docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
+======== CPU Configuration ========
+The CPU usage is : 35%
+Available CPU Memory: 24.8 G / 64.0G
 
-:::warning
+======== GPU Configuration ========
+No GPU devices
 
-Unsafe components have a higher risk of breaking changes due to internal refactorings.
+======== Network Connection Checking ========
+The connection to https://open.fedml.ai is OK.
 
+The connection to S3 Object Storage is OK.
+
+The connection to mqtt.fedml.ai (port:1883) is OK.
+```
 :::
-
-### `docusaurus deploy [siteDir]` {#docusaurus-deploy-sitedir}
-
-Deploys your site with [GitHub Pages](https://pages.github.com/). Check out the docs on [deployment](deployment.mdx#deploying-to-github-pages) for more details.
-
-#### Options {#options-3}
-
-| Name | Default | Description |
-| --- | --- | --- |
-| `--out-dir` | `build` | The full path for the new output directory, relative to the current workspace. |
-| `--skip-build` | `false` | Deploy website without building it. This may be useful when using a custom deploy script. |
-| `--config` | `undefined` | Path to Docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
-
-### `docusaurus serve [siteDir]` {#docusaurus-serve-sitedir}
-
-Serve your built website locally.
-
-| Name | Default | Description |
-| --- | --- | --- |
-| `--port` | `3000` | Use specified port |
-| `--dir` | `build` | The full path for the output directory, relative to the current workspace |
-| `--build` | `false` | Build website before serving |
-| `--config` | `undefined` | Path to Docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
-| `--host` | `localhost` | Specify a host to use. For example, if you want your server to be accessible externally, you can use `--host 0.0.0.0`. |
-| `--no-open` | `false` locally, `true` in CI | Do not open a browser window to the server location. |
-
-### `docusaurus clear [siteDir]` {#docusaurus-clear-sitedir}
-
-Clear a Docusaurus site's generated assets, caches, build artifacts.
-
-We recommend running this command before reporting bugs, after upgrading versions, or anytime you have issues with your Docusaurus site.
-
-### `docusaurus write-translations [siteDir]` {#docusaurus-write-translations-sitedir}
-
-Write the JSON translation files that you will have to translate.
-
-By default, the files are written in `website/i18n/<defaultLocale>/...`.
-
-| Name | Default | Description |
-| --- | --- | --- |
-| `--locale` | `<defaultLocale>` | Define which locale folder you want to write translations the JSON files in |
-| `--override` | `false` | Override existing translation messages |
-| `--config` | `undefined` | Path to Docusaurus config file, default to `[siteDir]/docusaurus.config.js` |
-| `--messagePrefix` | `''` | Allows adding a prefix to each translation message, to help you highlight untranslated strings |
-
-### `docusaurus write-heading-ids [siteDir] [files]` {#docusaurus-write-heading-ids-sitedir}
-
-Add [explicit heading IDs](./guides/markdown-features/markdown-features-toc.mdx#explicit-ids) to the Markdown documents of your site.
-
-| Name | Default | Description |
-| --- | --- | --- |
-| `files` | All MD files used by plugins | The files that you want heading IDs to be written to. |
-| `--maintain-case` | `false` | Keep the headings' casing, otherwise make all lowercase. |
-| `--overwrite` | `false` | Overwrite existing heading IDs. |
