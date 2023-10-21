@@ -56,7 +56,7 @@ export function ProductCardItem({
         'border-2 border-solid border-white bg-secondary-900 hover:!border-primary dark:border-primary',
       )}
     >
-      <div className="p-6 mb-4 !pb-0 z-2 static">
+      <div className="p-8 mb-12 !pb-0 z-2 static">
         <h3 className="mb-1.5 flex items-center gap-3 font-jakarta group-hover:text-primary">
           <Icon className="h-7 w-7" style={{ '--stagger': '2' }} data-animate />
           <div style={{ '--stagger': '3' }} data-animate>
