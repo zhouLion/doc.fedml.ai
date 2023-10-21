@@ -1,5 +1,5 @@
 ---
-description: Docusaurus provides a set of scripts to help you generate, serve, and deploy your website.
+description: FEDML provides a set of CLIs to help you develop, launch, train, and deploy your model. 
 ---
 
 # Command Line Interface (CLI)
