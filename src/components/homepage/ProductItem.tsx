@@ -2,7 +2,7 @@ import { Product } from './Product.config';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import React from 'react';
-import ThemedImage from '@theme/ThemedImage';
+// import ThemedImage from '@theme/ThemedImage';
 import { ChevronRight } from 'react-feather';
 
 export function ProductLinkItem({ title, text, icon: Icon, link }: Product) {
@@ -42,11 +42,10 @@ export function ProductCardItem({
   link,
   title,
   icon: Icon,
-  text,
-  lightImage,
-  darkImage,
-  beta,
-}: Product) {
+  text, // lightImage,
+  // darkImage,
+} // beta,
+: Product) {
   return (
     <Link
       to={link}
@@ -57,7 +56,7 @@ export function ProductCardItem({
         'border-2 border-solid border-white bg-secondary-900 hover:!border-primary dark:border-primary',
       )}
     >
-      <div className="p-6 mb-24 !pb-0 z-2 static">
+      <div className="p-6 mb-4 !pb-0 z-2 static">
         <h3 className="mb-1.5 flex items-center gap-3 font-jakarta group-hover:text-primary">
           <Icon className="h-7 w-7" style={{ '--stagger': '2' }} data-animate />
           <div style={{ '--stagger': '3' }} data-animate>
@@ -65,7 +64,7 @@ export function ProductCardItem({
           </div>
         </h3>
         <p
-          className="mb-0 text-sm text-zinc-400"
+          className="mb-0 text-sm text-zinc-800 dark:text-zinc-300"
           style={{ '--stagger': '4' }}
           data-animate
         >
