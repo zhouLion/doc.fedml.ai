@@ -72,14 +72,14 @@ export function ProductCardItem({
           {text}
         </p>
       </div>
-      <ThemedImage
+      {/* <ThemedImage
         sources={{
           light: lightImage,
           dark: darkImage,
         }}
         alt={title}
         className="z-1 h-20 right-0 transition-transform group-hover:scale-110 absolute bottom-0"
-      />
+      /> */}
     </Link>
   );
 }

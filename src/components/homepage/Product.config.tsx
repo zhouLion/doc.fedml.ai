@@ -6,27 +6,19 @@ export type Product = {
   link: string;
   beta?: boolean;
   icon: () => React.JSX.Element;
-  // lightImage: string;
-  // darkImage: string;
+  lightImage: string;
+  darkImage: string;
   text: (() => React.JSX.Element) | string | React.JSX.Element;
 };
 
-export const MLOPS_PRODUCTS: Product[] = [
-  {
-    title: 'FEDML® Nexus AI Platform',
-    beta: true,
-    link: '/platform',
-    icon: () => <Icon icon="carbon:ibm-watson-studio" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: 'The dedicated cloud service for next-gen AI/ML development and operations',
-  },
+
+export const LAUNCH_PRODUCT: Product[] = [
   {
     title: 'FEDML®Launch: Run Any Job on GPU Marketplace or On-Premise Cluster',
     link: '/launch',
     icon: () => <Icon icon="bi:gpu-card" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>
@@ -44,6 +36,27 @@ export const MLOPS_PRODUCTS: Product[] = [
         </ul>
       </>
     ),
+  }
+];
+
+export const MLOPS_PRODUCTS: Product[] = [
+  {
+    title: 'FEDML® Nexus AI',
+    beta: true,
+    link: '/platform',
+    icon: () => <Icon icon="carbon:ibm-watson-studio" />,
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    text: 'The dedicated cloud platform for next-gen AI/ML development and operations',
+  },
+  {
+    title: 'FEDML® Open Source',
+    beta: true,
+    link: '/platform',
+    icon: () => <Icon icon="carbon:ibm-watson-studio" />,
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    text: 'The unified and scalable machine learning library for large-scale distributed training, model serving, and federated learning',
   },
 ];
 
@@ -52,8 +65,8 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Train',
     link: '/train',
     icon: () => <Icon icon="carbon:machine-learning-model" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>Large-scale distributed training </b>
@@ -69,8 +82,8 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Deploy',
     link: '/deploy',
     icon: () => <Icon icon="codicon:server-process" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>Model serving framework</b>
@@ -87,8 +100,8 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Federate',
     link: '/federate',
     icon: () => <Icon icon="lucide:combine" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>Federated Learning framework </b>
@@ -108,8 +121,8 @@ export const IaaS: Product[] = [
     // TODO: Supplement with the correct documentation links
     link: '/platform/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
-    // lightImage: '/img/landing-page/hero/video-graphic.png',
-    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    lightImage: '/img/landing-page/hero/video-graphic.png',
+    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>
