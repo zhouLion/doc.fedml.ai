@@ -6,27 +6,27 @@ export type Product = {
   link: string;
   beta?: boolean;
   icon: () => React.JSX.Element;
-  lightImage: string;
-  darkImage: string;
+  // lightImage: string;
+  // darkImage: string;
   text: (() => React.JSX.Element) | string | React.JSX.Element;
 };
 
 export const MLOPS_PRODUCTS: Product[] = [
   {
-    title: 'FEDML® Machine Learning Platform',
+    title: 'FEDML® Nexus AI Platform',
     beta: true,
     link: '/platform',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
-    text: 'An easy-to-use platform for building vertical LLMs without requiring strong ML experience.',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    text: 'The dedicated cloud service for next-gen AI/ML development and operations',
   },
   {
-    title: 'FEDML®Launch: Run Any Job on Any GPU Cloud',
+    title: 'FEDML®Launch: Run Any Job on GPU Marketplace or On-Premise Cluster',
     link: '/launch',
     icon: () => <Icon icon="bi:gpu-card" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>
@@ -52,11 +52,11 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Train',
     link: '/train',
     icon: () => <Icon icon="carbon:machine-learning-model" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
-        <b>Model training framework </b>
+        <b>Large-scale distributed training </b>
         <ul>
           <li>Large & foundational models</li>
           <li>Fast and efficient</li>
@@ -69,8 +69,8 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Deploy',
     link: '/deploy',
     icon: () => <Icon icon="codicon:server-process" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>Model serving framework</b>
@@ -87,8 +87,8 @@ export const COMPUTE_FRAMEWORK: Product[] = [
     title: 'Federate',
     link: '/federate',
     icon: () => <Icon icon="lucide:combine" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>Federated Learning framework </b>
@@ -108,8 +108,8 @@ export const IaaS: Product[] = [
     // TODO: Supplement with the correct documentation links
     link: '/platform/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
-    lightImage: '/img/landing-page/hero/video-graphic.png',
-    darkImage: '/img/landing-page/hero/video-graphic-dark.png',
+    // lightImage: '/img/landing-page/hero/video-graphic.png',
+    // darkImage: '/img/landing-page/hero/video-graphic-dark.png',
     text: (
       <>
         <b>
