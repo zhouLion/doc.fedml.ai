@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started
 
-Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://open.fedml.ai](https://open.fedml.ai)) with examples for different scenarios.
+Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai)) with examples for different scenarios.
 
 ## **FedML Feature Overview**
 
@@ -221,7 +221,7 @@ Hierarchical Federated Learning:
 
 ## **MLOps User Guide**
 
-[https://open.fedml.ai](https://open.fedml.ai)
+[https://nexus.fedml.ai](https://nexus.fedml.ai)
 
 Currently, the project developed based on FedML Octopus (cross-silo) and Beehive (cross-device) can be smoothly deployed into the real-world system using FedML MLOps.
 

@@ -11,7 +11,7 @@ FedML's core technology is backed by years of cutting-edge research represented 
 <img src="./../_static/image/fedml.png" alt="parrot" style="width:650px;"/>
 
 - FedML Open Source Library ([https://github.com/FedML-AI](https://github.com/FedML-AI))
-- FedML Edge SDK and MLOps Platform ([https://open.fedml.ai](https://open.fedml.ai))
+- FedML Edge SDK and MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai))
 
 The software architecture of the open-source library is on the left side.
 MLOps platform further reuses the source code of the open-source library (the green-colored box).

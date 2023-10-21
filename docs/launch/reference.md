@@ -85,7 +85,7 @@ computing:
 
   allow_cross_cloud_resources: false # true, false
   device_type: GPU              # options: GPU, CPU, hybrid
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://open.fedml.ai/accelerator_resource_type
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://nexus.fedml.ai/accelerator_resource_type
 
 framework_type: fedml         # options: fedml, deepspeed, pytorch, general
 task_type: train              # options: serve, train, dev-environment
@@ -128,7 +128,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://open.fedml.ai/gpu/projects/job/confirmStartJob?projectId=1692900612607447040&projectName=default-project&jobId=1696947481910317056
+https://nexus.fedml.ai/gpu/projects/job/confirmStartJob?projectId=1692900612607447040&projectName=default-project&jobId=1696947481910317056
 
 Are you sure to launch it? [y/N]: y
 
@@ -140,7 +140,7 @@ Your launch result is as follows:
 +------------+---------------------+---------+---------------------+------------------+------+
 
 You can track your job running details at this URL:
-https://open.fedml.ai/gpu/projects/job/jobDetail?projectId=1692900612607447040&jobId=1696947481910317056
+https://nexus.fedml.ai/gpu/projects/job/jobDetail?projectId=1692900612607447040&jobId=1696947481910317056
 
 For querying the realtime status of your job, please run the following command.
 fedml launch log 1696947481910317056
@@ -154,7 +154,7 @@ If you want to login as the role of GPU supplier and join into the FedML launch 
 fedml login $YourUserId -k $YourApiKey -r gpu_supplier
 ```
 
-Then you may find your GPU device in the FedML launch platform https://open.fedml.ai/gpu-supplier/gpus/index
+Then you may find your GPU device in the FedML launch platform https://nexus.fedml.ai/gpu-supplier/gpus/index
 
 And then you may bind your FedML account to your payment account. Once your GPU device is scheduled to run any computing work load,
 

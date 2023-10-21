@@ -68,7 +68,7 @@ This section guides you through 1) installing Android Apk, 2) binding your Andro
 
 ### 2.1 Connect Android App with FedML MLOps Platform
 
-After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://open.fedml.ai](https://open.fedml.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
+After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://nexus.fedml.ai](https://nexus.fedml.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
 
 <img src="./../../_static/image/beehive-device.png" alt="image-20220427204703095" style="zoom:67%;" />
 
@@ -117,7 +117,7 @@ To set data path on your device, click the top green bar. Set it as the path to 
 
 #### 3. **Deploy FL Server**
 
-- Create an account at FedML MLOps Platform ([https://open.fedml.ai](https://open.fedml.ai))
+- Create an account at FedML MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai))
 
 - Run local test fo
 
@@ -142,7 +142,7 @@ After correct execution, you can find the package `server-package.zip` under `ml
 
 <img src="./../../_static/image/android-pkg-uploading.png" />
 
-- Launch the training by using FedML MLOps ([https://open.fedml.ai](https://open.fedml.ai))
+- Launch the training by using FedML MLOps ([https://nexus.fedml.ai](https://nexus.fedml.ai))
 
 Steps at MLOps: create group -> create project -> create run -> select application (the one we uploaded server package for Android) -> start run
 
@@ -182,7 +182,7 @@ or
 <meta-data android:name="fedml_account" android:resource="@string/fed_ml_account" />
 ```
 
-You can find your account ID at FedML Open Platform (https://open.fedml.ai):
+You can find your account ID at FedML Open Platform (https://nexus.fedml.ai):
 ![account](./../../_static/image/beehive_account.png)
 
 4. initial FedML Android SDK on your `Application` class.
@@ -229,7 +229,7 @@ This is the message flow to interact between FedML Android SDK and your host APP
 
 - ai.fedml.edge.request.RequestManager
 
-This is used to connect your Android SDK with FedML Open Platform (https://open.fedml.ai), which helps you to simplify the deployment, edge collaborative training, experimental tracking, and more.
+This is used to connect your Android SDK with FedML Open Platform (https://nexus.fedml.ai), which helps you to simplify the deployment, edge collaborative training, experimental tracking, and more.
 
 You can import them in your Java/Android projects as follows. See [android/fedmlsdk_demo/src/main/java/ai/fedml/edgedemo/ui/main/MainFragment.java](fedmlsdk_demo/src/main/java/ai/fedml/edgedemo/ui/main/MainFragment.java) as an example.
 

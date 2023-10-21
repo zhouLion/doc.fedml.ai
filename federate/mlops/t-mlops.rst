@@ -2,7 +2,7 @@
 Tutorials for MLOps
 #######################
 
-https://open.fedml.ai
+https://nexus.fedml.ai
 
 
 FedML MLOps Platform simplifies the workflow of federated learning anywhere at any scale.

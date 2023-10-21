@@ -52,7 +52,7 @@ export const MLOPS_PRODUCTS: Product[] = [
   {
     title: 'FEDML® Open Source',
     beta: true,
-    link: '/platform',
+    link: '/open-source',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
     darkImage: '/img/landing-page/hero/video-graphic-dark.png',

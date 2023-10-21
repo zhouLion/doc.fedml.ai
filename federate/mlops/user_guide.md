@@ -23,7 +23,7 @@ MLOps works following the figure above; this workflow is handled by a web UI and
 To begin, please create an account:
 
 - Instructions for registration: \
-  Please open [https://open.fedml.ai](https://open.fedml.ai) and click "Sign Up".
+  Please open [https://nexus.fedml.ai](https://nexus.fedml.ai) and click "Sign Up".
 
 ### Local Development and Building MLOps Packages
 

@@ -9,7 +9,7 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'FEDML© Docs',
+  title: 'FEDML® Documentation',
   // tagline: 'FEDML® AI Pla',
   url: 'https://docs.fedml.ai',
   baseUrl: '/',
@@ -177,7 +177,7 @@ const config = {
           },
           {
             label: 'Login',
-            href: 'https://open.fedml.ai',
+            href: 'https://nexus.fedml.ai',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
