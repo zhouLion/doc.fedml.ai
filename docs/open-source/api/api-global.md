@@ -6,5 +6,13 @@ sidebar_position: 1
 
 ### `fedml.init()`
 
+### `fedml.set_env_version()`
 
-### `fedml.get()`
+### `fedml.get_env_version()`
+
+### `fedml.device.`
+
+### `fedml.data.`
+
+### `fedml.model.`
+
