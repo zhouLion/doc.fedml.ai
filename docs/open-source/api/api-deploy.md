@@ -4,46 +4,37 @@ sidebar_position: 4
 
 # FEDML Deploy APIs
 
-### `fedml.init()`
+### `fedml.api.model_create()`
 ```py
-fedml.init(path: str, output: str=None, alias: str=None) -> None
+fedml.api.model_create(name: str, config_file_path: str) -> bool
 ```
-**Usage**
 
-
-**Arguments**  
-- `path (str)`: Prefs file's path.
-- `output (str=None)`: Output path (by default same as `path` but appending `_resource` to the filename).
-- `alias (str=None)`: An alias to reference it when reading (by default the same as the `path`).
-
-**Returns**  
-None. 
-
-Creates a resource module (_Python_ file) with the given prefs file that you can import in a _Python_ module to get those prefs without having the prefs file itself.
-
-:::info
-This is explained at [Resources](../resources#how-to-create-a-resource-module) page.
-:::
-
-**Examples**  
-```py title="prefs.prefs"
-#PREFS
-lang='en'
-theme=>
-    background='#199396'
-    font='UbuntuMono'
-```
+### `fedml.api.model_delete()`
 ```py
-import prefs
-
-prefs.bundle("prefs.prefs")
+fedml.api.model_delete(name: str) -> bool
 ```
-```py title="prefs_resource.py"
-# PREFS resource module
-# Created using PREFS Python library
-# https://patitotective.github.io/PREFS
-# Do not modify this file
-__version__ = '0.3.0'
-CONTENT = {'lang': 'en', 'theme': {'background': '#199396', 'font': 'UbuntuMono'}}
-ALIAS = 'prefs.prefs'
+
+### `fedml.api.model_list()`
+```py
+fedml.api.model_list(name: str = "*", local: bool = True, api_key: str = None) -> bool
+```
+
+### `fedml.api.model_package()`
+```py
+fedml.api.model_list_remote(name: str) -> bool
+```
+
+### `fedml.api.model_push()`
+```py
+fedml.api.model_push(name: str, model_storage_url: str = None, model_net_url: str = None, api_key: str = None) -> bool
+```
+
+### `fedml.api.model_pull()`
+```py
+fedml.api.model_pull(name: str, api_key: str = None) -> bool
+```
+
+### `fedml.api.model_deploy()`
+```py
+fedml.api.model_deploy(local: bool, name: str, api_key: str = None, master_ids: str = None, worker_ids: str = None) -> bool
 ```
