@@ -1,0 +1,8 @@
+{
+  "label": "Spotlight Projects on FEDML",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "The FEDML Spotlight Projects are a curated collection of projects that demonstrate the capabilities of the FEDML platform."
+  }
+}
