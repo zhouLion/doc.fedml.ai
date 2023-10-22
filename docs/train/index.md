@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Introduction
 
-# Concepts
-
 Projects
 
 - Launch and Run Projects Anywhere

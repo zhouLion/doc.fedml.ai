@@ -1,4 +1,5 @@
 ---
+sidebar_position: 3
 description: FEDML provides a set of CLIs to help you develop, launch, train, and deploy your model. 
 ---
 
