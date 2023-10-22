@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# API Reference
+# FEDML Deploy APIs
 
 ### `fedml.init()`
 ```py
