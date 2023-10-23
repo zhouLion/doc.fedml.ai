@@ -17,7 +17,7 @@ to FedML MLOps platform first:
 :::
 
 
-### fedml.api.launch_job()
+### `fedml.api.launch_job()`
 
 Launch a job on the FedML AI Nexus platform
 
