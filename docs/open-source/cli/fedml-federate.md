@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 9
 ---
-# Build federate packages for the FedML® Nexus AI Platform.
+# Federated Learning - fedml federate
 
 ## Overview
 ```

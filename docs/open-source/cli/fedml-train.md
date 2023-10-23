@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 8
 ---
-# Build train packages for the FedML® Nexus AI Platform.
+# Training - fedml train
 
 ## Overview
 ```

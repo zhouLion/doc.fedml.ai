@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# Login the FedML® Nexus AI Platform
+# Platform Login/Logout - fedml login/logout
 
 ## Overview
 ```

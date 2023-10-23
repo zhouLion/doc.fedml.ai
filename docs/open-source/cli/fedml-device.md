@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
-# Bind to the FedML® Nexus AI Platform
+# Device Management - fedml device
 
 ## Overview
 ```
