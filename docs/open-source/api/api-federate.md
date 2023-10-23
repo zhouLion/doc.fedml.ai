@@ -4,46 +4,184 @@ sidebar_position: 6
 
 # FEDML Federate APIs
 
-### `fedml.model()`
-```py
-fedml.init(path: str, output: str=None, alias: str=None) -> None
-```
+### `fedml.init()`
 **Usage**
-
+```py
+fedml.init(args=None, check_env=True, should_init_logs=True) -> None
+```
 
 **Arguments**  
-- `path (str)`: Prefs file's path.
-- `output (str=None)`: Output path (by default same as `path` but appending `_resource` to the filename).
-- `alias (str=None)`: An alias to reference it when reading (by default the same as the `path`).
+- `args (str=None)`: Arguments.
+- `check_env (bool=True)`: Do we need to check the environment? such as gpu info, network connection, etc.
+- `should_init_logs (bool=True)`: Do we need to init logs related environment.
 
 **Returns**  
 None. 
 
-Creates a resource module (_Python_ file) with the given prefs file that you can import in a _Python_ module to get those prefs without having the prefs file itself.
+init the fedml library.
+ 
 
-:::info
-This is explained at [Resources](../resources#how-to-create-a-resource-module) page.
-:::
-
-**Examples**  
-```py title="prefs.prefs"
-#PREFS
-lang='en'
-theme=>
-    background='#199396'
-    font='UbuntuMono'
-```
+**Examples**
 ```py
-import prefs
-
-prefs.bundle("prefs.prefs")
+    import fedml
+    from fedml.cross_silo import Client
+    
+    if __name__ == "__main__":
+        args = fedml.init()
 ```
-```py title="prefs_resource.py"
-# PREFS resource module
-# Created using PREFS Python library
-# https://patitotective.github.io/PREFS
-# Do not modify this file
-__version__ = '0.3.0'
-CONTENT = {'lang': 'en', 'theme': {'background': '#199396', 'font': 'UbuntuMono'}}
-ALIAS = 'prefs.prefs'
+
+
+### `fedml.device.get_device()`
+**Usage**
+```py
+fedml.device.get_device(args) -> torch.device
+```
+
+**Arguments**
+- `args (str=None)`: Arguments.
+
+**Returns**  
+torch.device.
+
+apply the compute device (GPUs) for federated learning.
+
+
+**Examples**
+```py
+    import fedml
+
+    if __name__ == "__main__":
+        # init FedML framework
+        args = fedml.init()
+    
+        # init device
+        device = fedml.device.get_device(args)
+```
+
+
+### `fedml.data.load()`
+**Usage**
+```py
+fedml.data.load(args) -> (dataset, output_dim)
+```
+
+**Arguments**
+- `args (str=None)`: Arguments.
+
+**Returns**  
+dataset, output_dim.
+
+load datasets for federated learning.
+
+
+**Examples**
+```py
+    import fedml
+
+    if __name__ == "__main__":
+        # init FedML framework
+        args = fedml.init()
+    
+        # init device
+        device = fedml.device.get_device(args)
+
+        # load data
+        dataset, output_dim = fedml.data.load(args)
+```
+
+
+### `fedml.model.create()`
+**Usage**
+```py
+fedml.model.create(args, output_dim) -> model
+```
+
+**Arguments**
+- `args (str=None)`: Arguments.
+- `output_dim (int)`: Output dimension for model.
+
+**Returns**  
+dataset, output_dim.
+
+load model for federated learning.
+
+
+**Examples**
+```py
+    import fedml
+
+    if __name__ == "__main__":
+        # init FedML framework
+        args = fedml.init()
+    
+        # init device
+        device = fedml.device.get_device(args)
+
+        # load data
+        dataset, output_dim = fedml.data.load(args)
+
+        # load model
+        model = fedml.model.create(args, output_dim)
+```
+
+
+### `fedml.FedMLRunner.run()`
+**Usage**
+```py
+fedml.FedMLRunner.run() -> None
+```
+
+**Arguments**
+None
+
+**Returns**  
+None
+
+run the federated learning instance (client or server).
+
+
+**Examples**
+The example for the federated learning client:
+```Python
+import fedml
+from fedml.cross_silo import Client
+
+if __name__ == "__main__":
+    args = fedml.init()
+
+    # init device
+    device = fedml.device.get_device(args)
+
+    # load data
+    dataset, output_dim = fedml.data.load(args)
+
+    # load model
+    model = fedml.model.create(args, output_dim)
+
+    # start training
+    client = Client(args, device, dataset, model)
+    client.run()
+
+```
+
+The example for the federated learning server:
+```Python
+import fedml
+from fedml.cross_silo import Server
+
+if __name__ == "__main__":
+    args = fedml.init()
+
+    # init device
+    device = fedml.device.get_device(args)
+
+    # load data
+    dataset, output_dim = fedml.data.load(args)
+
+    # load model
+    model = fedml.model.create(args, output_dim)
+
+    # start training
+    server = Server(args, device, dataset, model)
+    server.run()
 ```
