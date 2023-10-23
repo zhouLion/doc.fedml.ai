@@ -51,7 +51,7 @@ if login_ret == 0:
 Launch a job on a cluster on the FedML AI Nexus platform
 
 ```py
-launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=None, device_server=None, device_edges=None)
+fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=None, device_server=None, device_edges=None)
 ```
 
 **Arguments**  
@@ -91,7 +91,7 @@ if login_ret == 0:
 Stop a run on FedML AI Nexus platform. 
 
 ```PY
-run_stop(run_id, platform="falcon", api_key=None)
+fedml.api.run_stop(run_id, platform="falcon", api_key=None)
 ```
 
 **Arguments**  
@@ -108,7 +108,7 @@ Boolean indicating whether the run was successfully stopped or not.
 List a run on FedML AI Nexus platform.
 
 ```py
-run_list(run_name, run_id=None, platform="falcon", api_key=None)
+fedml.api.run_list(run_name, run_id=None, platform="falcon", api_key=None)
 ```
 
 **Arguments**
@@ -126,7 +126,7 @@ run_list(run_name, run_id=None, platform="falcon", api_key=None)
 Get status a run on FedML AI Nexus platform.
 
 ```py
-run_status(run_name, run_id, platform: str = "falcon", api_key: str = None)
+fedml.api.run_status(run_name, run_id, platform: str = "falcon", api_key: str = None)
 ```
 
 **Arguments**
@@ -144,7 +144,7 @@ Tuple of `FedMLRunModelList` and `status (str)` denoting status of the run.
 Fetches logs of run from FedML AI Nexus platform.
 
 ```py
-run_logs(run_id, page_num, page_size, need_all_logs=False, platform="falcon", api_key=None)
+fedml.api.run_logs(run_id, page_num, page_size, need_all_logs=False, platform="falcon", api_key=None)
 ```
 
 **Arguments**
@@ -166,7 +166,7 @@ run_logs(run_id, page_num, page_size, need_all_logs=False, platform="falcon", ap
 List clusters associated with your account on FedML AI Nexus platform.
 
 ```py
-cluster_list(cluster_names=(), api_key=None)
+fedml.api.cluster_list(cluster_names=(), api_key=None)
 ```
 
 **Arguments**
@@ -186,7 +186,7 @@ cluster_list(cluster_names=(), api_key=None)
 Check whether cluster with provided name exists on your account on FedML AI Nexus platform.
 
 ```py
-cluster_exists(cluster_name, api_key=None)
+fedml.api.cluster_exists(cluster_name, api_key=None)
 ```
 
 **Arguments**
@@ -201,7 +201,7 @@ Boolean indicating whether the cluster with provided name exists or not.
 Check status of your cluster on FedML AI Nexus platform.
 
 ```py
-cluster_status(cluster_name, api_key=None)
+fedml.api.cluster_status(cluster_name, api_key=None)
 ```
 
 **Arguments**
@@ -217,7 +217,7 @@ Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelLis
 Start selected clusters on FedML AI Nexus platform.
 
 ```py
-cluster_start(cluster_names: Tuple[str], api_key=None)
+fedml.api.cluster_start(cluster_names: Tuple[str], api_key=None)
 ```
 
 **Arguments**
@@ -233,7 +233,7 @@ Boolean indicating whether the clusters were successfully started or not.
 Start all existing clusters on your account on FedML AI Nexus platform.
 
 ```py
-cluster_startall(api_key=None)
+fedml.api.cluster_startall(api_key=None)
 ```
 
 **Arguments**
@@ -248,7 +248,7 @@ Boolean indicating whether the clusters were successfully started or not.
 Stop selected clusters on FedML AI Nexus platform.
 
 ```py
-cluster_stop(cluster_names: Tuple[str], api_key=None)
+fedml.api.cluster_stop(cluster_names: Tuple[str], api_key=None)
 ```
 
 **Arguments**
@@ -264,7 +264,7 @@ Boolean indicating whether the clusters were successfully stopped or not.
 Stop all existing clusters on your account on FedML AI Nexus platform.
 
 ```py
-cluster_stopall(api_key=None)
+fedml.api.cluster_stopall(api_key=None)
 ```
 
 **Arguments**
@@ -281,7 +281,7 @@ Kill (Tear Down) selected clusters on FedML AI Nexus platform.
 > **_NOTE:_** Note that kill is different from stop. Clusters once killed cannot be restarted.
 
 ```py
-cluster_kill(cluster_names: Tuple[str], api_key=None)
+fedml.api.cluster_kill(cluster_names: Tuple[str], api_key=None)
 ```
 
 **Arguments**
@@ -299,7 +299,7 @@ Kill (Tear Down) all existing clusters on your account on FedML AI Nexus platfor
 > **_NOTE:_** Note that kill is different from stop. Clusters once killed cannot be restarted.
 
 ```py
-cluster_killall(api_key=None)
+fedml.api.cluster_killall(api_key=None)
 ```
 **Arguments**
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
