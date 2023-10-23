@@ -1,9 +1,20 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
+
 # FEDML Launch APIs
 
 Simple launcher apis for running any AI job across multiple public and/or decentralized GPU clouds, offering lower prices without cloud vendor lock-in, the highest GPU availability, training across distributed low-end GPUs, and user-friendly Ops to save time on environment setup.
+
+
+:::tip
+Before using some of the apis that require remote operation (e.g. `fedml.api.launch_job()`), please use one of the following methods to login 
+to FedML MLOps platform first:
+
+(1) CLI: `fedml login $api_key`
+
+(2) API: `fedml.api.fedml_login(api_key=$api_key)`
+:::
 
 
 ### launch_job()
@@ -23,7 +34,7 @@ fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=No
 
 **Returns**  
 `LaunchResult` object with the following attributes:
-- `result_code (int)`: API result code. `0` means success. Full list of result codes can be found [here](./api-result-codes.md).
+- `result_code (int)`: API result code. `0` means success. Full list of result codes can be found [here](#result-codes).
 - `result_msg (str)`: API status message.
 - `run_id (str)`: Run ID of the launched job.
 - `project_id (str)`: Project Id of the launched job. This is default assigned if not specified in your job yaml file
@@ -65,7 +76,7 @@ fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=No
 
 **Returns**  
 `LaunchResult` object with the following attributes:
-- `result_code (int)`: API result code. `0` means success. Full list of result codes can be found [here](./api-result-codes.md).
+- `result_code (int)`: API result code. `0` means success. Full list of result codes can be found [here](#result-codes).
 - `result_msg (str)`: API status message.
 - `run_id (str)`: Run ID of the launched job.
 - `project_id (str)`: Project Id of the launched job.
@@ -209,7 +220,7 @@ fedml.api.cluster_status(cluster_name, api_key=None)
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 
 **Returns**  
-Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelList` can be found [here](#clusterlistclusternames-apikeynone).
+Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelList` can be found [here](#clusterlist).
 
 
 ### `cluster_start()`
@@ -306,3 +317,29 @@ fedml.api.cluster_killall(api_key=None)
 
 **Returns**  
 Boolean indicating whether the clusters were successfully killed or not.
+
+### Result Codes:
+
+| Code | Name                                                            | Message                                 |
+|------|-----------------------------------------------------------------|-----------------------------------------|
+| 0    | LAUNCH_JOB_STATUS_REQUEST_SUCCESS                               | LAUNCH_REQUEST_SUCCESS                  |
+| 1    | RESOURCE_MATCHED_STATUS_MATCHED                                 | MATCHED                                 |
+| 2    | RESOURCE_MATCHED_STATUS_JOB_URL_ERROR                           | ERROR_JOB_URL                           |
+| 3    | RESOURCE_MATCHED_STATUS_INVALID_PARAMS                          | INVALID_PARAMS                          |
+| 4    | RESOURCE_MATCHED_STATUS_BLOCKED                                 | BLOCKED                                 |
+| 5    | RESOURCE_MATCHED_STATUS_QUEUED                                  | QUEUED                                  |
+| 6    | RESOURCE_MATCHED_STATUS_BIND_CREDIT_CARD_FIRST                  | BIND_CREDIT_CARD_FIRST                  |
+| 7    | RESOURCE_MATCHED_STATUS_QUERY_CREDIT_CARD_BINDING_STATUS_FAILED | QUERY_CREDIT_CARD_BINDING_STATUS_FAILED |
+| 8    | RESOURCE_MATCHED_STATUS_NO_RESOURCES                            | NO_RESOURCES                            |
+| 9    | RESOURCE_MATCHED_STATUS_REQUEST_FAILED                          | REQUEST_FAILED                          |
+| 10   | LAUNCH_JOB_STATUS_REQUEST_FAILED                                | LAUNCH_REQUEST_FAILED                   |
+| 11   | LAUNCH_JOB_STATUS_JOB_URL_ERROR                                 | LAUNCH_ERROR_JOB_URL                    |
+| 12   | LAUNCH_JOB_STATUS_JOB_CANCELED                                  | LAUNCH_ERROR_JOB_CANCELED               |
+| 13   | LAUNCH_JOB_STATUS_NO_JOBS                                       | LAUNCH_ERROR_NO_JOBS                    |
+| 14   | RESOURCE_MATCHED_STATUS_QUEUE_CANCELED                          | QUEUE_CANCELED                          |
+| 15   | CLUSTER_CONFIRM_FAILED                                          | CLUSTER_CONFIRM_FAILED                  |
+| 16   | CLUSTER_CREATION_FAILED                                         | CLUSTER_CREATION_FAILED                 |
+| 17   | LAUNCH_JOB_STATUS_INVALID                                       | LAUNCH_JOB_STATUS_INVALID               |
+| 18   | LAUNCH_JOB_STATUS_BLOCKED                                       | LAUNCH_JOB_STATUS_BLOCKED               |
+| 19   | APP_UPDATE_FAILED                                               | APP_UPDATE_FAILED                       |
+
