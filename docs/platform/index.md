@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Overview
 
 
 FEDML®Launch: a universal scheduler for running any AI jobs anywhere at any scale.
