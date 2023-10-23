@@ -4,6 +4,9 @@ sidebar_position: 4
 
 # FEDML Deploy APIs
 
+## API Workflow
+![API Workflow](pic%2FAPIsWorkflow.png)
+
 :::tip
 Before using some of the apis that require remote operation (e.g. `fedml.api.model_push()`), please use one of the following methods to login 
 to FedML MLOps platform first:
