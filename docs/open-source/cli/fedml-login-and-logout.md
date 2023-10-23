@@ -58,7 +58,7 @@ Login as a federated-learning server in FEDML Nexus AI Cloud:
 fedml login -s <API_KEY>
 ```
 
-Login as a compute node (GPU) provider (supplier) in FEDML Nexus AI Cloud:
+Login as the compute node (GPU) provider (supplier) in FEDML Nexus AI Cloud:
 ```
 fedml login -p <API_KEY>
 ```
@@ -70,7 +70,7 @@ fedml login -p <API_KEY>
 Usage: fedml logout [OPTIONS]
 
 Options:
-  -c, --compute_node     Logout from the FedML general compute node.
+  -c, --compute_node  Logout from the FedML general compute node.
   -s, --server        Logout from the the FedML on-premise parameter server (PS).
   -v, --version TEXT  Logout which backend environment version of FedML® Nexus
                       AI Platform. It should be dev, test, or release.
