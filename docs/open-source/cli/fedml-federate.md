@@ -3,30 +3,9 @@ sidebar_position: 9
 ---
 # Federated Learning - fedml federate
 
-## Overview
-```
-Usage: fedml federate build [OPTIONS]
+### `fedml federate build [OPTIONS]`
 
-Options:
-  -s, --server                  build the server package, default is building
-                                client package.
-  -sf, --source_folder TEXT     the source code folder path
-  -ep, --entry_point TEXT       the entry point of the source code
-  -ea, --entry_args TEXT        entry arguments of the entry point program
-  -cf, --config_folder TEXT     the config folder path
-  -df, --dest_folder TEXT       the destination package folder path
-  -ig, --ignore TEXT            the ignore list for copying files, the format
-                                is as follows: *.model,__pycache__,*.data*,
-  -m, --model_name TEXT         model name for training.
-  -mc, --model_cache_path TEXT  model cache path for training.
-  -mi, --input_dim TEXT         input dimensions for training.
-  -mo, --output_dim TEXT        output dimensions for training.
-  -dn, --dataset_name TEXT      dataset name for training.
-  -dt, --dataset_type TEXT      dataset type for training.
-  -dp, --dataset_path TEXT      dataset path for training.
-```
-
-## Options {#options-1}
+#### Options {#options-1}
 
 | Name                          | Default | Description                                                                               |
 |-------------------------------|---------|-------------------------------------------------------------------------------------------|
@@ -49,11 +28,11 @@ At first, you need to define your package properties as follows.
 If you want to ignore some folders or files, you may specify the ignore argument
 or add them to the .gitignore file in the source code folder.
 
-### Required arguments:
+#### Required arguments:
 source code folder, entry file, entry arguments,
 config folder, built destination folder
 
-### Optional arguments:
+#### Optional arguments:
 You may define the model and data arguments using the command arguments as follows.
 ```
 model name, model cache path, model input dimension, model output dimension,
@@ -90,7 +69,7 @@ Your may pass these environment variables as your entry arguments. e.g.,
 ENTRY_ARGS_MODEL_DATA='-m $FEDML_MODEL_NAME -mc $FEDML_MODEL_CACHE_PATH -mi $FEDML_MODEL_INPUT_DIM -mo $FEDML_MODEL_OUTPUT_DIM -dn $FEDML_DATASET_NAME -dt $FEDML_DATASET_TYPE -dp $FEDML_DATASET_PATH'
 ```
 
-## Examples {#example-1}
+#### Examples {#example-1}
 ```
 # Define the federated package properties
 SOURCE_FOLDER=.
