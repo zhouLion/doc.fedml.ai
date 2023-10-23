@@ -16,7 +16,7 @@ to FedML MLOps platform first:
 ### `fedml.api.model_create()`
 Create a model card in local environment.
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_create(name: str, model: str = None, model_config: str = None) -> bool
 ```
@@ -41,7 +41,7 @@ Deploy a model card to one of the following environments:
 (2) GPU cloud node(s) / cluster.  
 (3) On-premise node(s) / cluster.  
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_deploy(name: str, local: bool = False, 
 master_ids: str = None, worker_ids: str = None) -> bool
@@ -71,7 +71,7 @@ it will automatically deploy the model card to GPU cloud node(s) / cluster using
 
 Delete a model card at local environment or a model card at Nexus AI Platform.
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_delete(name: str, local: bool = True) -> bool
 ```
@@ -91,7 +91,7 @@ delete the model card at Nexus AI Platform.
 
 List model card(s) at local environment or Nexus AI Platform.
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_list(name: str = "*", local: bool = True) -> any
 ```
@@ -119,7 +119,7 @@ If you do not plan to use UI to upload the model card, you do not need to use th
 `fedml.api.model_push()` will package and upload the model card directly.
 :::
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_package(name: str) -> str
 ```
@@ -137,7 +137,7 @@ Return the absolute path string of the zip file if the model card is packaged su
 
 Push a local model card or a remote stored model card to Nexus AI Platform.
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_push(name: str, model_storage_url: str = None) -> bool
 ```
@@ -156,7 +156,7 @@ fedml.api.model_push(name: str, model_storage_url: str = None) -> bool
 
 Pull a model card from Nexus AI Platform to local.
 
-**Usage**
+**Example**
 ```py
 fedml.api.model_pull(name: str) -> any
 ```
