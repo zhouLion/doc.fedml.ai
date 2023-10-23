@@ -1,15 +1,13 @@
 ---
 sidebar_position: 2
 ---
-# Build federate packages for the FedML® Nexus AI Platform.
+# Build train packages for the FedML® Nexus AI Platform.
 
 ## Overview
 ```
-Usage: fedml federate build [OPTIONS]
+Usage: fedml train build [OPTIONS]
 
 Options:
-  -s, --server                  build the server package, default is building
-                                client package.
   -sf, --source_folder TEXT     the source code folder path
   -ep, --entry_point TEXT       the entry point of the source code
   -ea, --entry_args TEXT        entry arguments of the entry point program
@@ -30,7 +28,6 @@ Options:
 
 | Name                          | Default | Description                                                                               |
 |-------------------------------|---------|-------------------------------------------------------------------------------------------|
-| `--server` or `-s`            | `false` | build the server package, default is building client package.                             |
 | `--source_folder` or `-sf`    | `false` | the source code folder path                                                               |
 | `--entry_point` or `-ep`      | `false` | the entry point of the source code                                                        |
 | `--entry_args` or `-ea`       | `false` | entry arguments of the entry point program                                                |
@@ -92,7 +89,7 @@ ENTRY_ARGS_MODEL_DATA='-m $FEDML_MODEL_NAME -mc $FEDML_MODEL_CACHE_PATH -mi $FED
 
 ## Examples {#example-1}
 ```
-# Define the federated package properties
+# Define the package properties
 SOURCE_FOLDER=.
 ENTRY_FILE=train.py
 ENTRY_ARGS='--epochs 1'
@@ -107,26 +104,13 @@ DATASET_NAME=mnist
 DATASET_TYPE=csv
 DATASET_PATH=./dataset
 
-# Build the federated client package with the model and data arguments
-fedml federate build -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
-  -cf $CONFIG_FOLDER -df $DEST_FOLDER \
-  -m $MODEL_NAME -mc $MODEL_CACHE -mi $MODEL_INPUT_DIM -mo $MODEL_OUTPUT_DIM \
-  -dn $DATASET_NAME -dt $DATASET_TYPE -dp $DATASET_PATH
+# Build the train package with the model and data arguments
+fedml train build -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
+    -cf $CONFIG_FOLDER -df $DEST_FOLDER \
+    -m $MODEL_NAME -mc $MODEL_CACHE -mi $MODEL_INPUT_DIM -mo $MODEL_OUTPUT_DIM \
+    -dn $DATASET_NAME -dt $DATASET_TYPE -dp $DATASET_PATH
 
-# Build the federated client package without the model and data arguments
-# fedml federate build -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
-#  -cf $CONFIG_FOLDER -df $DEST_FOLDER 
- 
-# Define the federated server package properties
-ENTRY_FILE=torch_server.py
-
-# Build the federated server package with the model and data arguments
-fedml federate build -s -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
-  -cf $CONFIG_FOLDER -df $DEST_FOLDER \
-  -m $MODEL_NAME -mc $MODEL_CACHE -mi $MODEL_INPUT_DIM -mo $MODEL_OUTPUT_DIM \
-  -dn $DATASET_NAME -dt $DATASET_TYPE -dp $DATASET_PATH
-  
-# Build the federated server package without the model and data arguments
-# fedml federate build -s -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
-#  -cf $CONFIG_FOLDER -df $DEST_FOLDER
+# Build the train package without the model and data arguments
+fedml train build -sf $SOURCE_FOLDER -ep $ENTRY_FILE -ea "$ENTRY_ARGS" \
+    -cf $CONFIG_FOLDER -df $DEST_FOLDER
 ```
