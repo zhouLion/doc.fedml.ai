@@ -4,46 +4,41 @@ sidebar_position: 2
 
 # Experimental Tracking APIs
 
-### `fedml.init()`
-```py
-fedml.init(path: str, output: str=None, alias: str=None) -> None
-```
+### `fedml.log()`
+
 **Usage**
+```py
+fedml.log(
+    metrics: dict,
+    step: int = None,
+    customized_step_key: str = None,
+    commit: bool = True) -> None
+```
 
-
-**Arguments**  
-- `path (str)`: Prefs file's path.
-- `output (str=None)`: Output path (by default same as `path` but appending `_resource` to the filename).
-- `alias (str=None)`: An alias to reference it when reading (by default the same as the `path`).
+**Arguments**
+- `metrics (dict)`: A dictionary object for metrics, e.g., {"accuracy": 0.3, "loss": 2.0}.
+- `step (int=None)`: Set the index for current metric. If this value is none, then step will be the current global step counter.
+- `customized_step_key (str=None)`: Specify the customized step key, which must be one of the keys in the metrics dictionary.
+- `commit (bool=True)`: If commit is false, the metrics dictionary will be saved to memory and won't be committed until commit is true.
 
 **Returns**  
 None. 
 
-Creates a resource module (_Python_ file) with the given prefs file that you can import in a _Python_ module to get those prefs without having the prefs file itself.
+log dictionary of metric data to the FedML® Nexus AI Platform.
 
-:::info
-This is explained at [Resources](../resources#how-to-create-a-resource-module) page.
-:::
 
-**Examples**  
-```py title="prefs.prefs"
-#PREFS
-lang='en'
-theme=>
-    background='#199396'
-    font='UbuntuMono'
-```
+**Examples**
 ```py
-import prefs
+    fedml.log({"ACC": 0.1})
+    fedml.log({"acc": 0.11})
+    fedml.log({"acc": 0.2})
+    fedml.log({"acc": 0.3})
+    
+    fedml.log({"acc": 0.31}, step=1)
+    fedml.log({"acc": 0.32, "x_index": 2}, step=2, customized_step_key="x_index")
+    fedml.log({"loss": 0.33}, customized_step_key="x_index", commit=False)
+    fedml.log({"acc": 0.34}, step=4, customized_step_key="x_index", commit=True)
+    
+    fedml.log_metric({"acc": 0.8})
+```
 
-prefs.bundle("prefs.prefs")
-```
-```py title="prefs_resource.py"
-# PREFS resource module
-# Created using PREFS Python library
-# https://patitotective.github.io/PREFS
-# Do not modify this file
-__version__ = '0.3.0'
-CONTENT = {'lang': 'en', 'theme': {'background': '#199396', 'font': 'UbuntuMono'}}
-ALIAS = 'prefs.prefs'
-```
