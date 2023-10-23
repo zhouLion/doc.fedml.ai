@@ -34,6 +34,39 @@ fedml.api.model_create(name: str, model: str = None, model_config: str = None) -
 `bool`
 
 
+### `fedml.api.model_deploy()`
+
+Deploy a model card to one of the following environments:  
+(1) Current machine.  
+(2) GPU cloud node(s) / cluster.  
+(3) On-premise node(s) / cluster.  
+
+**Usage**
+```py
+fedml.api.model_deploy(name: str, local: bool = False, 
+master_ids: str = None, worker_ids: str = None) -> bool
+```
+
+**Arguments**  
+- `name (str)`: Model card name.
+- `local (Optional[bool])`: If `True`, will deploy model card to this current machine. Note that this will only use local
+model card.
+- `master_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the master node(s) id(s) to deploy the model card.
+If you want to deploy to multiple master nodes, use `","` to separate them. e.g. `"master_id1,master_id2"`.
+- `worker_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the worker node(s) id(s) to deploy the model card.
+If you want to deploy to multiple worker nodes, use `","` to separate them. e.g. `"worker_id1,worker_id2"`.
+
+:::tip
+If you do not indicate `master_ids` and `worker_ids`, and `local` is `False`, 
+it will automatically deploy the model card to GPU cloud node(s) / cluster using FedML®Launch.
+:::
+
+**Returns**  
+`True` if the model card is deployed successfully, otherwise `False`.
+
+**Returns Type**  
+`bool`
+
 ### `fedml.api.model_delete()`
 
 Delete a model card at local environment or a model card at Nexus AI Platform.
@@ -138,37 +171,3 @@ Return a `None` if api_key is not indicated or incompatible.
 
 **Returns Type**  
 `any`
-
-
-### `fedml.api.model_deploy()`
-
-Deploy a model card to one of the following environments:  
-(1) Current machine.  
-(2) GPU cloud node(s) / cluster.  
-(3) On-premise node(s) / cluster.  
-
-**Usage**
-```py
-fedml.api.model_deploy(name: str, local: bool = False, 
-master_ids: str = None, worker_ids: str = None) -> bool
-```
-
-**Arguments**  
-- `name (str)`: Model card name.
-- `local (Optional[bool])`: If `True`, will deploy model card to this current machine. Note that this will only use local
-model card.
-- `master_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the master node(s) id(s) to deploy the model card.
-If you want to deploy to multiple master nodes, use `","` to separate them. e.g. `"master_id1,master_id2"`.
-- `worker_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the worker node(s) id(s) to deploy the model card.
-If you want to deploy to multiple worker nodes, use `","` to separate them. e.g. `"worker_id1,worker_id2"`.
-
-:::tip
-If you do not indicate `master_ids` and `worker_ids`, and `local` is `False`, 
-it will automatically deploy the model card to GPU cloud node(s) / cluster using FedML®Launch.
-:::
-
-**Returns**  
-`True` if the model card is deployed successfully, otherwise `False`.
-
-**Returns Type**  
-`bool`
