@@ -220,7 +220,7 @@ fedml.api.cluster_status(cluster_name, api_key=None)
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 
 **Returns**  
-Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelList` can be found [here](#clusterlist).
+Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelList` can be found [here](#fedmlapiclusterlist).
 
 
 ### `fedml.api.cluster_start()`
