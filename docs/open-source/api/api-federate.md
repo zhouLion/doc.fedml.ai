@@ -141,8 +141,9 @@ run the federated learning instance (client or server).
 
 
 **Examples**
+
 The example for the federated learning client:
-```Python
+```py
 import fedml
 from fedml.cross_silo import Client
 
@@ -165,7 +166,7 @@ if __name__ == "__main__":
 ```
 
 The example for the federated learning server:
-```Python
+```py
 import fedml
 from fedml.cross_silo import Server
 
