@@ -42,8 +42,8 @@ fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=No
 
 
 **Example**
-```py
 
+```py
 import fedml
 api_key="YOUR_API_KEY"
 yaml_file = "/home/fedml/train.yaml"
