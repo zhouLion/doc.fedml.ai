@@ -3,7 +3,6 @@ sidebar_position: 7
 ---
 #  Log Management - fedml run logs
 
-
 ### `fedml run logs [OPTIONS]`
 
 Get logs of run from the FedML® Nexus AI Platform.

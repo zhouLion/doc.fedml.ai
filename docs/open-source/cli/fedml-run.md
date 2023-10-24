@@ -5,9 +5,9 @@ sidebar_position: 6
 
 # Runs Management - fedml run
 
-Manage runs on the FedML® Nexus AI Platform
-
 ## FedML Run CLI Overview
+
+Manage runs on the FedML® Nexus AI Platform
 
 ```
 Usage: fedml run [OPTIONS] COMMAND [ARGS]...
