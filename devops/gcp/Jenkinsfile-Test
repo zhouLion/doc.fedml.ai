@@ -67,7 +67,7 @@ pipeline {
       }
       steps {
         container('base') {
-          sh 'podman build --network=host -f ./devops/gcp/test/Dockerfile -t $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST-SNAPSHOT-$BUILD_NUMBER .'
+          sh 'podman build --network=host -f ./devops/Dockerfile -t $REGISTRY_TEST/$DOCKER_NAMESPACE$APP_NAME:$VERSION_TEST-SNAPSHOT-$BUILD_NUMBER .'
         }
       }
     }
