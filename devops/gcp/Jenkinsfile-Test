@@ -25,7 +25,7 @@ pipeline {
         BRANCH_TEST = 'test'
 
         DOCKER_NAMESPACE = ''
-        APP_NAME = 'falcon-admin-web'
+        APP_NAME = 'docs-fedml-ai'
         DEPLOY_NAME = 'docs-fedml-ai'
         GIT_URL = 'https://github.com/FedML-AI/docs.fedml.ai.git'
         SONAR_HOST = ''
