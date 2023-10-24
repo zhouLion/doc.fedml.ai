@@ -5,31 +5,29 @@ sidebar_position: 5
 
 ## FedML Cluster CLI Overview
 
-### `fedml cluster [OPTIONS] COMMAND [ARGS]...`
-
 Manage clusters on FedML® Nexus AI Platform
 
-#### Options
+```
+Usage: fedml cluster [OPTIONS] COMMAND [ARGS]...
 
-| Option          | Description                                                                                                                       |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help      | Show this message and exit                                                                                                        |
-| -k, --api_key   | user api key.                                                                                                                     |
-| -v, --version   | version of FedML® Nexus AI Platform. It should be dev, test or release                                                            |
+  Manage clusters on FedML® Nexus AI Platform
 
+Options:
+  -h, --help          Show this message and exit.
+  -k, --api_key TEXT  user api key.
+  -v, --version TEXT  specify version of FedML® Nexus AI Platform. It should
+                      be dev, test or release
 
-#### Commands
-
-| Option   | Description                                                  |
-|----------|--------------------------------------------------------------|
-| kill     | Kill (tear down) clusters from FedML® Nexus AI Platform.     |
-| killall  | Kill (tear down) ALL clusters from FedML® Nexus AI Platform. |
-| list     | List clusters from FedML® Nexus AI Platform.                 |
-| start    | Start clusters from FedML® Nexus AI Platform.                |
-| startall | Start ALL clusters from FedML® Nexus AI Platform.            |
-| status   | Status of clusters from FedML® Nexus AI Platform.            |
-| stop     | Stop clusters from FedML® Nexus AI Platform.                 |
-| stopall  | Stop ALL clusters from FedML® Nexus AI Platform.             |
+Commands:
+  kill      Kill (tear down) clusters from FedML® Nexus AI Platform
+  killall   Kill (tear down) ALL clusters from FedML® Nexus AI Platform
+  list      List clusters from FedML® Nexus AI Platform
+  start     Start clusters from FedML® Nexus AI Platform
+  startall  Start ALL clusters from FedML® Nexus AI Platform
+  status    Status of clusters from FedML® Nexus AI Platform
+  stop      Stop clusters from FedML® Nexus AI Platform
+  stopall   Stop ALL clusters from FedML® Nexus AI Platform
+```
 
 
 ### `fedml cluster kill [OPTIONS] [CLUSTER_NAMES]...`
