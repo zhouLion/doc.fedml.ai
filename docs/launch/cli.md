@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 ---
 
-# Introduction
+# Command Line Interfaces (CLIs)
 
 Launch
 
