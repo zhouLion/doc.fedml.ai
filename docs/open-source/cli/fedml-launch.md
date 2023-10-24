@@ -82,7 +82,7 @@ You just need to customize the following config items.
 Then you can use the following example CLI to launch the job at the MLOps platform.
 (Replace $YourApiKey with your own account API key from open.fedml.ai)
 
-### Example: Launch job on FedML® Launch platform
+#### Example: Launch job on FedML® Launch platform
  
 
 ```
@@ -123,7 +123,7 @@ For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1716563514434392064
 ```
 
-### Example: Launch job on a cluster on FedML® Launch platform
+#### Example: Launch job on a cluster on FedML® Launch platform
 
 ```
 fedml launch hello_job.yaml -c demo_cluster

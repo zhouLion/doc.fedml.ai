@@ -7,29 +7,28 @@ sidebar_position: 6
 
 ## FedML Run CLI Overview
 
-### `fedml run [OPTIONS] COMMAND [ARGS]...`
-
 Manage runs on the FedML® Nexus AI Platform
 
-#### Options
+```
+Usage: fedml run [OPTIONS] COMMAND [ARGS]...
 
-| Option          | Description                                                                                                                       |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help      | Show this message and exit                                                                                                        |
-| -k, --api_key   | user api key.                                                                                                                     |
-| -v, --version   | version of FedML® Nexus AI Platform. It should be dev, test or release                                                            |
-| -pf, --platform | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+  Manage runs on the FedML® Nexus AI Platform.
 
+Options:
+  -h, --help            Show this message and exit.
+  -k, --api_key TEXT    user api key.
+  -v, --version TEXT    version of FedML® Nexus AI Platform. It should be dev,
+                        test or release
+  -pf, --platform TEXT  The platform name at the FedML® Nexus AI Platform
+                        (options: octopus, parrot, spider, beehive, falcon,
+                        launch, default is falcon).
 
-#### Commands
-
-| Option | Description                                          |
-|--------|------------------------------------------------------|
-| list   | List runs from the FedML® Nexus AI Platform.         |
-| logs   | Get logs of run from the FedML® Nexus AI Platform.   |
-| status | Get status of run from the FedML® Nexus AI Platform. |
-| stop   | Stop a run from the FedML® Nexus AI Platform.        |
-
+Commands:
+  list    List runs from the FedML® Nexus AI Platform.
+  logs    Get logs of run from the FedML® Nexus AI Platform.
+  status  Get status of run from the FedML® Nexus AI Platform.
+  stop    Stop a run from the FedML® Nexus AI Platform.
+```
 
 ### `fedml run list [OPTIONS]`
 
