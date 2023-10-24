@@ -14,7 +14,7 @@ A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Syst
 
 ## Vision Paper for High Scientific Impacts
 
-<span style="color:red">Being visionary to find the correct problems is always the key to impactful research. </span>
+<span>Being visionary to find the correct problems is always the key to impactful research. </span>
 
 [1] [Open Problems and Advances in Federated Learning](https://arxiv.org/abs/1912.04977). FnTML 2021.
 
@@ -23,7 +23,7 @@ A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Syst
 [3] [Federated learning for Internet of Things: : Applications, Challenges, and Opportunities](https://arxiv.org/abs/2111.07494) (Arxiv 2021)
 
 ## System for Large-scale Distributed/Federated Training
-<span style="color:red">Towards communication/computation/memory-efficient, resilient and robust distributed training and inferences via ML+system co-design and real-world implementation.</span>
+<span  >Towards communication/computation/memory-efficient, resilient and robust distributed training and inferences via ML+system co-design and real-world implementation.</span>
 
 [1] [A fundamental tradeoff between computation and communication in distributed computing](https://ieeexplore.ieee.org/abstract/document/8051074) (IEEE Transactions on Information Theory)
 
@@ -48,7 +48,7 @@ A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Syst
 [11] [Communication-aware scheduling of serial tasks for dispersed computing](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Qhe5ua0AAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=Qhe5ua0AAAAJ:eq2jaN3J8jMC) (IEEE/ACM Transactions on Networking)
 
 ## Training Algorithms for FL
-<span style="color:red">Algorithmic innovation to land distributed training and inference on the edge into the real-world system, solving challenges in efficiency, scalability, label deficiency, personalization, fairness, low-latency, straggler mitigation, etc. </span>
+<span  >Algorithmic innovation to land distributed training and inference on the edge into the real-world system, solving challenges in efficiency, scalability, label deficiency, personalization, fairness, low-latency, straggler mitigation, etc. </span>
 
 [1] [Group Knowledge Transfer: Federated Learning of Large CNNs at the Edge](https://arxiv.org/abs/2007.14513) (NeurIPS’20)
 
@@ -83,7 +83,7 @@ A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Syst
 
 ## Security/privacy for FL
 
-<span style="color:red">Privacy-preserving, Attack, and Defense</span>
+<span  >Privacy-preserving, Attack, and Defense</span>
 
 [1] [LightSecAgg: a Lightweight and Versatile Design for Secure Aggregation in Federated Learning](https://arxiv.org/abs/2109.14236) (MLSys’22)
 
@@ -118,7 +118,7 @@ A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Syst
 [16] [Polyshard: Coded sharding achieves linearly scaling efficiency and security simultaneously](https://ieeexplore.ieee.org/abstract/document/9141331) (IEEE Transactions on Information Forensics and Security)
 
 ## AI Applications
-<span style="color:red"> Besides fundamental research in FL, we also target important applications in Natural Language Processing, Computer Vision, Data Mining, and the Internet of Things (IoTs).</span>
+<span  > Besides fundamental research in FL, we also target important applications in Natural Language Processing, Computer Vision, Data Mining, and the Internet of Things (IoTs).</span>
 
 [1] [FedNLP: Benchmarking Federated Learning Methods for Natural Language Processing Tasks](https://arxiv.org/pdf/2104.08815.pdf) NAACL 2022
 

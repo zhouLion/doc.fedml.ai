@@ -11,4 +11,4 @@ In other words, FedML supports both federated learning for data silos and distri
 - **FedML MLOps**: FedML's machine learning operation pipeline for AI running anywhere at any scale.
 - **Model Serving**: we focus on providing a better user experience for edge AI.
 
-<img src="./../_static/image/mission.png" alt="parrot" style="width:100%;"/>
+<img src="./../_static/image/mission.png" alt="parrot"/>

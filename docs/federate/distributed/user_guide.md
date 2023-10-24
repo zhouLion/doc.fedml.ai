@@ -1,5 +1,5 @@
 # FedML Cheetah User Guide
 
-<img src="./../_static/image/cheetah.jpeg" alt="cheetah" style="width:650px;"/>
+<img src="./../_static/image/cheetah.jpeg" alt="cheetah" />
 
 Coming soon

@@ -35,7 +35,7 @@ train_args:
 ``` 
 The reference experimental result: [https://app.wandb.ai/automl/fedml/runs/ybv29kak](https://app.wandb.ai/automl/fedml/runs/ybv29kak)
 
-<img src="./../../_static/image/result_mnist_lr.png" alt="MNIST + Logistic Regressio" style="width:100%;"/>
+<img src="./../../_static/image/result_mnist_lr.png" alt="MNIST + Logistic Regressio"  />
 
 
 ### **Shakespeare (LEAF) + RNN**
@@ -62,7 +62,7 @@ train_args:
 
 The experimental result refers to：[https://app.wandb.ai/automl/fedml/runs/2al5q5mi](https://app.wandb.ai/automl/fedml/runs/2al5q5mi)
 
-<img src="./../../_static/image/result_sp_rnn.png" alt="Shakespeare + RNN" style="width:100%;"/>
+<img src="./../../_static/image/result_sp_rnn.png" alt="Shakespeare + RNN"  />
 
 ### **Shakespeare (Google) + RNN**
 ```yaml
@@ -88,7 +88,7 @@ train_args:
 
 The experimental result refers to：[https://wandb.ai/automl/fedml/runs/4btyrt0u](https://wandb.ai/automl/fedml/runs/4btyrt0u)
 
-<img src="./../../_static/image/result_sp_google_rnn.png" alt="Shakespeare + RNN" style="width:100%;"/>
+<img src="./../../_static/image/result_sp_google_rnn.png" alt="Shakespeare + RNN"  />
 
 ### **Federated EMNIST + CNN**
 ```yaml
@@ -114,7 +114,7 @@ train_args:
 
 The experimental result refers to：[https://wandb.ai/automl/fedml/runs/3lv4gmpz](https://wandb.ai/automl/fedml/runs/3lv4gmpz)
 
-<img src="./../../_static/image/result_femnist_cnn.png" alt="Federated EMNIST + CNN" style="width:100%;"/>
+<img src="./../../_static/image/result_femnist_cnn.png" alt="Federated EMNIST + CNN"  />
 
 ### **Fed-CIFAR100 + CNN**
 ```yaml

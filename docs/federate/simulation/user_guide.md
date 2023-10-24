@@ -1,5 +1,5 @@
 # FedML Parrot User Guide
-<img src="./../_static/image/parrot.jpeg" alt="parrot" style="width:650px;"/>
+<img src="./../_static/image/parrot.jpeg" alt="parrot"   />
 
 FedML Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
 Compared to other simulators, FedML Parrot brings additional values as follows:
@@ -11,7 +11,7 @@ Compared to other simulators, FedML Parrot brings additional values as follows:
 
 In the simulation environment, FedML Parrot assumes that you have the infrastructure as shown in the following figure. You can run your experiments in your laptop or the cluster. 
 
-<img src="./../_static/image/multi-gpu-topo.png" alt="drawing" style="width:650px;"/>
+<img src="./../_static/image/multi-gpu-topo.png" alt="drawing"   />
 
 ## Outline
 - Installation
@@ -31,7 +31,7 @@ For more installation methods, please follow instructions at [installing FedML](
 ## Algorithm Reference Implementation
 FedML Parrot supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
 
-<img src="./../_static/image/fedml-topology.png" alt="drawing" style="width:800px;"/>
+<img src="./../_static/image/fedml-topology.png" alt="drawing"   />
 
 
 For more details, please read [Algorithm Reference Implementation](./user_guide/algorithm-reference-implementation.md).

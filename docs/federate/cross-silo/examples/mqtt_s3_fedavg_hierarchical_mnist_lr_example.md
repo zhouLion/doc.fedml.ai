@@ -1,6 +1,6 @@
 # FedML Octopus - Heterogeneous Hierarchical Federated Learning
 
-<img src="./../../_static/image/cross-silo-hi.png" alt="parrot" style="width:100%;"/>
+<img src="./../../_static/image/cross-silo-hi.png" alt="parrot" />
 
 This example illustrates how to do real-world hierarchical cross-silo federated learning with FedML Octopus. Hierarchical architecture allows a silo/client to take adavantage of multiple GPUs on different nodes to further accelerate training process. We use PyTorch's Distributed Data Parallel (DDP) to achieve this goal. 
 

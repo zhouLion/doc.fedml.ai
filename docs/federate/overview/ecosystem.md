@@ -23,7 +23,7 @@ and helps us better understand the inherent
 challenges of this direction. The comprehensive analysis points to intriguing and exciting
 future research aimed at developing FL methods for NLP tasks.
 
-<img src="./../_static/image/fednlp.png" alt="drawing" style="width:50%;"/>
+<img src="./../_static/image/fednlp.png" alt="drawing"/>
 
 
 ## FedGraphNN: A Federated Learning Benchmark System for Graph Neural Networks
@@ -45,7 +45,7 @@ in the FL setting. These results imply that more research efforts are needed
 to unravel the mystery behind federated GNNs. Moreover, our system performance analysis demonstrates that the FedGraphNN system is computationally
 efficient and secure to large-scale graphs datasets. 
 
-<img src="./../_static/image/fedgraphnn.png" alt="drawing" style="width:80%;"/>
+<img src="./../_static/image/fedgraphnn.png" alt="drawing"/>
 
 
 ## FedCV: A Federated Learning Framework for Diverse Computer Vision Tasks
@@ -75,7 +75,7 @@ training is challenging given the huge number of parameters and the per-client m
 a library and benchmark, along with comparable evaluation settings, is necessary to make meaningful progress in
 FL on computer vision tasks
 
-<img src="./../_static/image/fedcv.png" alt="drawing" style="width:60%;"/>
+<img src="./../_static/image/fedcv.png" alt="drawing"/>
 
 ## FedIoT: Federated Learning for Internet of Things
 Arxiv: [https://arxiv.org/pdf/2106.07976.pdf](https://arxiv.org/pdf/2106.07976.pdf)

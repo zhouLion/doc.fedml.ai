@@ -1,6 +1,6 @@
 # FedML Octopus User Guide
 
-<img src="./../_static/image/octopus.jpeg" alt="octopus" style="width:650px;"/>
+<img src="./../_static/image/octopus.jpeg" alt="octopus"/>
 
 FedML Octopus is the industrial grade platform of cross-silo federated learning for cross-organization/account training. 
 It provides the federated learning service and edge AI SDK for developers or companies to conduct open collaboration from anywhere at any scale in a secure manner. 
@@ -19,7 +19,7 @@ You can also read [the tutorial](https://doc.fedml.ai/mlops/user_guide.html)  to
 System heterogeneity is one of the key challenges in practical federated learning. All existing open federated learning frameworks do not consider the practical scenario 
 where different data silos may have different numbers of GPUs or even multiple nodes (where each node has multiple GPUs), as shown as the figure below. 
 
-<img src="./../_static/image/cross-silo-hi.png" alt="parrot" style="width:100%;"/>
+<img src="./../_static/image/cross-silo-hi.png" alt="parrot" />
 
 FedML Octopus addresses this challenge by enabling a distributed training paradigm (PyTorch DDP, distributed data parallel) to run inside each data-silo, and further orchestrate different silos with asynchronous or synchronous federated optimization method. 
 As a result, FedML Octopus can support this scenario in a flexible, secure, and efficient manner. FedML MLOps platform also simplifies its real-world deployment.

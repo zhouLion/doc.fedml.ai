@@ -3,10 +3,10 @@
 <table>
 <tr>
 <td valign="center">
-<img src="./../../_static/image/android_running.jpeg" alt="drawing" style="width:300px;"/>
+<img src="./../../_static/image/android_running.jpeg" alt="drawing"  />
 </td>
 <td valign="center">
-<img src="./../../_static/image/edge_devices_overview.png" alt="drawing" style="width:400px;"/>
+<img src="./../../_static/image/edge_devices_overview.png" alt="drawing"  />
 </td>
 </tr>
 </table>
@@ -32,7 +32,7 @@ Python Server: [https://github.com/FedML-AI/FedML/tree/master/python/quick_start
 
 The software architecture design for Android App/SDK is illustrated in the figure below.
 
-<img src="./../../_static/image/FedML-Android-Arch.jpg" alt="drawing" style="width:600px;"/>
+<img src="./../../_static/image/FedML-Android-Arch.jpg" alt="drawing"  />
 
 Next show you the step-by-step user experiment of using FedML Beehive.
 
@@ -52,7 +52,7 @@ Next show you the step-by-step user experiment of using FedML Beehive.
 
 - Clone customized MNN library ([https://github.com/FedML-AI/MNN](https://github.com/FedML-AI/MNN)) into `FedML/android/fedmlsdk/MobileNN/MNN` (shown as below)
 
-<img src="./../../_static/image/MNN_clone_on_MobileNN_folder.png" alt="drawing" style="width:400px;"/>
+<img src="./../../_static/image/MNN_clone_on_MobileNN_folder.png" alt="drawing"  />
 
 - Compile and Build Android NDK layer by clicking "Make Project"
 
@@ -70,7 +70,7 @@ This section guides you through 1) installing Android Apk, 2) binding your Andro
 
 After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://nexus.fedml.ai](https://nexus.fedml.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
 
-<img src="./../../_static/image/beehive-device.png" alt="image-20220427204703095" style="zoom:67%;" />
+<img src="./../../_static/image/beehive-device.png" alt="image-20220427204703095"   />
 
 You can also see the binding devices in **My Edge Devices** list on the web page.
 
@@ -111,7 +111,7 @@ The MNIST dataset folder and the CIFAR-10 dataset folder can be moved to `/sdcar
 
 ### 3.2 Set the Data Path
 
-<img src="./../../_static/image/android_running.jpeg" alt="image-20220428113930309" style="width:350px;margin:0 auto" />
+<img src="./../../_static/image/android_running.jpeg" alt="image-20220428113930309"  />
 
 To set data path on your device, click the top green bar. Set it as the path to the corresponding dataset moved to the Android device (find the folder name starting from ai.fedml).
 

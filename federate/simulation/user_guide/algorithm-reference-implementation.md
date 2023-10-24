@@ -2,7 +2,7 @@
 
 FedML Parrot supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
 
-<img src="./../../_static/image/fedml-topology.png" alt="drawing" style="width:800px;"/>
+<img src="./../../_static/image/fedml-topology.png" alt="drawing"   />
 
 The API for each algorithm is as simple as follows:
 

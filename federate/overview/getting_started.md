@@ -71,7 +71,7 @@ Other low-level APIs related to security and privacy are also supported. All alg
 
 ### Simplified APIs
 
-<img src="../_static/image/apioverview.jpg" alt="drawing" style="width:60%;"/>
+<img src="../_static/image/apioverview.jpg" alt="drawing"  />
 
 Our philosophy behind our API design is to reduce the number of APIs to as few as possible while simultaneously maintaining the flexibility.
 The figure above shows the high-level overview of the API design. Essentially, each module has a package entry point (e.g., fedml.cross-silo) to manage related APIs, and FedML users can wrapper these APIs to meet their specific demands.
@@ -254,7 +254,7 @@ Detailed guidance for the MLOps can be found at [FedML MLOps User Guide](./../ml
 
 ### Ecosystem
 
-<img src="../_static/image/started_ecosystem.png" alt="drawing" style="width:100%;"/>
+<img src="../_static/image/started_ecosystem.png" alt="drawing"  />
 
 The FedML Ecosystem facilitates federated learning research and productization in diverse application domains. With the foundational support from FedML Core Framework, it supports FedNLP (Natural Language Processing), FedCV (Computer Vision), FedGraphNN (Graph Neural Networks), and FedIoT (Internet of Things).
 Please read this guidance for details: [https://doc.fedml.ai/starter/ecosystem.html](https://doc.fedml.ai/starter/ecosystem.html)
@@ -284,7 +284,7 @@ Please check out [the full publication list](./../resources/papers.md) for detai
 
 - Join our Slack:
 
-<img src="./../_static/image/slack_logo.png" alt="drawing" style="width:200px;"/>
+<img src="./../_static/image/slack_logo.png" alt="drawing"  />
 
 [https://join.slack.com/t/fedml/shared_invite/zt-havwx1ee-a1xfOUrATNfc9DFqU~r34w](https://join.slack.com/t/fedml/shared_invite/zt-havwx1ee-a1xfOUrATNfc9DFqU~r34w)
 
@@ -292,7 +292,7 @@ Please check out [the full publication list](./../resources/papers.md) for detai
 
 Our WeChat group has 200+ members. Please add the following account and ask for an invitation to join.
 
-<img src="./../_static/image/wechat.jpeg" alt="drawing" style="width:200px;"/>
+<img src="./../_static/image/wechat.jpeg" alt="drawing"  />
 
 ### FAQ
 
