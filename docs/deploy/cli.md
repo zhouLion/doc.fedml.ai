@@ -70,9 +70,9 @@ fedml model deploy -n my_model
 ```
 
 ##### Deploy a model card to on-premise device.
-login your device to Nexus AI Platform.
+Bind your device to Nexus AI Platform.
 ```
-fedml login $api_key
+fedml device bind $api_key
 ```
 Check your device id on Nexus AI Platform (In our example is 32314).  
 ![OnPremDevices.jpg](pics%2FgetDeviceId.jpg)

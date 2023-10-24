@@ -1,11 +1,14 @@
 ---
 sidebar_position: 7
 ---
-# Deploy to On-Premise Servers
-### Deploy the model to On-Premise Devices
-login your device to Nexus AI Platform.
+# Deploy to On-Premise
+
+If you have your own on-premise servers, you can deploy the model cards to your own servers.
+
+### Bind your devices to Nexus AI Platform
+Bind your device to Nexus AI Platform.
 ```
-fedml login $api_key
+fedml device bind $api_key
 ```
 Check your device id on Nexus AI Platform (In our example is 32314).  
 ![OnPremDevices.jpg](pics%2FgetDeviceId.jpg)

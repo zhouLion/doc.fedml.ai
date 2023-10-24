@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Deploy to Cloud
 
-`fedml model deploy` is a high level CLI to deploy a model card to the cloud.  
+`fedml model deploy` is a high level CLI to deploy a model card to FedML GPU cloud marketplace.  
 
 If you do not use `--local` option for local deploy, nor specify the `---master_ids`
 and `--worker_ids` options for on-premise deploy, the model card will be deployed to the cloud. 
