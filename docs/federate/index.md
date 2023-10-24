@@ -2,40 +2,99 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# What is FEDML Federate?
 
-# Concepts
+# Overview
 
-Projects
+![FedML Platform!](_static/image/mission.png 'FedML Platform')
 
-- Launch and Run Projects Anywhere
+FedML®Federate is part of FEDML® Nexus AI cloud. It is a machine learning platform that enables zero-code, lightweight, cross-platform, and provably secure federated learning and analytics. It enables machine learning from decentralized data at various users/silos/edge nodes without requiring data centralization to the cloud, thus providing maximum privacy and efficiency. It consists of a lightweight and cross-platform Edge AI SDK that is deployable over edge GPUs, smartphones, and IoT devices. Furthermore, it also provides a user-friendly MLOps platform to simplify decentralized machine learning and real-world deployment. FedML supports vertical solutions across a broad range of industries (healthcare, finance, insurance, smart cities, IoT, etc.) and applications (computer vision, natural language processing, data mining, and time-series forecasting). Its core technology is backed by many years of cutting-edge research by its co-founders.
 
-1. Run projects in FEDML Cloud
-2. Run projects in on-premises cluster
+# Outline
 
-- Experimental Tracking:
+This documentation is organized in the following sections:
 
-1. Metrics, Logs, System Monitoring, Artifacts (Models and datasets)
-2. Model versioning
-3. GitHub Source Code
-4. Visualization in Tables and Figures (\*)
-5. LLM Tracking (input, output, prompt management\*)
-6. Multi-step Workflow
+[Get Started](./overview/getting_started.md)
 
-- GPU Cluster Management
+[Installing FedML](./overview/installation.md)
 
-1. Building a GPU Cluster with On-premises Machines (\*)
-2. Team Member Collaboration
-3. Queue Priority (\*)
-4. Elastic Training (\*)
-5. Fault Tolerance (\*)
-6. Failover (\*)
+[Mission](./overview/mission.md)
 
-- Train As a Service
+[Overview](./overview/overview.md)
 
-1. Zero-code LLM Fine-tuning
-2. United LLM for distributed GPUs
-3. Federated LLM for distributed data
-4. Distributed Training on low-end GPUs
+[Ecosystem](./overview/ecosystem.md)
 
-- On-premise Deployment
+[OSS Code](./overview/oss_code_architecture.md)
+
+[MLOps Video](./overview/mlops_video.md)
+
+[Q&A](./overview/faq.md)
+
+.. toctree::
+:maxdepth: 3
+:name: FedML MLOps
+:caption: FedML MLOps - Landing FedML into Reality
+
+starter/mlops_video.rst
+mlops/user_guide.md
+mlops/examples.md
+mlops/faq.md
+mlops/api.md
+
+.. toctree::
+:maxdepth: 3
+:name: FedML Parrot - Simulating the Real World
+:caption: FedML Parrot - Simulating the Real World
+
+simulation/user_guide.md
+simulation/examples.md
+simulation/faq.md
+simulation/api.md
+
+.. toctree::
+:maxdepth: 3
+:name: FedML Octopus
+:caption: FedML Octopus - Simple Connector for Data Silos
+
+cross-silo/user_guide.md
+cross-silo/examples.md
+cross-silo/faq.md
+cross-silo/api.md
+
+.. toctree::
+:maxdepth: 3
+:name: FedML BeeHive
+:caption: FedML BeeHive - Collaborative Learning on Smartphones/IoTs
+
+cross-device/user_guide.md
+cross-device/examples.md
+cross-device/faq.md
+cross-device/api.md
+
+.. toctree::
+:maxdepth: 3
+:name: FedML Cheetah
+:caption: FedML Cheetah - Speedy Training of Large Models
+
+distributed/user_guide.md
+
+.. toctree::
+:maxdepth: 3
+:name: FedML Benchmarks
+:caption: Benchmarks for FedNLP, FedCV, FedGraphNN and FedIoT
+
+benchmark/fedgraphnn.md
+
+.. toctree::
+:maxdepth: 3
+:name: Resource
+:caption: Resources
+
+resources/papers.md
+resources/video.rst
+resources/community
+
+# Careers
+
+FedML is hiring researchers, engineers, product managers, and related interns.
+If you are interested, Please apply at https://fedml.ai/careers

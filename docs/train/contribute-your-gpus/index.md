@@ -1,1 +1,3 @@
-#  Share and Earn When GPUs are Idle
+#  Share your GPUs and Earn
+
+Updating ...
