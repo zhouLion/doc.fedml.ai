@@ -1,8 +1,25 @@
-# Application Ecosystem
+---
+sidebar_position: 4
+---
 
-The FedML Ecosystem facilitates federated learning research and productization in diverse application domains. With the foundational support from FedML Core Framework, it supports FedNLP (Natural Language Processing), FedCV (Computer Vision), FedGraphNN (Graph Neural Networks), and FedIoT (Internet of Things).
+# Pre-built Jobs and Examples
 
-## FedNLP: Benchmarking Federated Learning Methods for Natural Language Processing Tasks
+## Examples
+We provide examples at https://github.com/FedML-AI/FedML/blob/master/python/examples/README.md to cover following use cases:
+
+1. Multiple scenarios: Cross-silo Federated Learning; Cross-device Federated Learning; FL Simulation with Single Process or Distributed Computing.
+
+2. Support any machine learning framework: PyTorch, TensorFlow, JAX with Haiku, and MXNet.
+
+3. Diverse communication backends (MPI, gRPC, PyTorch RPC, MQTT + S3)
+Secure Aggregation (multi-party computation): cross_silo/light_sec_agg_example
+
+## Pre-built Jobs
+The FEDML®Federate Pre-built Job facilitates federated learning research and productization in diverse application domains. With the foundational support from FedML Core Framework, it supports FedNLP (Natural Language Processing), FedCV (Computer Vision), FedGraphNN (Graph Neural Networks), and FedIoT (Internet of Things).
+
+The source code of these pre-built jobs (applications for federated learning) are maintained at https://github.com/FedML-AI/FedML/tree/master/python/app
+
+### FedNLP: Benchmarking Federated Learning Methods for Natural Language Processing Tasks
 Arxiv: [https://arxiv.org/pdf/2104.08815.pdf](https://arxiv.org/pdf/2104.08815.pdf)
 
 Published at NAACL 2022.
@@ -23,10 +40,10 @@ and helps us better understand the inherent
 challenges of this direction. The comprehensive analysis points to intriguing and exciting
 future research aimed at developing FL methods for NLP tasks.
 
-<img src="./../_static/image/fednlp.png" alt="drawing"/>
+![./_static/image/fednlp.png](./_static/image/fednlp.png)
 
 
-## FedGraphNN: A Federated Learning Benchmark System for Graph Neural Networks
+### FedGraphNN: A Federated Learning Benchmark System for Graph Neural Networks
 Arxiv: [https://arxiv.org/pdf/2111.11066.pdf](https://arxiv.org/pdf/2111.11066.pdf)
 
 Published at ICLR'21-DPML and MLSys'21-GNNSys workshops
@@ -45,10 +62,12 @@ in the FL setting. These results imply that more research efforts are needed
 to unravel the mystery behind federated GNNs. Moreover, our system performance analysis demonstrates that the FedGraphNN system is computationally
 efficient and secure to large-scale graphs datasets. 
 
-<img src="./../_static/image/fedgraphnn.png" alt="drawing"/>
+<img src="./_static/image/fedgraphnn.png" alt="drawing"/>
+
+![FedGraphNN](./_static/image/fedgraphnn.png)
 
 
-## FedCV: A Federated Learning Framework for Diverse Computer Vision Tasks
+### FedCV: A Federated Learning Framework for Diverse Computer Vision Tasks
 Arxiv: [https://arxiv.org/pdf/2104.07145.pdf](https://arxiv.org/pdf/2104.07145.pdf)
 
 Published at FL-AAAI’2022
@@ -75,9 +94,9 @@ training is challenging given the huge number of parameters and the per-client m
 a library and benchmark, along with comparable evaluation settings, is necessary to make meaningful progress in
 FL on computer vision tasks
 
-<img src="./../_static/image/fedcv.png" alt="drawing"/>
+![FedCV](./_static/image/fedcv.png)
 
-## FedIoT: Federated Learning for Internet of Things
+### FedIoT: Federated Learning for Internet of Things
 Arxiv: [https://arxiv.org/pdf/2106.07976.pdf](https://arxiv.org/pdf/2106.07976.pdf)
 
 Published at ACM Sensys’21
@@ -94,4 +113,4 @@ FedDetect algorithm in both model and system performance. Our results demonstrat
 of federated learning in detecting a wider range of attack types occurred at multiple devices. The
 system efficiency analysis indicates that both end-to-end training time and memory cost are affordable and promising for resource-constrained IoT devices.
 
-![./../_static/image/fediot.png](./../_static/image/fediot.png)
+![./_static/image/fediot.png](./_static/image/fediot.png)

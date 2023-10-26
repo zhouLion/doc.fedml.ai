@@ -1,15 +1,9 @@
 # Federated Learning on Android Smartphones
 
-<table>
-<tr>
-<td valign="center">
-<img src="./../../_static/image/android_running.jpeg" alt="drawing"/>
-</td>
-<td valign="center">
-<img src="./../../_static/image/edge_devices_overview.png" alt="drawing" />
-</td>
-</tr>
-</table>
+![./_static/image/android_running.jpeg](./../_static/image/android_running.jpeg)
+
+![./_static/image/edge_devices_overview.png](./../_static/image/edge_devices_overview.png)
+
 
 This example will guide you to work through how to run federated learning on Android smartphones.
 The code for this example locates in the following two paths:
@@ -52,15 +46,15 @@ Next show you the step-by-step user experiment of using FedML Beehive.
 
 - Clone customized MNN library ([https://github.com/FedML-AI/MNN](https://github.com/FedML-AI/MNN)) into `FedML/android/fedmlsdk/MobileNN/MNN` (shown as below)
 
-<img src="./../../_static/image/MNN_clone_on_MobileNN_folder.png" alt="drawing"/>
+![./../_static/image/MNN_clone_on_MobileNN_folder.png](./../_static/image/MNN_clone_on_MobileNN_folder.png)
 
 - Compile and Build Android NDK layer by clicking "Make Project"
 
-<img src="./../../_static/image/android_ndk_build.png" alt="drawing" />
+![./../_static/image/android_ndk_build.png](./../_static/image/android_ndk_build.png)
 
 - Start to run if your Android smartphone is connected properly.
 
-<img src="./../../_static/image/launch_android_app.png" alt="drawing" />
+![./../../_static/image/launch_android_app.png](./../_static/image/launch_android_app.png)
 
 ## 2. Bind FedML Android App to FedML MLOps Platform
 
@@ -70,7 +64,7 @@ This section guides you through 1) installing Android Apk, 2) binding your Andro
 
 After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://nexus.fedml.ai](https://nexus.fedml.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
 
-<img src="./../../_static/image/beehive-device.png" alt="image-20220427204703095"/>
+![./../_static/image/launch_android_app.png](./../_static/image/beehive-device.png)
 
 You can also see the binding devices in **My Edge Devices** list on the web page.
 
@@ -111,7 +105,7 @@ The MNIST dataset folder and the CIFAR-10 dataset folder can be moved to `/sdcar
 
 ### 3.2 Set the Data Path
 
-<img src="./../../_static/image/android_running.jpeg" alt="image-20220428113930309" />
+![./../_static/image/android_running.jpeg](./../_static/image/android_running.jpeg)
 
 To set data path on your device, click the top green bar. Set it as the path to the corresponding dataset moved to the Android device (find the folder name starting from ai.fedml).
 
@@ -140,7 +134,7 @@ After correct execution, you can find the package `server-package.zip` under `ml
 
 3. Then you need to upload the `server-package.zip` package to FedML MLOps Platform as the UI shown below.
 
-<img src="./../../_static/image/android-pkg-uploading.png" />
+![./../_static/image/android-pkg-uploading.png](./../_static/image/android-pkg-uploading.png)
 
 - Launch the training by using FedML MLOps ([https://nexus.fedml.ai](https://nexus.fedml.ai))
 
@@ -183,7 +177,7 @@ or
 ```
 
 You can find your account ID at FedML Open Platform (https://nexus.fedml.ai):
-![account](./../../_static/image/beehive_account.png)
+![account](./../_static/image/beehive_account.png)
 
 4. initial FedML Android SDK on your `Application` class.
 

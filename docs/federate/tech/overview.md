@@ -8,7 +8,7 @@ FedML's core technology is backed by years of cutting-edge research represented 
 
 ## 1. Industrial-level System Design and Optimization
 
-<img src="./_static/image/fedml.png" alt="parrot"/>
+![overview architecture](./../_static/image/fedml.png)
 
 - FedML Open Source Library ([https://github.com/FedML-AI](https://github.com/FedML-AI))
 - FedML Edge SDK and MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai))
@@ -18,8 +18,8 @@ MLOps platform further reuses the source code of the open-source library (the gr
 
 ## 2. User-friendly MLOps platform to simplify collaboration and real-world deployment
 
-<img src="./_static/image/mlops0.png" alt="parrot" />
-<img src="./_static/image/mlops_ui2.png" alt="parrot" />
+![MLOps Overview](./../_static/image/mlops0.png)
+![MLOps Overview](./../_static/image/mlops_ui2.png)
 
 ## 3. A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Systems, Applications, and Visionary Impacts
 

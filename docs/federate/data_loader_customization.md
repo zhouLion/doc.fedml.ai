@@ -1,5 +1,8 @@
+---
+sidebar_position: 6
+---
 
-# Customizing Data Loader for Your Own Dataset
+# Customize Your Own Dataloader
 
 Datasets are loaded by data_loader.py (located under [https://github.com/FedML-AI/FedML/tree/master/python/fedml/data](https://github.com/FedML-AI/FedML/tree/master/python/fedml/data). When your customized data loader follows the following data structure, FedML Parrot framework can process it without any source code change.
 

@@ -1,4 +1,8 @@
-# FedML MLOps CLI and API Reference
+---
+sidebar_position: 99
+---
+
+# Command Line Interfaces (CLIs)
 
 ## Overview
 ```shell

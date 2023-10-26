@@ -1,4 +1,4 @@
-# FedML BeeHive API Reference
+# API Reference
 
 FedML BeeHive (the cross-device FL) currently support `ServerMNN` related APIs, which operates a FL server compatible with our FedML Android SDK/APP.
 ```python

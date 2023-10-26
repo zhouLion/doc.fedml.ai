@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Installing FedML
 
 FedML supports Linux, MacOS, Windows, and Android.
@@ -323,15 +327,15 @@ helm install --set image.repository="fedml/fedml-edge-client-server-light" --set
 
 ## Guidance for Windows Users
 
-Please follow instructions at [Windows Installation](./install/windows.md)
+Please follow instructions at [Windows Installation](./windows.md)
 
 ## Guidance for Raspberry Pi Users 
 
-Please follow instructions at [Raspberry Pi Installation](./install/rpi.md)
+Please follow instructions at [Raspberry Pi Installation](./rpi.md)
 
 ## Guidance for NVIDIA Jetson Devices
 
-Please follow instructions at [NVIDIA Jetson Device Installation](./install/jetson.md)
+Please follow instructions at [NVIDIA Jetson Device Installation](./jetson.md)
 
 ## Testing if the installation succeeded
 If the installation is successful, you will not see any issue when run `import fedml`.
