@@ -60,6 +60,8 @@ bootstrap: config/bootstrap.sh
 `entry_point` is the path to the entry point file of the model.  
 `bootstrap` is the path to the script for installing dependencies.  
 
+More configurable options in the config yaml file can be found at [YAML Configuration](yaml_ref.md) .
+
 ### Create a Bootstrap Script
 `bootstrap.sh` is the shell script for installing dependencies.
 ```bash
