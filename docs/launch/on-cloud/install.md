@@ -4,7 +4,6 @@ sidebar_position: 1
 
 # Launch on Cloud
 
-
 ## 1. Set up the fedml library
 Install Python library for interacting with FedML® Launch APIs.
 
@@ -55,6 +54,9 @@ computing:
   maximum_cost_per_hour: $1.75
   resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://nexus.fedml.ai/accelerator_resource_type
 ```
+
+=======
+For more details and properties about the job yaml file, please refer to [job yaml file](../yaml).
 
 :::tip Tip
 Directory structure of `hello_world` example
@@ -151,11 +153,3 @@ This is the quickest, one-click way to go to your run UI.
 The Run UI offers a lot of information about your run including Metrics, Logs, Hardware Monitoring, Model, Artifacts, as shown in the image below:
 
 ![Run UI](static/image/run_ui.png)
-
-
-
-
-
-
-
-

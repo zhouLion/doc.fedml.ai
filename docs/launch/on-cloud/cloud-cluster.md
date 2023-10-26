@@ -54,6 +54,7 @@ computing:
   maximum_cost_per_hour: $1.75
   resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://nexus.fedml.ai/accelerator_resource_type
 ```
+For more details and properties about the job yaml file, please refer to [job yaml file](../yaml).
 
 :::tip Tip
 Directory structure of `hello_world` example
