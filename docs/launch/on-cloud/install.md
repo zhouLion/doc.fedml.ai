@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Launch on Cloud
+# Launch on Real-time Matching Cloud GPUs (Uber Mode)
 
 ## 1. Set up the fedml library
 Install Python library for interacting with FedML® Launch APIs.
@@ -11,7 +11,7 @@ Install Python library for interacting with FedML® Launch APIs.
 pip install fedml
 ```
 
-## 2. Create job.yaml file
+## 2. Create `job.yaml` file
 Before launch any job, at first, you need to define your job properties in the job yaml file, e.g. workspace, job, bootstrap, etc.
 
 :::tip Tip
