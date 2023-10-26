@@ -8,7 +8,6 @@ sidebar_position: 8
 
 Simple launcher apis for running any AI job across multiple public and/or decentralized GPU clouds, offering lower prices without cloud vendor lock-in, the highest GPU availability, training across distributed low-end GPUs, and user-friendly Ops to save time on environment setup.
 
-=======
 #### Example Usage
 
 ```python
