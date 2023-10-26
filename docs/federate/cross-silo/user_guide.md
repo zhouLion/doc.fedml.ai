@@ -49,7 +49,7 @@ fedml build -t client -sf $SOURCE -ep $ENTRY -cf $CONFIG -df $DEST
 
 Usage: fedml build [OPTIONS]
 
-  Commands for open.fedml.ai MLOps platform
+  Commands for nexus.fedml.ai MLOps platform
 
 Options:
   -t, --type TEXT            client or server? (value: client; server)

@@ -93,5 +93,5 @@ train_args:
   weight_decay: 0.001
 ```
 
-For more details, please check these [examples](./examples.md).
+For more details, please check these [examples](./examples/examples.md).
 
