@@ -298,7 +298,7 @@ If you want to scale up or scal down the pods to your desired count, you may run
 ## Installation with Helm Charts
 
 Also, you may use the helm charts to deploy your fedml client and server to target Kubernetes cluster.
-You just need to run the following commands with your user id at the open.fedml.ai.
+You just need to run the following commands with your user id at the nexus.fedml.ai.
 ```
 kubectl create namespace fedml
 helm install --set image.repository="fedml/fedml-edge-client-server-light" --set env.fedmlAccountId="$YourUserId" --set env.role="client" fedml-client-deployment ./fedml-client-deployment-latest.tgz

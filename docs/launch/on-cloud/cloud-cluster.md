@@ -95,7 +95,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 Do you want to launch the job with the above matched GPU resource? [y/N]:
 ```
 
@@ -106,7 +106,7 @@ Once resources are confirmed, it will then create a cluster out of these matched
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048
@@ -137,7 +137,7 @@ The url link to FedML® AI Nexus Platform for your run is printed in the output 
 
 ```bash
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048
