@@ -36,7 +36,7 @@ For more installation methods, please refer to [installing FedML](./../open-sour
 ### A Quick Overview of the Code Architecture
 
 In general, FedML source code architecture follows the paper which won the [Best Paper Award at NeurIPS 2020 (FL workshop)](https://chaoyanghe.com/wp-content/uploads/2021/02/NeurIPS-SpicyFL-2020-Baidu-best-paper-award-He-v2.pdf). Its original idea is presented at the live [video](https://www.youtube.com/watch?v=93SETZGZMyI) and
-[white paper](https://arxiv.org/abs/2007.13518) by FedML co-founder Dr. [Chaoyang He](https://chaoyanghe.com).
+[white paper](https://arxiv.org/abs/2007.13518) by FedML co-founder Dr. [Aiden Chaoyang He](https://chaoyanghe.com).
 
 ![FedML Code Architecture](./_static/image/fedml.png)
 
@@ -101,7 +101,7 @@ You will get the following output:
 ...
 ```
 
-You can also customize the hyper-parameters with `fedml_config.yaml`. Check out [this tutorial for a one-line example](https://doc.fedml.ai/simulation/examples/sp_fedavg_mnist_lr_example.html) for details.
+You can also customize the hyper-parameters with `fedml_config.yaml`. Check out [this tutorial for a one-line example](./simulation/examples/sp_fedavg_mnist_lr_example.md) for details.
 
 For flexibility, one-line API can also be expanded into five lines of APIs. To illustrate this, let's switch to FedML Octopus (cross-silo federated learning) as example (Source code: [https://github.com/FedML-AI/FedML/tree/master/python/examples/cross_silo/mqtt_s3_fedavg_mnist_lr_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/cross_silo/mqtt_s3_fedavg_mnist_lr_example)).
 
@@ -191,12 +191,14 @@ Now let's run some examples to get a sense of how FedML simplifies federated lea
 
 Simulation with a Single Process (Standalone):
 
-- [sp_fedavg_mnist_lr_example](./../simulation/examples/sp_fedavg_mnist_lr_example.md):
+
+
+- [sp_fedavg_mnist_lr_example](./simulation/examples/sp_fedavg_mnist_lr_example.md):
   Simulating FL using a single process in your personal laptop or server. This is helpful for researchers hoping to try a quick algorithmic idea in small synthetic datasets (MNIST, shakespeare, etc.) and small models (ResNet-18, Logistic Regression, etc.).
 
 Simulation with Message Passing Interface (MPI):
 
-- [mpi_torch_fedavg_mnist_lr_example](./../simulation/examples/mpi_torch_fedavg_mnist_lr_example.md):
+- [mpi_torch_fedavg_mnist_lr_example](./simulation/examples/mpi_torch_fedavg_mnist_lr_example.md):
   MPI-based Federated Learning for cross-GPU/CPU servers.
 
 Simulation with NCCL-based MPI (the fastest training):
@@ -207,16 +209,16 @@ Simulation with NCCL-based MPI (the fastest training):
 
 Horizontal Federated Learning:
 
-- [mqtt_s3_fedavg_mnist_lr_example](./../cross-silo/examples/mqtt_s3_fedavg_mnist_lr_example.md): an example to illustrate running horizontal federated learning in data silos (hospitals, banks, etc.)
+- [mqtt_s3_fedavg_mnist_lr_example](./cross-silo/example/mqtt_s3_fedavg_mnist_lr_example.md): an example to illustrate running horizontal federated learning in data silos (hospitals, banks, etc.)
 
 Hierarchical Federated Learning:
 
-- [hierarchical_fedavg_mnist_lr_example](./../cross-silo/examples/hierarchical_fedavg_mnist_lr_example.md): an example to illustrate running hierarchical federated learning in data silos (hospitals, banks, etc.).
+- [mqtt_s3_fedavg_hierarchical_mnist_lr_example](./cross-silo/example/mqtt_s3_fedavg_hierarchical_mnist_lr_example.md): an example to illustrate running hierarchical federated learning in data silos (hospitals, banks, etc.).
   Here `hierarchical` implies that each FL Client (data silo) has multiple GPUs that can run local distributed training with PyTorch DDP, and the FL server then aggregates globally from the results received from all FL Clients.
 
 #### **FedML Beehive Examples**
 
-- [Federated Learning on Android Smartphones](./../cross-device/examples/mqtt_s3_fedavg_mnist_lr_example.md)
+- [Federated Learning on Android Smartphones](./cross-device/tutorial.md)
 
 ## **MLOps User Guide**
 
@@ -236,7 +238,7 @@ The above figure shows the workflow, which is handled by a web UI that avoids us
 
 3-Minute Introduction: [https://www.youtube.com/watch?v=E1k05jd1Tyw](https://www.youtube.com/watch?v=E1k05jd1Tyw)
 
-Detailed guidance for the MLOps can be found at [FedML MLOps User Guide](./../mlops/user_guide.md).
+Detailed guidance for the MLOps can be found at [FEDML Nexus AI User Guide](./cross-silo/user_guide.md).
 
 ## **More Resources**
 
@@ -256,7 +258,7 @@ Detailed guidance for the MLOps can be found at [FedML MLOps User Guide](./../ml
 ![Ecosystem](./_static/image/started_ecosystem.png)
 
 The FedML Ecosystem facilitates federated learning research and productization in diverse application domains. With the foundational support from FedML Core Framework, it supports FedNLP (Natural Language Processing), FedCV (Computer Vision), FedGraphNN (Graph Neural Networks), and FedIoT (Internet of Things).
-Please read this guidance for details: [https://doc.fedml.ai/starter/ecosystem.html](https://doc.fedml.ai/starter/ecosystem.html)
+Please read this [guidance](./examples.md) for details
 
 ### Publication
 
@@ -269,37 +271,13 @@ FedML’s core technology is backed by years of cutting-edge research represente
 5. AI Applications
    A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Systems, Applications, and Visionary Impacts
 
-Please check out [the full publication list](./../resources/papers.md) for details.
+Please check out [the full publication list](./tech/papers.md) for details.
 
 ### Invited Talks (Videos)
 
 - [Trustworthy and Scalable Federated Learning](https://www.youtube.com/watch?v=U3BiuWjhdaU). Federated Learning One World Seminar (FLOW). By Salman Avestimehr
 
-- [Distributed ML for Federated Learning feat](https://www.youtube.com/watch?v=AY7pCYTC8pQ). Chaoyang He. Stanford MLSys Seminar. By Chaoyang He
+- [Distributed ML for Federated Learning feat](https://www.youtube.com/watch?v=AY7pCYTC8pQ). Aiden Chaoyang He. Stanford MLSys Seminar. By Aiden Chaoyang He
 
-- [Contributed Talk for FedML Library](https://www.youtube.com/watch?v=93SETZGZMyI). Best Paper Award at NeurIPS 2020 Federated Learning Workshop. By Chaoyang He
+- [Contributed Talk for FedML Library](https://www.youtube.com/watch?v=93SETZGZMyI). Best Paper Award at NeurIPS 2020 Federated Learning Workshop. By Aiden Chaoyang He
 
-### Join the Community
-
-- Join our Slack:
-
-
-![Slack](./_static/image/slack_logo.png)
-
-[https://join.slack.com/t/fedml/shared_invite/zt-havwx1ee-a1xfOUrATNfc9DFqU~r34w](https://join.slack.com/t/fedml/shared_invite/zt-havwx1ee-a1xfOUrATNfc9DFqU~r34w)
-
-- Join our WeChat Group:
-
-Our WeChat group has 200+ members. Please add the following account and ask for an invitation to join.
-
-![WeChat](./_static/image/wechat.jpeg)
-
-### FAQ
-
-We organize the frequently asked questions at [https://github.com/FedML-AI/FedML/discussions](https://github.com/FedML-AI/FedML/discussions).
-Please feel free to ask questions there. We are happy to discuss supporting your special requests.
-
-### Join Our Team
-
-FedML is hiring researchers, engineers, product managers, and related interns.
-If you are interested, please apply at [https://fedml.ai/careers](https://fedml.ai/careers).

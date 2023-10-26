@@ -1,39 +1,7 @@
-========================
-Video
-========================
+# Invited Talks
 
-- Trustworthy and Scalable Federated Learning. Federated Learning One World Seminar (FLOW). By Salman Avestimehr
+- [Trustworthy and Scalable Federated Learning](https://www.youtube.com/watch?v=U3BiuWjhdaU). Federated Learning One World Seminar (FLOW). By Salman Avestimehr
 
-.. raw:: html
+- [Distributed ML for Federated Learning feat](https://www.youtube.com/watch?v=AY7pCYTC8pQ). Aiden Chaoyang He. Stanford MLSys Seminar. By Aiden Chaoyang He
 
-
-    <iframe id="player" type="text/html" width="800" height="540"
-      src="https://www.youtube.com/embed/U3BiuWjhdaU"
-      frameborder=0
-      'allowfullscreen'
-      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
-
-
-
-
-- Distributed ML for Federated Learning feat. Chaoyang He. Stanford MLSys Seminar. By Chaoyang He
-
-.. raw:: html
-
-    <iframe id="player" type="text/html" width="800" height="540"
-      src="https://www.youtube.com/embed/AY7pCYTC8pQ"
-      frameborder="0"
-      allowfullscreen
-      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
-
-
-
-- Contributed Talk for FedML Library. Best Paper Award at NeurIPS 2020 Federated Learning Workshop. By Chaoyang He
-
-.. raw:: html
-
-    <iframe id="player" type="text/html" width="800" height="540"
-      src="https://www.youtube.com/embed/93SETZGZMyI"
-      frameborder="0"
-      allowfullscreen
-      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+- [Contributed Talk for FedML Library](https://www.youtube.com/watch?v=93SETZGZMyI). Best Paper Award at NeurIPS 2020 Federated Learning Workshop. By Aiden Chaoyang He

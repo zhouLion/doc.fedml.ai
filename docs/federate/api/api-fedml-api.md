@@ -1,4 +1,8 @@
-# FedML APIs (high-level) 
+---
+sidebar_position: 2
+---
+
+# FedML APIs (High-level) 
 
 FedML-API is built based on [FedML-Core](api-core.md).
 With the help of FedML-core, new algorithms in distributed version can be easily implemented by adopting the worker-oriented programming interface, 

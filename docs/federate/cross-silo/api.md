@@ -1,4 +1,8 @@
-# FedML Octopus API Reference
+---
+sidebar_position: 4
+---
+
+# Cross-silo FL API Reference
 
 The philosophy of out API design is to reduce the number of APIs as much as possible while simultaneously maintaining the flexibility.
 
