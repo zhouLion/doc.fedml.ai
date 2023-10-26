@@ -200,44 +200,44 @@ const config = {
           height: '40px',
         },
         links: [
+          // {
+          //   title: 'Product',
+          //   items: [
+          //     {
+          //       label: 'Demo',
+          //       href: 'https://fedml.ai',
+          //     },
+          //     {
+          //       label: 'Developer Portal',
+          //       href: 'https://fedml.ai',
+          //     },
+          //   ],
+          // },
           {
-            title: 'Product',
+            // title: 'Company',
             items: [
-              {
-                label: 'Demo',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Developer Portal',
-                href: 'https://fedml.ai',
-              },
+              // {
+              //   label: 'About Us',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Join Us',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Privacy Policy',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Contact Us',
+              //   href: 'https://fedml.ai',
+              // },
             ],
           },
-          {
-            title: 'Company',
-            items: [
-              {
-                label: 'About Us',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Join Us',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Contact Us',
-                href: 'https://fedml.ai',
-              },
-            ],
-          },
-          {
-            title: 'Resources',
-            items: [...resources],
-          },
+          // {
+          //   title: 'Resources',
+          //   items: [...resources],
+          // },
         ],
         copyright: 'Copyright © FEDML since 2023. All rights reserved.',
       },
