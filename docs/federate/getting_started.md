@@ -61,7 +61,7 @@ Other low-level APIs related to security and privacy are also supported. All alg
 
 **serve**: Model serving, tailored for edge inference
 
-**mlops**: APIs related to machine learning operation platform (open.fedml.ai)
+**mlops**: APIs related to machine learning operation platform (nexus.fedml.ai)
 
 **centralized**: Some centralized trainer code examples for benchmarking purposes.
 
@@ -181,7 +181,7 @@ comm_args:
   #customized_training_s3_config: {'CN_S3_SAK': 'your s3 aws_secret_access_key', 'CN_REGION_NAME': 'your s3 region name', 'CN_S3_AKI': 'your s3 aws_access_key_id', 'BUCKET_NAME': 'your s3 bucket name'}
 
 tracking_args:
-  # When running on MLOps platform(open.fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
+  # When running on MLOps platform(nexus.fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
   enable_wandb: false
 ```
 

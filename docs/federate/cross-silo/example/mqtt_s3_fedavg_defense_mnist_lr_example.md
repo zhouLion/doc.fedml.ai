@@ -126,7 +126,7 @@ comm_args:
   grpc_ipconfig_path: ./config/grpc_ipconfig.csv
 
 tracking_args:
-   # When running on MLOps platform(open.fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
+   # When running on MLOps platform(nexus.fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
   enable_wandb: false
   wandb_key: ee0b5f53d949c84cee7decbe7a629e63fb2f8408
   wandb_project: fedml
@@ -279,8 +279,8 @@ if __name__ == "__main__":
 ```
 
 
-## A Better User-experience with FedML MLOps (open.fedml.ai)
-To reduce the difficulty and complexity of these CLI commands. We recommend you to use our MLOps (open.fedml.ai).
+## A Better User-experience with FedML MLOps (nexus.fedml.ai)
+To reduce the difficulty and complexity of these CLI commands. We recommend you to use our MLOps (nexus.fedml.ai).
 FedML MLOps provides:
 - Install Client Agent and Login
 - Inviting Collaborators and group management

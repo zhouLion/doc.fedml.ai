@@ -5,7 +5,7 @@ sidebar_position: 4
 
 ### `fedml launch [OPTIONS] YAML_FILE`
 
-Launch jobs on the FedML® Launch platform (open.fedml.ai).
+Launch jobs on the FedML® Launch platform (nexus.fedml.ai).
 
 #### Options
 
@@ -80,7 +80,7 @@ You just need to customize the following config items.
 3. `bootstrap`, It is the bootstrap shell command which will be executed before running entry commands.
 
 Then you can use the following example CLI to launch the job at the MLOps platform.
-(Replace $YourApiKey with your own account API key from open.fedml.ai)
+(Replace $YourApiKey with your own account API key from nexus.fedml.ai)
 
 #### Example: Launch job on FedML® Launch platform
  
@@ -105,7 +105,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://open.fedml.ai/launch/confirm-start-job?projectId=1692900612607447040&projectName=default-project&jobId=1716563514434392064
+https://nexus.fedml.ai/launch/confirm-start-job?projectId=1692900612607447040&projectName=default-project&jobId=1716563514434392064
 
 Are you sure to launch it? [y/N]:
 
@@ -126,7 +126,7 @@ Your launch result is as follows:
 +-------------------+---------------------+--------------+---------------------+------------------+------+
 
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716563514434392064
+https://nexus.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716563514434392064
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1716563514434392064
@@ -152,7 +152,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://open.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
+https://nexus.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
 Your run result is as follows:
@@ -163,7 +163,7 @@ Your run result is as follows:
 +--------------+---------------------+---------+---------------------+------------------+------+
 
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
+https://nexus.fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1716580465432989696
