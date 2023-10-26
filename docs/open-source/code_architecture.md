@@ -5,7 +5,7 @@ sidebar_position: 3
 # Open Source Code Architecture
 
 In general, FedML source code architecture follows the paper which won the [Best Paper Award at NeurIPS 2020 (FL workshop)](https://chaoyanghe.com/wp-content/uploads/2021/02/NeurIPS-SpicyFL-2020-Baidu-best-paper-award-He-v2.pdf). Its original idea is presented at the live [video](https://www.youtube.com/watch?v=93SETZGZMyI) and 
-[white paper](https://arxiv.org/abs/2007.13518) by FedML co-founder Dr. [Chaoyang He](https://chaoyanghe.com). 
+[white paper](https://arxiv.org/abs/2007.13518) by FedML co-founder Dr. [Aiden Chaoyang He](https://chaoyanghe.com). 
 
 ![FedML Code Architecture](./../federate/_static/image/fedml.png)
 

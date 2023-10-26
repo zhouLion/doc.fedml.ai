@@ -1,4 +1,8 @@
-# FedML MLOps User Guide
+---
+sidebar_position: 2
+---
+
+# Tutorial on FEDML Nexus AI Platform
 
 Video Tutorial:
 https://www.youtube.com/embed/Xgm0XEaMlVQ
@@ -12,7 +16,7 @@ https://www.youtube.com/embed/Xgm0XEaMlVQ
 - Invite Collaborators, Create a Group and a Project
 - Start Run (Training) via Automated Deployment and Scaling
 - Experimental Tracking via Simplified Project Management
-- FedML OTA(Over-the-Air) upgrade mechanism
+- FedML OTA (Over-the-Air) upgrade mechanism
 
 ### How Does FedML MLOps Platform Work?
 
@@ -236,7 +240,7 @@ Now you are ready to start the training. Enjoy! We provide the following experim
 
   Also, you may review your edge client logs via the command 'fedml logs' in your edge client device, and you may review your edge server logs via the command 'fedml logs -s' in your edge server device.
 
-## 6. FedML OTA(Over-the-Air) upgrade mechanism
+## 6. FedML OTA (Over-the-Air) upgrade mechanism
 
 The OTA process is a useful feature of FedML because it ensures that all agents in a run group are using the same version of the platform. This helps to avoid compatibility issues and ensures that everyone is working with the same set of features and bug fixes.
 

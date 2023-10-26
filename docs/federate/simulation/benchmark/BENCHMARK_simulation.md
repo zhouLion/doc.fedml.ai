@@ -35,8 +35,8 @@ train_args:
 ``` 
 The reference experimental result: [https://app.wandb.ai/automl/fedml/runs/ybv29kak](https://app.wandb.ai/automl/fedml/runs/ybv29kak)
 
-<img src="./../../_static/image/result_mnist_lr.png" alt="MNIST + Logistic Regressio"  />
-
+<!-- <img src="./../../_static/image/result_mnist_lr.png" alt="MNIST + Logistic Regressio"  /> -->
+![result](../../_static/image/result_mnist_lr.png)
 
 ### **Shakespeare (LEAF) + RNN**
 ```yaml
