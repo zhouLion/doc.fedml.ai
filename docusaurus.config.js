@@ -161,6 +161,12 @@ const config = {
             label: 'Federate',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'community',
+            position: 'left',
+            label: 'Join the Community',
+          },
+          {
             label: 'Resources',
             type: 'dropdown',
             items: [...resources],

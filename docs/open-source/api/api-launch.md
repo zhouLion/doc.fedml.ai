@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # FEDML Launch APIs
 
+## Launch APIs
+
 Simple launcher apis for running any AI job across multiple public and/or decentralized GPU clouds, offering lower prices without cloud vendor lock-in, the highest GPU availability, training across distributed low-end GPUs, and user-friendly Ops to save time on environment setup.
 
 
@@ -92,10 +94,12 @@ login_ret = fedml.api.fedml_login(api_key)
 if login_ret == 0:
     launch_result = fedml.api.launch_job_on_cluster(yaml_file, cluster="my_cluster")
     if launch_result.result_code == 0:
-        print("Job launched successfully")
+        print("Job launched successfully on cluster")
     else:
-        print("Failed to launch job")
+        print("Failed to launch job on cluster")
 ```
+
+## Run APIs
 
 ### `fedml.api.run_stop()`
 
@@ -155,11 +159,13 @@ Tuple of `FedMLRunModelList` and `status (str)` denoting status of the run.
 Fetches logs of run from FedML AI Nexus platform.
 
 ```py
-fedml.api.run_logs(run_id, page_num, page_size, need_all_logs=False, platform="falcon", api_key=None)
+fedml.api.run_logs(run_id, page_num=1, page_size=10, need_all_logs=False, platform="falcon", api_key=None)
 ```
 
 **Arguments**
 - `run_id (str)`: Id of the run to fetch logs of. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
+- `page_num (int)`: Page number of logs to fetch. Defaults to 1.
+- `page_size (int)`: Page size of logs to fetch. Defaults to 10.
 - `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 
@@ -171,6 +177,7 @@ fedml.api.run_logs(run_id, page_num, page_size, need_all_logs=False, platform="f
 - `log_line_lise (List[str])`: Full List of log lines.
 - `run_logs (FedMLRunLogModelList)`: Object with attributes like `log_lines`, `log_full_url` and `log_devices` etc.
 
+## Cluster APIs
 
 ### `fedml.api.cluster_list()`
 
@@ -318,7 +325,7 @@ fedml.api.cluster_killall(api_key=None)
 **Returns**  
 Boolean indicating whether the clusters were successfully killed or not.
 
-### Result Codes:
+## Result Codes:
 
 | Code | Name                                                            | Message                                 |
 |------|-----------------------------------------------------------------|-----------------------------------------|
