@@ -138,9 +138,12 @@ fedml launch job.yaml -c <cluster_name>
 For our example, the command and respective output would be as follows:
 
 ```bash
+fedml launch job.yaml -c hello-world
+```
 
 
-
+# 6. Run concurrent jobs on cluster.
+You can run as many consequent jobs as you like on your cluster now. It will queue the jobs and by default run in the order of submission.
 
 
 
