@@ -92,7 +92,7 @@ fedml launch hello_job.yaml
 > **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
 
 
-After the launch CLI is executed, the output is as follows. Here you may open the job url to confirm and actually start the job.
+After the launch CLI is executed, you will get the following output prompting for confirmation of resources:
 
 ```
 Submitting your job to FedML® Launch platform: 100%|████████████████████████████████████████████████████████████████████████████████████████| 6.07k/6.07k [00:01<00:00, 4.94kB/s]
@@ -106,6 +106,15 @@ Searched and matched the following GPU resource for your job:
 
 You can also view the matched GPU resource with Web UI at:
 https://open.fedml.ai/launch/confirm-start-job?projectId=1692900612607447040&projectName=default-project&jobId=1716563514434392064
+
+Are you sure to launch it? [y/N]:
+
+```
+
+You can either confirm through terminal or may even open the run url to confirm.
+Once resources are confirmed, it will then run your job and you will get the following output:
+
+```
 
 Are you sure to launch it? [y/N]: y
 

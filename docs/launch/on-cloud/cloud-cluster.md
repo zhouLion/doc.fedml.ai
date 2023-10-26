@@ -2,8 +2,7 @@
 sidebar_position: 1
 ---
 
-# Launch on Cloud
-
+# Launch on Cloud Cluster
 
 ## 1. Set up the fedml library
 Install Python library for interacting with FedML® Launch APIs.
@@ -69,23 +68,23 @@ tree -l
 :::
 
 
-## 3. Launch a job
-Launch a job to the GPU Cloud.
-
-```bash
-fedml launch /path/to/job.yaml
-```
-
+## 3. Launch a job on a cluster cloud
+Launch a job to the GPU Cloud Cluster.
 
 > **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML® AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
 
+```bash
+fedml launch /path/to/job.yaml -c cluster my_cluster
+```
 
-After the launch CLI is executed, you will get the following output prompting for confirmation of resources: 
+> **_NOTE:_** If a cluster with the specified name does not exist, a new one will be created for you (provided the required resources are both available and matched for your request). 
+> Once the cluster is established, the resources will remain locked in for this cluster till you tear the cluster down and will be utilized for any subsequent tasks initiated under the same cluster name.
 
+
+After the launch CLI is executed, you will get the following output prompting for confirmation of resources:
 
 ```
-❯ fedml launch job.yaml -v
-Submitting your job to FedML® Nexus AI Platform: 100%|█████████████████████████████| 2.92k/2.92k [00:00<00:00, 16.7kB/s]
+Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 4.87kB/s]
 
 Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
@@ -95,24 +94,21 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://open.fedml.ai/launch/confirm-start-job?projectId=1717259066058870784&projectName=my-project&jobId=1717260771043446784
+https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 Do you want to launch the job with the above matched GPU resource? [y/N]:
 ```
 
 You can either confirm through terminal or may even open the run url to confirm.
-Once resources are confirmed, it will then run your job, and you will get the following output:
+Once resources are confirmed, it will then create a cluster out of these matched resources, run your job, and you will get the following output:
 
 ```
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
-Launching the job with the above matched GPU resource.
-Failed to list run with response.status_code = 200, response.content: b'{"message":"Succeeded to process request","code":"SUCCESS","data":null}'
-
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717259066058870784&runId=1717260771043446784
+https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
-fedml run logs -rid 1717260771043446784
+fedml run logs -rid 1717307383354626048
 ```
 
 ## 4. Realtime status of your run
@@ -140,18 +136,53 @@ The url link to FedML® AI Nexus Platform for your run is printed in the output 
 
 ```bash
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717259066058870784&runId=1717260771043446784
+https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
-fedml run logs -rid 1717260771043446784
+fedml run logs -rid 1717307383354626048
 ```
+
 This is the quickest, one-click way to go to your run UI.
 :::
+
 
 The Run UI offers a lot of information about your run including Metrics, Logs, Hardware Monitoring, Model, Artifacts, as shown in the image below:
 
 ![Run UI](static/image/run_ui.png)
 
+# 6. Run concurrent jobs on cluster.
+
+You can run as many consequent jobs as you like on your cluster now. It will queue the jobs and by default run in the order of submission.
+
+```bash
+❯ fedml launch job_1.yaml -v dev -c hello_world_cluster
+Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 17.4kB/s]
+
+You can track your run details at this URL:
+https://open-dev.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
+
+For querying the realtime status of your run, please run the following command.
+fedml run logs -rid 1717314053350756352 -v dev
+```
+
+```bash
+❯ fedml launch job_2.yaml -v dev -c hello_world_cluster
+Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 11.8kB/s]
+
+You can track your run details at this URL:
+https://open-dev.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096
+
+For querying the realtime status of your run, please run the following command.
+fedml run logs -rid 1717314101526532096 -v dev
+```
+
+###### Jobs are queued in the order of submission but can also be preempted using the up and down arrows. 
+![Cluster_queue](static/image/cluster_queue.png)
+
+
+:::tip Tip
+The Run Name on the Cluster page links straight to the Run UI which gives you detailed info on Run Metrics, Logs, Hardware Monitoring, Model, Artifacts, etc.
+:::
 
 
 
