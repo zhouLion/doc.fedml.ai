@@ -1,4 +1,9 @@
-# FedML APIs (core) 
+---
+sidebar_position: 2
+---
+
+
+# FedML APIs (Core) 
 FedML-core separates the communication and the model training into two core components. 
 The first is the communication protocol component (labeled as distributed in the figure). 
 It is responsible for low-level communication among different works in the network. The communication backend is based on MPI (message passing interface, https://pypi.org/project/mpi4py/). 

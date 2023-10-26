@@ -11,7 +11,7 @@ FEDML Federate Simulation is also called Parrot, named after the beloved pet whi
 Compared to other simulators, FedML Parrot brings additional values as follows:
 1. <b>mitigating the gap between research and engineering</b>: before convincing your ML infrastructure team to do non-trivial algorithmic and system upgrades, you can use FedML Parrot to demonstrate the benefits of newly developed federated learning algorithms or applying FL to your existing ML applications. FedML Parrot can smoothly transplant your simulation code to real-world deployment with our MLOps platform (open.fedml.ai). This has been demonstrated by real business use cases served by FedML Inc.
 
-2. <b>simplifying your research</b>: ML researchers can  try quick algorithmic ideas without handling tedious engineering. For example, Dr. Chaoyang He. has published 30+ FL-related publications using the FedML framework in just 2-3 years.
+2. <b>simplifying your research</b>: ML researchers can  try quick algorithmic ideas without handling tedious engineering. For example, Dr. Aiden Chaoyang He. has published 30+ FL-related publications using the FedML framework in just 2-3 years.
 
 3. <b>teaching with tangible live demo</b>: professors can use FedML Parrot to teach students the FL algorithmic skeleton without needing large-scale GPU resources. If you are a professor, please don't hesitate to use FedML.
 
