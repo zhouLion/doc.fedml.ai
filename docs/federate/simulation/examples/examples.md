@@ -1,4 +1,8 @@
-# FedML Parrot Examples
+---
+sidebar_position: 3
+---
+
+# Simulation Examples
 
 ## Simulation with a Single Process (Standalone)
 
@@ -9,6 +13,5 @@
 - [mpi_torch_fedavg_mnist_lr_example](./examples/mpi_torch_fedavg_mnist_lr_example.md): 
   MPI-based Federated Learning for cross-GPU/CPU servers.
   
-
-## Simulation with NCCL-based MPI (the fastest training)
-- If your cross-GPU bandwidth is high (e.g., InfiniBand, NVLink, EFA, etc.), we suggest using this NCCL-based MPI FL simulator to accelerate your development. 
+**More examples** can be found at: 
+https://github.com/FedML-AI/FedML/blob/master/python/examples/README.md

@@ -1,7 +1,13 @@
-# FedML Parrot User Guide
-<img src="./../_static/image/parrot.jpeg" alt="parrot"   />
+---
+sidebar_position: 1
+---
 
-FedML Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
+
+# Simulation Overview
+
+![./../_static/image/parrot.jpeg](./../_static/image/parrot.jpeg)
+
+FEDML Federate Simulation is also called Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
 Compared to other simulators, FedML Parrot brings additional values as follows:
 1. <b>mitigating the gap between research and engineering</b>: before convincing your ML infrastructure team to do non-trivial algorithmic and system upgrades, you can use FedML Parrot to demonstrate the benefits of newly developed federated learning algorithms or applying FL to your existing ML applications. FedML Parrot can smoothly transplant your simulation code to real-world deployment with our MLOps platform (open.fedml.ai). This has been demonstrated by real business use cases served by FedML Inc.
 
@@ -11,7 +17,7 @@ Compared to other simulators, FedML Parrot brings additional values as follows:
 
 In the simulation environment, FedML Parrot assumes that you have the infrastructure as shown in the following figure. You can run your experiments in your laptop or the cluster. 
 
-<img src="./../_static/image/multi-gpu-topo.png" alt="drawing"   />
+![./../_static/image/multi-gpu-topo.png](./../_static/image/multi-gpu-topo.png)
 
 ## Outline
 - Installation
@@ -26,15 +32,14 @@ In the simulation environment, FedML Parrot assumes that you have the infrastruc
 ```
 pip install fedml
 ```
-For more installation methods, please follow instructions at [installing FedML](./../../starter/installation.md).
+For more installation methods, please follow instructions at [installing FedML](./../../open-source/installation/installation.md).
 
 ## Algorithm Reference Implementation
-FedML Parrot supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
+FedML®Federate Simulation supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
 
-<img src="./../_static/image/fedml-topology.png" alt="drawing"   />
+![./../_static/image/fedml-topology.png](./../_static/image/fedml-topology.png)
 
-
-For more details, please read [Algorithm Reference Implementation](./user_guide/algorithm-reference-implementation.md).
+For more details, please read [Algorithm Reference Implementation](./api.md).
 
 
 ## Datasets and Models
@@ -56,10 +61,10 @@ Shakespeare dataset is built from the collective works of William Shakespeare.
 - **[Stack Overflow](https://github.com/FedML-AI/FedML/tree/master/data/stackoverflow)**:
 Stack Overflow dataset originally hosted by Kaggle consists of questions and answers from the website Stack Overflow. This dataset is used to perform two tasks: tag prediction via logistic regression and next word prediction. 
 
-For a comprehensive dataset and model list, please visit [Datasets and Models](./user_guide/datasets-and-models.md).
+For a comprehensive dataset and model list, please visit [Datasets and Models](./../datasets-and-models.md).
 
 ## Customizing Data Loader for Your Own Dataset
-You may need to plugin new datasets into FedML framework. Please follow instructions at [Customizing Data Loader for Your Own Dataset](./user_guide/data_loader_customization.md).
+You may need to plugin new datasets into FedML framework. Please follow instructions at [Customizing Data Loader for Your Own Dataset](./../data_loader_customization.md).
 
 
 ## Benchmark
@@ -87,4 +92,4 @@ fedml login userid(or API Key) -c -r edge_simulator
 ``` 
 
 ## Examples
-FedML Parrot provides rich, well-documented examples for you to get started: [FedML Parrot Examples](./examples.md).
+FedML Parrot provides rich, well-documented examples for you to get started: [Simulation Examples](./examples.md).
