@@ -78,10 +78,8 @@ const config = {
           ...defaultSettings,
           routeBasePath: '/',
           sidebarCollapsible: true,
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/edit/main/',
         },
         // blog: {
         //   showReadingTime: true,
@@ -259,14 +257,12 @@ const config = {
           },
         ],
       },
-      // TODO: support algolia for high level document query
-      // algolia: {
-      //   appId: '$algolia_appId',
-      //   apiKey: '$algolia_apiKey',
-      //   indexName: 'docs',
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      // },
+      algolia: {
+        appId: '4Q8VKNSWWC',
+        apiKey: '627564cc17312d65fbd3da0482a0a4d8',
+        indexName: 'fedml_docs',
+        contextualSearch: true,
+      },
     }),
 
   webpack: {
