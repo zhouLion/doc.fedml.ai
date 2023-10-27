@@ -1,4 +1,6 @@
-# FedML Installation on Raspberry Pi
+# Raspberry Pi
+
+A step-by-step installation guide of FedML on Raspberry Pi devices.
 
 ## Run FedML with Docker (Recommended)
 - Pull FedML RPI docker image
