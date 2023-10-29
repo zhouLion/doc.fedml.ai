@@ -258,14 +258,13 @@ const config = {
           },
         ],
       },
-      // TODO: support algolia for high level document query
-      // algolia: {
-      //   appId: '$algolia_appId',
-      //   apiKey: '$algolia_apiKey',
-      //   indexName: 'docs',
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      // },
+      // support algolia for high level document query
+      algolia: {
+        appId: '4Q8VKNSWWC',
+        apiKey: '627564cc17312d65fbd3da0482a0a4d8',
+        indexName: 'fedml_docs',
+        contextualSearch: true,
+      },
     }),
 
   webpack: {
