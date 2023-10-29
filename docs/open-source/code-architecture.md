@@ -47,8 +47,8 @@ sidebar_position: 2
 
 **FEDML Spotlight Projects:**
 
-- `FedML/python/spotlight/UnitedLLM` -- a cross-cloud distributed training framework for large-scale language models (LLMs)
-- `FedML/python/spotlight/FedLLM` -- a federated learning framework for LLMs
+- `FedML/python/spotlight_prj/UnitedLLM` -- a cross-cloud distributed training framework for large-scale language models (LLMs)
+- `FedML/python/spotlight_prj/FedLLM` -- a federated learning framework for LLMs
 
 and more...
 
