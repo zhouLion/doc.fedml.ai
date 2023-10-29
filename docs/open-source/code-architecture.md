@@ -30,11 +30,16 @@ sidebar_position: 2
 
 `fedml/core`  -- core modules shared by all training, deployment, and federated learning frameworks, including features related to communication backend, security/privacy, design pattern, logging, etc.
 
-`fedml/mlops` -- MLOps (Nexus AI) related features \
-`fedml/device` -- GPU placement and management \
-`fedml/data` -- prebuilt data loaders \
-`fedml/model` -- prebuilt models \
-`fedml/ml` -- integrating with many other general machine learning frameworks \
+`fedml/mlops` -- MLOps (Nexus AI) related features
+
+`fedml/device` -- GPU placement and management
+
+`fedml/data` -- prebuilt data loaders
+
+`fedml/model` -- prebuilt models
+
+`fedml/ml` -- integrating with many other general machine learning frameworks
+
 `fedml/utils` -- common utilities
 
 
