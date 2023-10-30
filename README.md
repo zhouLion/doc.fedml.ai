@@ -18,26 +18,11 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 - Visit http://localhost:3000/ to preview the content change
 - GitHub PR (Pull Request) and ask _**Chaoyang**_ or _**Al**_ to review and merge
 
-# Installation
-
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
+# Installation, Build, and Start
 
 ```
 npm install 
 npm run build
 npm run start
 ```
-
+Note: please the above commands are the same as we use in CI/CD. Please make sure you 

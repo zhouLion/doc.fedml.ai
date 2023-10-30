@@ -18,7 +18,7 @@ A detailed workflow is shown as below.
 
 ![image](./../_static/image/MLOps_workflow.png)
 
-You can also read [the tutorial](https://doc.fedml.ai/mlops/user_guide.html)  to see how easy it is to simplify the real-world deployment (including an video tutorial).
+You can also read [the tutorial](https://doc.fedml.ai/federate/cross-silo/user_guide)  to see how easy it is to simplify the real-world deployment (including an video tutorial).
 
 ## Heterogeneous hierarchical federated learning: supporting local AllReduce-based distributed training
 System heterogeneity is one of the key challenges in practical federated learning. All existing open federated learning frameworks do not consider the practical scenario 
