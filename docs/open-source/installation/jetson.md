@@ -31,14 +31,14 @@ pip3 install fedml --no-dependencies
 ```
 
 #### Resolving common issues
-1. pip3 install h5py related error:
+- pip3 install h5py related error:
 ```
 sudo apt-get install subversion
 ln -s /usr/include/locale.h /usr/include/xlocale.h
 sudo apt-get install libhdf5-serial-dev
 ```
 
-2. pip3 install sklearn related error:
+- pip3 install sklearn related error:
 ```
 sudo apt-get install build-essential libatlas-base-dev gfortran
 ```

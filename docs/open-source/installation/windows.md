@@ -3,7 +3,9 @@
 A step-by-step installation guide of FedML on WindowsOS.
 
 
-# The following instruction has been tested for Windows 11 on 64-bit operating system, x64-based processor. Please post issues to our GitHub if you met any issues.
+:::info
+The following instructions have been tested for Windows 11 on 64-bit operating system, x64-based processor. Please post issues to our [GitHub Issue](https://github.com/FedML-AI/FedML/issues) page if you meet any issues.
+:::
 
 - Python Installation on Windows: https://k0nze.dev/posts/how-install-python-on-windows-11/?msclkid=3785d45dce8911ecbae4ea89f38f9f29
 

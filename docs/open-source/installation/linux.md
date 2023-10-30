@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Linux
 
-A step-by-step installation guide of FedML on Linux systems.
+A step-by-step installation guide of FedML on Linux.
 
 ## Ubuntu 
 
-On Ubuntu, run the following commands to install `pip3` and `fedml`.
+On Ubuntu, run the following commands to install `pip3` and `fedml`, and check environment info:
 ```
 sudo apt install python3-pip
 pip3 install fedml
@@ -17,7 +17,7 @@ fedml env
 ```
 
 ## CentOS
-On CentOS, run the following commands to install `pip3` and `fedml`.
+On CentOS, run the following commands to install `pip3` and `fedml`, and check environment info:
 ```
 yum –y install python3-pip
 pip3 install fedml
