@@ -81,15 +81,8 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -265,14 +258,13 @@ const config = {
           },
         ],
       },
-      // TODO: support algolia for high level document query
-      // algolia: {
-      //   appId: '$algolia_appId',
-      //   apiKey: '$algolia_apiKey',
-      //   indexName: 'docs',
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      // },
+      // support algolia for high level document query
+      algolia: {
+        appId: '4Q8VKNSWWC',
+        apiKey: '627564cc17312d65fbd3da0482a0a4d8',
+        indexName: 'fedml_docs',
+        contextualSearch: true,
+      },
     }),
 
   webpack: {
