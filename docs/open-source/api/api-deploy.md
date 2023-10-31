@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # FEDML Deploy APIs
@@ -12,9 +12,9 @@ Before using some of the apis that require remote operation (e.g. `fedml.api.mod
 please use one of the following methods to login 
 to FedML MLOps platform first:
 
-(1) CLI: `fedml login $api_key`
+1. CLI: `fedml login $api_key`
 
-(2) API: `fedml.api.fedml_login(api_key=$api_key)`
+2. API: `fedml.api.fedml_login(api_key=$api_key)`
 :::
 
 ### `fedml.api.model_create()`
@@ -41,9 +41,9 @@ fedml.api.model_create(name: str, model: str = None, model_config: str = None) -
 ### `fedml.api.model_deploy()`
 
 Deploy a model card to one of the following environments:  
-(1) Current machine.  
-(2) GPU cloud node(s) / cluster.  
-(3) On-premise node(s) / cluster.  
+1. Current machine.  
+2. GPU cloud node(s) / cluster.  
+3. On-premise node(s) / cluster.  
 
 **Example**
 ```py
@@ -62,7 +62,7 @@ If you want to deploy to multiple worker nodes, use `","` to separate them. e.g.
 
 :::tip
 If you do not indicate `master_ids` and `worker_ids`, and `local` is `False`, 
-it will automatically deploy the model card to GPU cloud node(s) / cluster using FedML®Launch.
+it will automatically deploy the model card to GPU cloud node(s) / cluster using FedML® Launch.
 :::
 
 **Returns**  

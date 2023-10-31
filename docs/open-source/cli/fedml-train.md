@@ -8,23 +8,21 @@ sidebar_position: 8
 
 | Name                          | Default | Description                                                                               |
 |-------------------------------|---------|-------------------------------------------------------------------------------------------|
-| `--source_folder` or `-sf`    | `false` | the source code folder path                                                               |
-| `--entry_point` or `-ep`      | `false` | the entry point of the source code                                                        |
-| `--entry_args` or `-ea`       | `false` | entry arguments of the entry point program                                                |
-| `--config_folder` or `-cf`    | `false` | the config folder path                                                                    |
-| `--dest_folder` or `-df`      | `false` | the destination package folder path                                                       |
-| `--ignore` or `-ig`           | `false` | the ignore list for copying files, the format is as follows: *.model,__pycache__,*.data*, |
-| `--model_name` or `-m`        | `false` | model name for training.                                                                  |
-| `--model_cache_path` or `-mc` | `false` | model cache path for training.                                                            |
-| `--input_dim` or `-mi`        | `false` | input dimensions for training.                                                            |
-| `--output_dim` or `-mo`       | `false` | output dimensions for training.                                                           |
-| `--dataset_name` or `-dn`     | `false` | dataset name for training.                                                                |
-| `--dataset_type` or `-dt`     | `false` | dataset type for training.                                                                |
-| `--dataset_path` or `-dp`     | `false` | dataset path for training.                                                                |
+| `--source_folder` or `-sf`    | `false` | Source code folder path.                                                               |
+| `--entry_point` or `-ep`      | `false` | Entry point of the source code.                                                        |
+| `--entry_args` or `-ea`       | `false` | Entry arguments of the entry point program.                                                |
+| `--config_folder` or `-cf`    | `false` | Config folder path.                                                                    |
+| `--dest_folder` or `-df`      | `false` | Destination package folder path.                                                       |
+| `--ignore` or `-ig`           | `false` | Ignore list for copying files, the format is as follows: *.model,__pycache__,*.data*. |
+| `--model_name` or `-m`        | `false` | Model name for training.                                                                  |
+| `--model_cache_path` or `-mc` | `false` | Model cache path for training.                                                            |
+| `--input_dim` or `-mi`        | `false` | Input dimensions for training.                                                            |
+| `--output_dim` or `-mo`       | `false` | Output dimensions for training.                                                           |
+| `--dataset_name` or `-dn`     | `false` | Dataset name for training.                                                                |
+| `--dataset_type` or `-dt`     | `false` | Dataset type for training.                                                                |
+| `--dataset_path` or `-dp`     | `false` | Dataset path for training.                                                                |
 
-At first, you need to define your package properties as follows.
-If you want to ignore some folders or files, you may specify the ignore argument
-or add them to the .gitignore file in the source code folder.
+At first, you need to define your package properties as follows. If you want to ignore some folders or files, you may specify the ignore argument or add them to the .gitignore file in the source code folder.
 
 #### Required arguments:
 source code folder, entry file, entry arguments,
@@ -40,15 +38,15 @@ dataset name, dataset type, dataset path.
 Also, you may define the model and data arguments using the file named fedml_config.yaml as follows.
 ```
 fedml_data_args:
-    dataset_name: mnist
-    dataset_path: ./dataset
-    dataset_type: csv
+  dataset_name: mnist
+  dataset_path: ./dataset
+  dataset_type: csv
     
 fedml_model_args:
-    input_dim: '784'
-    model_cache_path: /Users/alexliang/fedml_models
-    model_name: lr
-    output_dim: '10'
+  input_dim: '784'
+  model_cache_path: /Users/alexliang/fedml_models
+  model_name: lr
+  output_dim: '10'
 ```
 
 The above model and data arguments will be mapped to the equivalent environment variables as follows.

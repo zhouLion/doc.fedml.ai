@@ -8,13 +8,13 @@ sidebar_position: 10
 ### `fedml env`
 
 
-Do sanity check of the FEDML library's current running environment information, including versions of the library, OS, CPU/GPU hardwares and network connectivity (HTTPS, S3, MQTT). 
+Do a sanity check of the FEDML library's current running environment information, including versions of the library, OS, CPU/GPU hardwares and network connectivity (HTTPS, S3, MQTT). 
 
 #### Options {#options}
 
 | Name | Default | Description |
 | --- | --- | --- |
-| `--version` or `-v` | `release` | The backend environment of FEDML Nexus AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by FEDML team for internal development. |
+| <nobr>`--version`</nobr> <br/> or `-v` | `release` | The backend environment of FEDML Nexus AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by FEDML team for internal development. |
 
 :::info
 
