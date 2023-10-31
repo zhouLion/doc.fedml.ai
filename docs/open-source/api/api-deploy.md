@@ -48,17 +48,22 @@ Deploy a model card to one of the following environments:
 **Example**
 ```py
 fedml.api.model_deploy(name: str, local: bool = False, 
-master_ids: str = None, worker_ids: str = None) -> bool
+master_ids: str = None, worker_ids: str = None, use_remote: bool = False) -> bool
 ```
 
 **Arguments**  
 - `name (str)`: Model card name.
 - `local (Optional[bool])`: If `True`, will deploy model card to this current machine. Note that this will only use local
 model card.
-- `master_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the master node(s) id(s) to deploy the model card.
-If you want to deploy to multiple master nodes, use `","` to separate them. e.g. `"master_id1,master_id2"`.
-- `worker_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the worker node(s) id(s) to deploy the model card.
-If you want to deploy to multiple worker nodes, use `","` to separate them. e.g. `"worker_id1,worker_id2"`.
+- `master_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the master node(s)
+id(s) to deploy the model card. If you want to deploy to multiple master nodes, use `","` to separate them. 
+e.g. `"master_id1,master_id2"`.
+- `worker_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the worker node(s) 
+id(s) to deploy the model card. If you want to deploy to multiple worker nodes, use `","` to separate them. 
+e.g. `"worker_id1,worker_id2"`.
+- `use_remote (Optional[bool])`: If `True`, then use a remote model card on the Nexus AI Platform. Default is `False`, 
+which means use a local model card, and FedML will push the model card to Nexus AI Platform first, 
+then deploy it. 
 
 :::tip
 If you do not indicate `master_ids` and `worker_ids`, and `local` is `False`, 

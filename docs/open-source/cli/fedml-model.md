@@ -53,13 +53,14 @@ Deploy model to the Local | On-premise | GPU Cloud.
 
 #### Options {#options-1}
 
-| Name                   | Default | Description                                      |
-|------------------------|---------|--------------------------------------------------|
-| `--name` or `-n`       |         | Model Card name.  [required]                     |
-| `--local` or `-l`      |         | Deploy model locally. [isflag]                   |
-| `--master_ids` or `-m` | `None`  | Device Id(s) for on-premise master node(s).      |
-| `--worker_ids` or `-w` | `None`  | Device Id(s) for on-premise worker node(s).      |
-| `--version` or `-v`       | `release` | The backend environment of FEDML Nexus AI Cloud. |
+| Name                   | Default   | Description                                                                                                                     |
+|------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
+| `--name` or `-n`       |           | Model Card name.  [required]                                                                                                    |
+| `--local` or `-l`      |           | Deploy model locally. [is-flag]                                                                                                 |
+| `--master_ids` or `-m` | `None`    | Device Id(s) for on-premise master node(s).                                                                                     |
+| `--worker_ids` or `-w` | `None`    | Device Id(s) for on-premise worker node(s).                                                                                     |
+| `--version` or `-v`    | `release` | The backend environment of FEDML Nexus AI Cloud.                                                                                |
+| `--use_remote` or `-r` | `False`   | Use a remote model card. [is-flag] <br/> If not specify, fedml will first push your local model card to remote, then deploy it. |
 
 #### Examples {#example-1}
 
