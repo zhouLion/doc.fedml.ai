@@ -11,17 +11,15 @@ Launch jobs on the FedML® Launch platform (nexus.fedml.ai).
 
 | Option        | Description                                                                                                                                                 |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help    | Show this message and exit                                                                                                                                  |
-| -c, --cluster | Please provide a cluster name. If a cluster with that name already exists, it will be used; otherwise, a new cluster with the provided name will be created |
-| -k, --api_key | user api key.                                                                                                                                               |
-| -v, --version | version of FedML® Nexus AI Platform. It should be dev, test or release                                                                                      |
+| <nobr>`--help`</nobr> <br/> or `-h` | Show this message and exit.                                                                                                                                  |
+| <nobr>`--cluster`</nobr> <br/> or `-c` | Please provide a cluster name. If a cluster with that name already exists, it will be used; otherwise, a new cluster with the provided name will be created. |
+| <nobr>`--api_key`</nobr> <br/> or `-k` | The user API key.                                                                                                                                               |
+| <nobr>`--version`</nobr> <br/> or `-v` | The version of the FedML® Nexus AI Platform. It should be dev, test or release.                                                                                      |
                                                                                                                                                                                                                                                                                                                     
 
 #### Notes
 
-Before launch any job, at first, you need to define your job properties in the job yaml file, e.g. entry file, config file, command arguments, etc.
-
-The job yaml file is as follows:
+Before launching any job, first, you need to define your job properties in the job yaml file, e.g. entry file, config file, command arguments, etc. The job yaml file is as follows:
 
 ```
 fedml_env:
@@ -71,16 +69,16 @@ server_job: |
 ```
 
 
-You just need to customize the following config items.
+You just need to customize the following config items:
 
-1. `workspace`, It is the local directory where your source code resides.
+1. `workspace`, this is the local directory where your source code resides.
 
-2. `job`, It is the running entry command which will be executed as the job entry point.
+2. `job`, this is the running entry command which will be executed as the job entry point.
 
-3. `bootstrap`, It is the bootstrap shell command which will be executed before running entry commands.
+3. `bootstrap`, this is the bootstrap shell command which will be executed before running entry commands.
 
 Then you can use the following example CLI to launch the job at the MLOps platform.
-(Replace $YourApiKey with your own account API key from nexus.fedml.ai)
+(Replace `$YourApiKey` with your own account API key from nexus.fedml.ai)
 
 #### Example: Launch job on FedML® Launch platform
  
@@ -89,7 +87,9 @@ Then you can use the following example CLI to launch the job at the MLOps platfo
 fedml launch hello_job.yaml
 ```
 
-> **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
+:::info 
+Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
+:::
 
 
 After the launch CLI is executed, you will get the following output prompting for confirmation of resources:
@@ -115,7 +115,6 @@ You can either confirm through terminal or may even open the run url to confirm.
 Once resources are confirmed, it will then run your job and you will get the following output:
 
 ```
-
 Are you sure to launch it? [y/N]: y
 
 Your launch result is as follows:
@@ -139,7 +138,9 @@ fedml launch hello_job.yaml -c demo_cluster
 ```
 
 
-> **_NOTE:_** Note that if a cluster with provided name already exists, it will be used; otherwise, a new cluster with the provided name will be created.
+:::info 
+Note that if a cluster with provided name already exists, it will be used; otherwise, a new cluster with the provided name will be created.
+:::
 
 ```
 Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 3.48k/3.48k [00:00<00:00, 9.34kB/s]
