@@ -6,8 +6,4 @@ sidebar_position: 1
 
 ![deployArch.png](pics%2FdeployArch.png)
 
-FEDML®Deploy provides end-to-end services for scientists / engineers to easily scale their models
-to the Cloud or On-Premise Servers. From model management to model deployment, from endpoint monitoring to
-model refinement, FEDML®Deploy provides open-box apis / clis / ui to bring the models into industrial level production.
-
-
+FEDML®Deploy provides end-to-end services for scientists and engineers to scale their models to the Cloud or On-Premise Servers quickly. From model management to model deployment, endpoint monitoring to model refinement, FEDML®Deploy provides open-box APIs / CLIs / UI to bring the models into industrial-level production.

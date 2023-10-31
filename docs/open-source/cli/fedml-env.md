@@ -43,7 +43,7 @@ Available CPU Memory: 24.8 G / 64.0G
 No GPU devices
 
 ======== Network Connection Checking ========
-The connection to https://open.fedml.ai is OK.
+The connection to https://nexus.fedml.ai is OK.
 
 The connection to S3 Object Storage is OK.
 

@@ -81,13 +81,6 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/edit/main/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -159,6 +152,12 @@ const config = {
             label: 'Federate',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'community',
+            position: 'left',
+            label: 'Join the Community',
+          },
+          {
             label: 'Resources',
             type: 'dropdown',
             items: [...resources],
@@ -192,44 +191,44 @@ const config = {
           height: '40px',
         },
         links: [
+          // {
+          //   title: 'Product',
+          //   items: [
+          //     {
+          //       label: 'Demo',
+          //       href: 'https://fedml.ai',
+          //     },
+          //     {
+          //       label: 'Developer Portal',
+          //       href: 'https://fedml.ai',
+          //     },
+          //   ],
+          // },
           {
-            title: 'Product',
+            // title: 'Company',
             items: [
-              {
-                label: 'Demo',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Developer Portal',
-                href: 'https://fedml.ai',
-              },
+              // {
+              //   label: 'About Us',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Join Us',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Privacy Policy',
+              //   href: 'https://fedml.ai',
+              // },
+              // {
+              //   label: 'Contact Us',
+              //   href: 'https://fedml.ai',
+              // },
             ],
           },
-          {
-            title: 'Company',
-            items: [
-              {
-                label: 'About Us',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Join Us',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://fedml.ai',
-              },
-              {
-                label: 'Contact Us',
-                href: 'https://fedml.ai',
-              },
-            ],
-          },
-          {
-            title: 'Resources',
-            items: [...resources],
-          },
+          // {
+          //   title: 'Resources',
+          //   items: [...resources],
+          // },
         ],
         copyright: 'Copyright © FEDML since 2023. All rights reserved.',
       },
@@ -257,6 +256,7 @@ const config = {
           },
         ],
       },
+      // support algolia for high level document query
       algolia: {
         appId: '4Q8VKNSWWC',
         apiKey: '627564cc17312d65fbd3da0482a0a4d8',

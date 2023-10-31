@@ -12,7 +12,7 @@ where the Job YAML `your_job.yaml` defines the computing resource requirement an
 
 Launch swiftly pairs AI jobs with the most economical GPU resources, auto-provisions, and effortlessly runs the job, eliminating complex environment setup and management. It supports a range of compute-intensive jobs for generative AI and LLMs, such as large-scale training, serverless deployments, and vector DB searches. FEDML Launch also facilitates on-prem cluster management and deployment on private or hybrid clouds.
 
-![Alt text](Flowchart.jpg)
+![Flow Chart for the Launch System](./static/image/Flowchart.jpg)
 
 FEDML Launch works as following consecutive actions:
 
