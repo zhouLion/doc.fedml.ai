@@ -1,27 +1,27 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # FEDML Launch APIs
 
 ## Launch APIs
 
-Simple launcher apis for running any AI job across multiple public and/or decentralized GPU clouds, offering lower prices without cloud vendor lock-in, the highest GPU availability, training across distributed low-end GPUs, and user-friendly Ops to save time on environment setup.
+Simple launcher APIs for running any AI job across multiple public and/or decentralized GPU clouds, offering lower prices without cloud vendor lock-in, the highest GPU availability, training across distributed low-end GPUs, and user-friendly Ops to save time on environment setup.
 
 
 :::tip
 Before using some of the apis that require remote operation (e.g. `fedml.api.launch_job()`), please use one of the following methods to login 
 to FedML MLOps platform first:
 
-(1) CLI: `fedml login $api_key`
+1. CLI: `fedml login $api_key`
 
-(2) API: `fedml.api.fedml_login(api_key=$api_key)`
+2. API: `fedml.api.fedml_login(api_key=$api_key)`
 :::
 
 
 ### `fedml.api.launch_job()`
 
-Launch a job on the FedML AI Nexus platform
+Launch a job on the FedML AI Nexus platform.
 
 ```py
 fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=None, device_edges=None)
@@ -31,8 +31,8 @@ fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=No
 - `yaml_file (str)`: Full path of your job yaml file.
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 - `resource_id (str=None)`: Specific `resource_id` to use. Typically, you won't need to specify a specific `resource_id`. Instead, we will match resources based on your job yaml, and then automatically launch the job using matched resources.
-- `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`
-- `device_edges (List[str]=None): List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`
+- `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
+- `device_edges (List[str]=None)`: List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
 
 **Returns**  
 `LaunchResult` object with the following attributes:
@@ -61,7 +61,7 @@ if login_ret == 0:
 
 ### `fedml.api.launch_job_on_cluster()`
 
-Launch a job on a cluster on the FedML AI Nexus platform
+Launch a job on a cluster on the FedML AI Nexus platform.
 
 ```py
 fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=None, device_server=None, device_edges=None)
@@ -71,9 +71,9 @@ fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=No
 - `yaml_file (str)`: Full path of your job yaml file.
 - `cluster (str)`: Cluster name to use. If a cluster with provided name doesn't exist, one will be created.
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
-- `resource_id (str=None)`: Specific `resource_id` to use. Typically, you won't need to specify a specific `resource_id`. Instead, we will match resources based on your job yaml, and then automatically launch the job using matched resources.
-- `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`
-- `device_edges (List[str]=None): List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`
+- `resource_id (str=None)`: Specific `resource_id` to use. Typically, you won't need to specify a specific `resource_id`. Instead, we will match resources based on your job yaml, and then automatically launch the job using the matched resources.
+- `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
+- `device_edges (List[str]=None)`: List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
 
 
 **Returns**  
@@ -82,7 +82,7 @@ fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=No
 - `result_msg (str)`: API status message.
 - `run_id (str)`: Run ID of the launched job.
 - `project_id (str)`: Project Id of the launched job.
-- `inner_id (str)`: Serving endpoint id of launched job. Only applicable for Deploy / Serve Job tasks, and will be `None` otherwise. 
+- `inner_id (str)`: Serving endpoint id of launched job. Only applicable for Deploy / Serve Job tasks, `None` otherwise. 
 
 
 **Example**
@@ -147,7 +147,7 @@ fedml.api.run_status(run_name, run_id, platform: str = "falcon", api_key: str = 
 **Arguments**
 - `run_name (str)`:Name of the run. This can also be found out from the Runs page on FedML AI Nexus Platform.
 - `run_id (str)`: Id of the run to get status of (Only required if run_name is not provided). Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
+- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 
 **Returns**  
@@ -166,7 +166,7 @@ fedml.api.run_logs(run_id, page_num=1, page_size=10, need_all_logs=False, platfo
 - `run_id (str)`: Id of the run to fetch logs of. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
 - `page_num (int)`: Page number of logs to fetch. Defaults to 1.
 - `page_size (int)`: Page size of logs to fetch. Defaults to 10.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
+- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
 - `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
 
 **Returns**  
@@ -325,7 +325,7 @@ fedml.api.cluster_killall(api_key=None)
 **Returns**  
 Boolean indicating whether the clusters were successfully killed or not.
 
-## Result Codes:
+## Result Codes
 
 | Code | Name                                                            | Message                                 |
 |------|-----------------------------------------------------------------|-----------------------------------------|
