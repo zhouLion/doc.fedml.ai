@@ -1,5 +1,6 @@
 const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
 const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+const compressPlugin = require('./plugins/compress-images-plugin.cjs');
 const { defaultSettings } = require('./plugins/doc-plugin.cjs');
 
 const code_themes = {
@@ -41,6 +42,7 @@ const plugins = [
   tailwindPlugin,
   // ...docs_plugins,
   webpackPlugin,
+  compressPlugin,
   // TODO: set some redirects rules
   // [
   //   "@docusaurus/plugin-client-redirects",
@@ -80,8 +82,7 @@ const config = {
           sidebarCollapsible: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
+          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
