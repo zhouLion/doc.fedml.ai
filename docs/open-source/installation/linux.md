@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Linux
 
 A step-by-step installation guide of FedML on Linux.
