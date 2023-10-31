@@ -16,9 +16,9 @@ Usage: fedml run [OPTIONS] COMMAND [ARGS]...
 
 Options:
   -h, --help            Show this message and exit.
-  -k, --api_key TEXT    user api key.
-  -v, --version TEXT    version of FedML® Nexus AI Platform. It should be dev,
-                        test or release
+  -k, --api_key TEXT    The user API key.
+  -v, --version TEXT    Version of FedML® Nexus AI Platform. It should be dev,
+                        test or release.
   -pf, --platform TEXT  The platform name at the FedML® Nexus AI Platform
                         (options: octopus, parrot, spider, beehive, falcon,
                         launch, default is falcon).
@@ -38,12 +38,12 @@ List runs from the FedML® Nexus AI Platform.
 
 | Option          | Description                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help      | Show this message and exit                                                                                                        |
-| -r, --run_name  | Run name at the FedML® Nexus AI Platform.                                                                                         |
-| -rid, --run_id  | Run id at the FedML® Nexus AI Platform.                                                                                           |
-| -k, --api_key   | user api key.                                                                                                                     |
-| -v, --version   | version of FedML® Nexus AI Platform. It should be dev, test or release                                                            |
-| -pf, --platform | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
+| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the FedML® Nexus AI Platform.                                                                                         |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--api_key` </nobr> <br/> or `-k`   | The user API key.                                                                                                                     |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
@@ -86,14 +86,14 @@ Get logs of run from the FedML® Nexus AI Platform.
 
 | Option              | Description                                                                                                                       |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help          | Show this message and exit                                                                                                        |
-| -rid, --run_id      | Run id at the FedML® Nexus AI Platform.                                                                                           |
-| -a, --need_all_logs | boolean value representing if all logs are needed. Default to True                                                                |
-| -pn, --page_num     | request page num for logs. --need_all_logs should be set to False if you want to use this option.                                 |
-| -ps, --page_size    | request page size for logs, --need_all_logs should be set to False if you want to use this option.                                |
-| -k, --api_key       | user api key.                                                                                                                     |
-| -v, --version       | version of FedML® Nexus AI Platform. It should be dev, test or release                                                            |
-| -pf, --platform     | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--need_all_logs` </nobr> <br/> or `-a` | Boolean value representing if all logs are needed. Default to True.                                                                |
+| <nobr> `--page_num` </nobr> <br/> or `-pn` | request page num for logs. --need_all_logs should be set to False if you want to use this option.                                 |
+| <nobr> `--page_size` </nobr> <br/> or `-ps` | request page size for logs, --need_all_logs should be set to False if you want to use this option.                                |
+| <nobr> `--api_key` </nobr> <br/> or `-k`       | The user API key.                                                                                                                     |
+| <nobr> `--version` </nobr> <br/> or `-v`       | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf`     | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
@@ -137,12 +137,12 @@ Get status of run from the FedML® Nexus AI Platform.
 
 | Option          | Description                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help      | Show this message and exit                                                                                                        |
-| -r, --run_name  | Run name at the FedML® Nexus AI Platform.                                                                                         |
-| -rid, --run_id  | Run id at the FedML® Nexus AI Platform.                                                                                           |
-| -k, --api_key   | user api key.                                                                                                                     |
-| -v, --version   | version of FedML® Nexus AI Platform. It should be dev, test or release.                                                           |
-| -pf, --platform | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit                                                                                                        |
+| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the FedML® Nexus AI Platform.                                                                                         |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--api_key` </nobr> <br/> or `-k` | The user API key.                                                                                                                     |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                           |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
@@ -165,11 +165,11 @@ Stop a run from the FedML® Nexus AI Platform.
 
 | Option          | Description                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| -h, --help      | Show this message and exit                                                                                                        |
-| -rid, --run_id  | Id of the run.                                                                                                                    |
-| -k, --api_key   | user api key.                                                                                                                     |
-| -v, --version   | version of FedML® Nexus AI Platform. It should be dev, test or release                                                            |
-| -pf, --platform | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Id of the run.                                                                                                                    |
+| <nobr> `--api_key` </nobr> <br/> or `-k` | The user API key.                                                                                                                     |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
