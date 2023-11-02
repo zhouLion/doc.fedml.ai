@@ -13,3 +13,18 @@ Essentially, Our MLOps can seamlessly migrate the local development to the real-
 Please read the detailed [examples and tutorial](./example/example.md) for details.
 
 
+
+
+```
+@article{elkordy2023federated,
+  title={Federated analytics: A survey},
+  author={Elkordy, Ahmed Roushdy and Ezzeldin, Yahya H and Han, Shanshan and Sharma, Shantanu and He, Chaoyang and Mehrotra, Sharad and Avestimehr, Salman and others},
+  journal={APSIPA Transactions on Signal and Information Processing},
+  volume={12},
+  number={1},
+  year={2023},
+  publisher={Now Publishers, Inc.}
+}
+```
+
+
