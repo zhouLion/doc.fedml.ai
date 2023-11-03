@@ -75,7 +75,7 @@ Launch a job to the GPU Cloud Cluster.
 > **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML® AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
 
 ```bash
-fedml launch /path/to/job.yaml -c cluster my_cluster
+fedml launch /path/to/job.yaml -c my_cluster
 ```
 
 > **_NOTE:_** If a cluster with the specified name does not exist, a new one will be created for you (provided the required resources are both available and matched for your request). 
@@ -156,25 +156,25 @@ The Run UI offers a lot of information about your run including Metrics, Logs, H
 You can run as many consequent jobs as you like on your cluster now. It will queue the jobs and by default run in the order of submission.
 
 ```bash
-❯ fedml launch job_1.yaml -v dev -c hello_world_cluster
+❯ fedml launch job_1.yaml -c hello_world_cluster
 Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 17.4kB/s]
 
 You can track your run details at this URL:
-https://open-dev.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
+https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
 
 For querying the realtime status of your run, please run the following command.
-fedml run logs -rid 1717314053350756352 -v dev
+fedml run logs -rid 1717314053350756352
 ```
 
 ```bash
-❯ fedml launch job_2.yaml -v dev -c hello_world_cluster
+❯ fedml launch job_2.yaml -c hello_world_cluster
 Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 11.8kB/s]
 
 You can track your run details at this URL:
-https://open-dev.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096
+https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096
 
 For querying the realtime status of your run, please run the following command.
-fedml run logs -rid 1717314101526532096 -v dev
+fedml run logs -rid 1717314101526532096
 ```
 
 ###### Jobs are queued in the order of submission but can also be preempted using the up and down arrows. 
