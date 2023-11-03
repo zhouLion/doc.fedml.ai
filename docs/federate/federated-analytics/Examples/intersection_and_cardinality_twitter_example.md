@@ -1,4 +1,4 @@
-# FA Example: intersection and cardinality analytics
+# Itersection and Cardinality Analytics
 
 
 This example demonstrates how to complete an intersection and cardinality analytics task using Twitter Sentiment140 dataset. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/intersection_and_cardinality_twitter_example). 

@@ -1,4 +1,7 @@
-# FedMLSecurity - Example with FedAVG, MNIST, Logistic regression, and defenses
+---
+sidebar_position: 2
+---
+# FedAVG, MNIST, Logistic regression, and defenses
 
 
 This example demonstrates how to activate an attack using local data from multiple clients. The source code locates at [https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_defense_mnist_lr_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_defense_mnist_lr_example). We provide sample configurations for different defense mechanisms at [https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_defense_mnist_lr_example/config](https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_defense_mnist_lr_example/config), including cclip defense, foolsgold, geometric median, krum (and m-krum), crfl, rfa, etc. As an example, We utilize byzantine attack of random mode as an example. 

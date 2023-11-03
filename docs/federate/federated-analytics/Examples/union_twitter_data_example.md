@@ -1,4 +1,4 @@
-# FA Example: union analytics
+# Union Analytics
 
 
 This example demonstrates how to complete a union analytics task using Twitter Sentiment140 dataset. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/union_twitter_data_example). 

@@ -1,4 +1,7 @@
-# Example of MPI mode: byzantine attack & Krum defense
+---
+sidebar_position: 3
+---
+# Byzantine Attack & Krum Defense (Distributed Simulation)
 
 
 This example demonstrates how to utilize Krum defense against Byzantine attack (random mode) during FL training with MPI backend. We utilize logistic regression, MNIST dataset, and the optimizer FedAVG. The source code locates at [https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_byzantine_krum_mnist_lr_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_byzantine_krum_mnist_lr_example). We set the number of FL clients to be 5. 
@@ -158,12 +161,4 @@ At the end of the training, the window will display the following log:
 [FedML-Server @device-id-0] [Thu, 02 Nov 2023 22:11:46] [INFO] [fedml_comm_manager.py:39:receive_message] receive_message. msg_type = 5, sender_id = 3, receiver_id = 0
 [FedML-Server @device-id-0] [Thu, 02 Nov 2023 22:11:46] [INFO] [fedml_server_manager.py:163:handle_message_client_status_update] received client status FINISHED
 [FedML-Server @device-id-0] [Thu, 02 Nov 2023 22:11:46] [INFO] [fedml_server_manager.py:150:process_finished_status] sender_id = 3, all_client_is_finished = True
---------------------------------------------------------------------------
-MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD
-with errorcode 0.
-
-NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
-You may or may not see output from other processes, depending on
-exactly when Open MPI kills them.
---------------------------------------------------------------------------
 ```

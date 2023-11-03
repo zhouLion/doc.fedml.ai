@@ -1,4 +1,4 @@
-# FA Example: k-percentile analytics
+# K-percentile Analytics
 
 
 This example demonstrates how to complete a k-percentile analytics task using local data from multiple clients. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/k_percentile_fake_data_example). As an example, we utilize a fake dataset containing 10,000 integers, uniformly sampled from 0 to 100.

@@ -1,4 +1,4 @@
-# FA Example: AVG
+# AVG
 
 
 This example demonstrates how to complete an average analytics task using local data from multiple clients. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/avg_fake_data_example). As an example, we utilize a fake dataset containing 10,000 integers, uniformly sampled from 0 to 100.

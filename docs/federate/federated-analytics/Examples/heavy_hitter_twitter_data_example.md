@@ -1,4 +1,4 @@
-# FA Example: heavy hitter
+# Heavy Hitter
 
 
 This example demonstrates how to complete a heavy hitter analytics task using local data from multiple clients. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/heavy_hitter_twitter_data_example). We implemented the Triehh method in the follownig paper: 
