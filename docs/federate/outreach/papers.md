@@ -1,4 +1,4 @@
-# Research Publications
+# Publications
 
 
 FedML’s core technology is backed by years of cutting-edge research represented in 50+ publications in ML/FL Algorithms, Security/Privacy, Systems, and Applications.

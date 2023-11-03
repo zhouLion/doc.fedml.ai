@@ -12,4 +12,4 @@ https://discord.gg/9xkW8ae6RV
 Our WeChat group has 200+ members, please add the following account and ask for an invitation to join. 
 
 
-![./_static/image/wechat.jpeg](./../federate/_static/image/wechat.jpeg)
+![./_static/image/wechat.jpeg](./img/wechat.jpeg)
