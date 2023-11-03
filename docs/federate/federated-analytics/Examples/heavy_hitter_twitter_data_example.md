@@ -1,7 +1,7 @@
-# FedML Federated Analytics - Example with heavy hitter + Twitter Data
+# FA Example: heavy hitter
 
 
-This example demonstrates how to complete a heavy hitter analytics task using local data from multiple clients. The source code locates at [https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/heavy_hitter_twitter_data_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/heavy_hitter_twitter_data_example). We implemented the Triehh method in the follownig paper: 
+This example demonstrates how to complete a heavy hitter analytics task using local data from multiple clients. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/heavy_hitter_twitter_data_example). We implemented the Triehh method in the follownig paper: 
 
 ```
 Federated Heavy Hitters Discovery with Differential Privacy: [paper](https://arxiv.org/pdf/1902.08534.pdf)
@@ -26,7 +26,7 @@ RUN_ID=$1
 python3 server.py --cf fedml_config.yaml --rank 0 --role server --run_id $RUN_ID
 ```
 
-`server.py`
+`server.py` is as follows:
 
 ```python
 from fedml.fa import init, FARunner
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     fa_runner.run()
 ```
 
-`run_client.sh`
+`run_client.sh` is as follows:
 
 
 ```shell
@@ -50,7 +50,7 @@ RUN_ID=$2
 python3 client.py --cf fedml_config.yaml --rank $RANK --role client --run_id $RUN_ID
 ```
 
-`client.py`
+`client.py` is as follows:
 
 ```python
 from fedml.fa import init, FARunner

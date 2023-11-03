@@ -1,7 +1,7 @@
-# FedML Federated Analytics - Example with frequency estimation + Fake Data
+# FA Example: frequency estimation
 
 
-This example demonstrates how to complete a frequency estimation analytics task using local data from multiple clients. The source code locates at [https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/frequency_estimation_fake_data_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/frequency_estimation_fake_data_example). As an example, we utilize a fake dataset containing 10,000 integers, uniformly sampled from 0 to 100.
+This example demonstrates how to complete a frequency estimation analytics task using local data from multiple clients. The source code locates at [[link]](https://github.com/FedML-AI/FedML/tree/master/python/examples/federated_analytics/frequency_estimation_fake_data_example). As an example, we utilize a fake dataset containing 10,000 integers, uniformly sampled from 0 to 100.
 
 
 > **If you have multiple nodes, you should run the client script on each node**
@@ -20,7 +20,7 @@ RUN_ID=$1
 python3 server.py --cf fedml_config.yaml --rank 0 --role server --run_id $RUN_ID
 ```
 
-`server.py`
+`server.py` is as follows:
 
 ```python
 from fedml.fa import init, FARunner
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     fa_runner.run()
 ```
 
-`run_client.sh`
+`run_client.sh` is as follows:
 
 
 ```shell
@@ -44,7 +44,7 @@ RUN_ID=$2
 python3 client.py --cf fedml_config.yaml --rank $RANK --role client --run_id $RUN_ID
 ```
 
-`client.py`
+`client.py` is as follows:
 
 ```python
 from fedml.fa import init, FARunner

@@ -1,4 +1,4 @@
-# FedMLSecurity - Example with FedAVG, MNIST, Logistic regression, and attacks
+# Example: attacks
 
 
 This example demonstrates how to inject an attack during FL training. We utilize logistic regression, MNIST dataset, and the optimizer FedAVG. The source code locates at [https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_attack_mnist_lr_example](https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_attack_mnist_lr_example). We provide sample configurations for byzantine attacks (zero/random/flip mode), label flipping attack, and model replacement attack at [https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_attack_mnist_lr_example/config](https://github.com/FedML-AI/FedML/tree/master/python/examples/security/mqtt_s3_fedavg_attack_mnist_lr_example/config). As an example, we utilize byzantine attack of random mode and set the number of FL clients to be 4. 

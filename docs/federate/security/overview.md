@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 6
 ---
 
 
@@ -11,12 +11,9 @@ FEDML®Federate FedMLSecurity is a benchmark that simulates attacks and defenses
 
 We summarize the injections of attacks and defenses to the FL framework in FedMLSecurity as follows. 
 
-![overview.pdf](overview.pdf)
+![overview.png](overview.png)
 
 
-We also provide detailed algorithms for injecting attacks and defenses to different stages of FL training, as follows.
-
-![FedMLSecurity_algo.pdf](FedMLSecurity_algo.pdf)
 
 The highlights of FedMLSecurity are summarized as follows:
 
@@ -35,9 +32,14 @@ We provide APIs in FedMLSecurity to enable users to integrate user-defined attac
 
 
 
+We also provide detailed algorithms for injecting attacks and defenses to different stages of FL training, as follows.
+
+![FedMLSecurity_algo.png](FedMLSecurity_algo.png)
 
 
-Please read the [paper](https://arxiv.org/pdf/2306.04959.pdf) and [examples](./example/example.md) for details.
+
+Please read the [paper](https://arxiv.org/pdf/2306.04959.pdf) for details.
+
 
 
 
