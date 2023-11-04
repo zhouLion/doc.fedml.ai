@@ -44,31 +44,42 @@ const plugins = [
   webpackPlugin,
   compressPlugin,
   // TODO: set some redirects rules
-  // [
-  //   "@docusaurus/plugin-client-redirects",
-  //   {
-  //     createRedirects(path) {
-  //       // @example return path list
-  //       // if (path.startsWith("/guides/capabilities/webhooks")) {
-  //       //   return [
-  //       //     path.replace("/guides/capabilities/webhooks", "/guides/webhooks"),
-  //       //     path.replace(
-  //       //       "/guides/capabilities/webhooks",
-  //       //       "/guides/features/webhooks"
-  //       //     ),
-  //       //   ];
-  //       // }
-  //       return undefined; // Return a falsy value: no redirect created
-  //     },
-  //   },
-  // ],
+  [
+    '@docusaurus/plugin-client-redirects',
+    {
+      redirects: [
+        {
+          to: '/federate/cross-silo/user_guide',
+          from: '/mlops/user_guide',
+        },
+      ],
+      // createRedirects(path) {
+      // @example return path list
+      // if (path.startsWith("/guides/capabilities/webhooks")) {
+      //   return [
+      //     path.replace("/guides/capabilities/webhooks", "/guides/webhooks"),
+      //     path.replace(
+      //       "/guides/capabilities/webhooks",
+      //       "/guides/features/webhooks"
+      //     ),
+      //   ];
+      // }
+      // return undefined; // Return a falsy value: no redirect created
+      // },
+    },
+  ],
 ];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   ...meta,
   plugins,
-
+  scripts: [
+    {
+      src: 'https://static.zdassets.com/ekr/snippet.js?key=b209e179-353c-4ee4-a882-fd8e0ee72b8e',
+      id: 'ze-snippet',
+    },
+  ],
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
