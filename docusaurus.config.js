@@ -1,6 +1,6 @@
 const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
 const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
-const compressPlugin = require('./plugins/compress-images-plugin.cjs');
+// const compressPlugin = require('./plugins/compress-images-plugin.cjs');
 const { defaultSettings } = require('./plugins/doc-plugin.cjs');
 
 const code_themes = {
