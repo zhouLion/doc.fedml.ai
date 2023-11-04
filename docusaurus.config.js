@@ -1,5 +1,6 @@
 const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
 const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
+const compressPlugin = require('./plugins/compress-images-plugin.cjs');
 const { defaultSettings } = require('./plugins/doc-plugin.cjs');
 
 const code_themes = {
@@ -41,32 +42,44 @@ const plugins = [
   tailwindPlugin,
   // ...docs_plugins,
   webpackPlugin,
+  compressPlugin,
   // TODO: set some redirects rules
-  // [
-  //   "@docusaurus/plugin-client-redirects",
-  //   {
-  //     createRedirects(path) {
-  //       // @example return path list
-  //       // if (path.startsWith("/guides/capabilities/webhooks")) {
-  //       //   return [
-  //       //     path.replace("/guides/capabilities/webhooks", "/guides/webhooks"),
-  //       //     path.replace(
-  //       //       "/guides/capabilities/webhooks",
-  //       //       "/guides/features/webhooks"
-  //       //     ),
-  //       //   ];
-  //       // }
-  //       return undefined; // Return a falsy value: no redirect created
-  //     },
-  //   },
-  // ],
+  [
+    '@docusaurus/plugin-client-redirects',
+    {
+      redirects: [
+        {
+          to: '/federate/cross-silo/user_guide',
+          from: '/mlops/user_guide',
+        },
+      ],
+      // createRedirects(path) {
+      // @example return path list
+      // if (path.startsWith("/guides/capabilities/webhooks")) {
+      //   return [
+      //     path.replace("/guides/capabilities/webhooks", "/guides/webhooks"),
+      //     path.replace(
+      //       "/guides/capabilities/webhooks",
+      //       "/guides/features/webhooks"
+      //     ),
+      //   ];
+      // }
+      // return undefined; // Return a falsy value: no redirect created
+      // },
+    },
+  ],
 ];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   ...meta,
   plugins,
-
+  scripts: [
+    {
+      src: 'https://static.zdassets.com/ekr/snippet.js?key=b209e179-353c-4ee4-a882-fd8e0ee72b8e',
+      id: 'ze-snippet',
+    },
+  ],
   trailingSlash: false,
   themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
@@ -80,8 +93,7 @@ const config = {
           sidebarCollapsible: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
+          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
