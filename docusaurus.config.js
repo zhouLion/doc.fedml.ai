@@ -42,7 +42,7 @@ const plugins = [
   tailwindPlugin,
   // ...docs_plugins,
   webpackPlugin,
-  compressPlugin,
+  // compressPlugin,
   // TODO: set some redirects rules
   [
     '@docusaurus/plugin-client-redirects',
