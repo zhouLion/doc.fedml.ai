@@ -91,9 +91,8 @@ const config = {
           ...defaultSettings,
           routeBasePath: '/',
           sidebarCollapsible: true,
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
+          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
