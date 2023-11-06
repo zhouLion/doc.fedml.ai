@@ -1,3 +1,6 @@
+---
+sidebar_position: 9
+---
 # Model Configuration YAML
 
 ## Full example of a model configuration YAML file

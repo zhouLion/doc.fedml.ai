@@ -17,3 +17,5 @@ For single machine deploy, use same device id: 32314 for master and worker.
 ```
 fedml model deploy -n my_model -m 32314 -w 32314
 ```
+You can then check the status of the deployment on Nexus AI Platform.
+![EndpointDeployed.jpg](pics/EndpointDeployed.jpg)
