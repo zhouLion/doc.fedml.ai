@@ -19,3 +19,6 @@ fedml model deploy -n my_model -m 32314 -w 32314
 ```
 You can then check the status of the deployment on Nexus AI Platform.
 ![EndpointDeployed.jpg](pics/EndpointDeployed.jpg)
+
+The System Performance (QPS, Latency, etc.) can be monitored on Nexus AI Platform.
+![SystemPerformance.jpg](pics/SystemMonitor.jpg)
