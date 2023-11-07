@@ -259,25 +259,3 @@ Detailed guidance for the MLOps can be found at [FEDML Nexus AI User Guide](./cr
 
 The FedML Ecosystem facilitates federated learning research and productization in diverse application domains. With the foundational support from FedML Core Framework, it supports FedNLP (Natural Language Processing), FedCV (Computer Vision), FedGraphNN (Graph Neural Networks), and FedIoT (Internet of Things).
 Please read this [guidance](./examples.md) for details
-
-### Publication
-
-FedML’s core technology is backed by years of cutting-edge research represented in <b>50+ publications</b> in ML/FL Algorithms, Security/Privacy, Systems, and Applications.
-
-1. Vision Paper for High Scientific Impacts
-2. System for Large-scale Distributed/Federated Training
-3. Training Algorithms for FL
-4. Security/privacy for FL
-5. AI Applications
-   A Full-stack of Scientific Publications in ML Algorithms, Security/Privacy, Systems, Applications, and Visionary Impacts
-
-Please check out [the full publication list](./tech/papers.md) for details.
-
-### Invited Talks (Videos)
-
-- [Trustworthy and Scalable Federated Learning](https://www.youtube.com/watch?v=U3BiuWjhdaU). Federated Learning One World Seminar (FLOW). By Salman Avestimehr
-
-- [Distributed ML for Federated Learning feat](https://www.youtube.com/watch?v=AY7pCYTC8pQ). Aiden Chaoyang He. Stanford MLSys Seminar. By Aiden Chaoyang He
-
-- [Contributed Talk for FedML Library](https://www.youtube.com/watch?v=93SETZGZMyI). Best Paper Award at NeurIPS 2020 Federated Learning Workshop. By Aiden Chaoyang He
-

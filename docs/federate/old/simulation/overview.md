@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 
-# Simulation Overview
+# Simulation
 
 ![./../_static/image/parrot.jpeg](./../_static/image/parrot.jpeg)
 

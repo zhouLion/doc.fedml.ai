@@ -134,5 +134,5 @@ At the end of the analysis, the client 2 window will display the following log:
 ```
 
 The server will also save the analyzing result as a figure:
-![frequency_estimation_result.png](frequency_estimation_result.png)
+![frequency_estimation_result.png](../../_img/federated-analytics/frequency_estimation_result.png)
 
