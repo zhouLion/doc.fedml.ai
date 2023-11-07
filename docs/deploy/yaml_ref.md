@@ -21,6 +21,7 @@ environment_variables:
   TOP_K: "5"
   PROMPT_STYLE: "llama_orca"
 deploy_timeout: 600
+auto_detect_public_ip: true
 computing:
   minimum_num_gpus: 1           # minimum # of GPUs to provision
   maximum_cost_per_hour: $3000   # max cost per hour for your job per gpu card
@@ -44,4 +45,5 @@ computing:
 | `data_cache_dir`        | `""`                                      | For on-premise mode, you can indicate a folder that will not be packaged into the model cards. Instead, the worker will read from the host machine. |
 | `environment_variables` | None                                      | Environment variable that can be read in entry_point file.                                                                                          |
 | `deploy_timeout`        | 100                                       | Maximum waiting time for endpoint to be established.                                                                                                |
+| `auto_detect_public_ip` | false                                     | For on-premise mode, auto detect the ip of the master and workers public ip.                                                                        |
 | `computing`             | None                                      | For gpu cloud mode, indicate the resource you need for inference. You can visiting URL and check: https://open-dev.fedml.ai/compute/distributed .   |
