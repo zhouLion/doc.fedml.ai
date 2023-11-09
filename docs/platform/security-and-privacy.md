@@ -10,7 +10,7 @@ FEDML Nexus AI offers a variety of security and privacy features to meet the nee
 
 By choosing on-premises or on-private cloud deployment, you can maintain the highest level of control and protection for your data, AI models, and code. Your data, models, and code will always remain within the secure perimeter of your private infrastructure, protecting all sensitive information. As shown in the figure below, FEDML Nexus AI platform will only communicate to your servers through encrypted messages that contain control messages only. FEDML python libraries will be running locally on your servers for orchestrating your training, deployment, and monitoring. 
 
-![drawing](./static/image/FEDML-NEXUS-AI-Security.png)
+![drawing](./static/image/security1.png)
 
 
 ## 2. On GPU/CPU marketplace deployment (multi-cloud and multi-provider)
@@ -29,7 +29,7 @@ Physical Security: Secured data centers with access control and surveillance.
 If you have specific security and privacy requirements, we can help you schedule your jobs only to providers that comply with those requirements. We can also provide separation between secure public cloud and community cloud, so you can choose which one to use.
 
 
-![drawing](./static/image/FEDML-NEXUS-AI-Security-2.png)
+![drawing](./static/image/security2.png)
 
 In addition to the security and privacy features offered by providers, FEDML also provides the following advanced features:
 
