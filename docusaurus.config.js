@@ -12,7 +12,7 @@ const code_themes = {
 const meta = {
   title: 'FEDML® Documentation',
   // tagline: 'FEDML® AI Pla',
-  url: 'https://docs.fedml.ai',
+  url: 'https://doc.fedml.ai',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
@@ -272,9 +272,9 @@ const config = {
       },
       // support algolia for high level document query
       algolia: {
-        appId: '4Q8VKNSWWC',
-        apiKey: '627564cc17312d65fbd3da0482a0a4d8',
-        indexName: 'fedml_docs',
+        appId: 'AFINDOYCE8',
+        apiKey: 'dbc6b095cadb32b759ac54fd671cb104',
+        indexName: 'fedml',
         contextualSearch: true,
       },
     }),
