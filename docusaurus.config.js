@@ -12,7 +12,7 @@ const code_themes = {
 const meta = {
   title: 'FEDML® Documentation',
   // tagline: 'FEDML® AI Pla',
-  url: 'https://docs.fedml.ai',
+  url: 'https://doc.fedml.ai',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
@@ -91,8 +91,9 @@ const config = {
           ...defaultSettings,
           routeBasePath: '/',
           sidebarCollapsible: true,
+          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/edit/main/',
+          editUrl: 'https://github.com/FedML-AI/docs.fedml.ai/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -271,9 +272,9 @@ const config = {
       },
       // support algolia for high level document query
       algolia: {
-        appId: '4Q8VKNSWWC',
-        apiKey: '627564cc17312d65fbd3da0482a0a4d8',
-        indexName: 'fedml_docs',
+        appId: 'AFINDOYCE8',
+        apiKey: '64b3fd509ffcc7e1aeeab049604ec649',
+        indexName: 'fedml',
         contextualSearch: true,
       },
     }),
