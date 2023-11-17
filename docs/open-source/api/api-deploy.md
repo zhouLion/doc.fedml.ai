@@ -194,3 +194,21 @@ Return a `None` if api_key is not indicated or incompatible.
 
 **Returns Type**  
 `any`
+
+### `fedml.api.delete_endpoint()`
+
+Delete an inference endpoint on Nexus platform.
+
+**Example**
+```py
+fedml.api.delete_endpoint(endpoint_id: str) -> bool:
+```
+
+**Arguments**  
+- `endpoint_id (str)`: Endpoint ID.
+
+**Returns**  
+`True` if the model endpoint is deleted successfully, otherwise `False`.
+
+**Returns Type**  
+`bool`
