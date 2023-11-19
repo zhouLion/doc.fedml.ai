@@ -76,6 +76,20 @@ it will automatically deploy the model card to GPU cloud node(s) / cluster using
 **Returns Type**  
 `bool`
 
+### `fedml.api.model_run()`
+Request a model inference endpoint.
+
+**Example**
+```py
+fedml.api.model_run(endpoint_id: str, json_string: str) -> bool:
+```
+**Returns**  
+Return the response string (After `json.dumps()`).
+
+**Returns Type**  
+`str`
+
+
 ### `fedml.api.model_delete()`
 
 Delete a model card at local environment or a model card at Nexus AI Platform.
@@ -180,3 +194,21 @@ Return a `None` if api_key is not indicated or incompatible.
 
 **Returns Type**  
 `any`
+
+### `fedml.api.delete_endpoint()`
+
+Delete an inference endpoint on Nexus platform.
+
+**Example**
+```py
+fedml.api.delete_endpoint(endpoint_id: str) -> bool:
+```
+
+**Arguments**  
+- `endpoint_id (str)`: Endpoint ID.
+
+**Returns**  
+`True` if the model endpoint is deleted successfully, otherwise `False`.
+
+**Returns Type**  
+`bool`
