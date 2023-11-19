@@ -11,8 +11,8 @@ const code_themes = {
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'FEDML® Documentation',
-  // tagline: 'FEDML® AI Pla',
-  url: 'https://doc.fedml.ai',
+  // tagline: 'FEDML® AI Platform',
+  url: 'https://docs.fedml.ai',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
@@ -108,7 +108,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       colorMode: {
         defaultMode: 'light',
       },
