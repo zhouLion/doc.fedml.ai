@@ -11,8 +11,8 @@ const code_themes = {
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'FEDML® Documentation',
-  // tagline: 'FEDML® AI Platform',
-  url: 'https://docs.fedml.ai',
+  // tagline: 'FEDML® AI Pla',
+  url: 'https://doc.fedml.ai',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   onBrokenLinks: 'throw',
