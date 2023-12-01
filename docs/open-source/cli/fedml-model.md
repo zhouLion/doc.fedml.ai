@@ -16,6 +16,7 @@ Commands:
   create  Create a model card in local environment.
   push    Push a model card (local or S3) to remote.
   deploy  Deploy model to the local | on-premise | GPU Cloud.
+  run     Request a model inference endpoint.
   pull    Pull a model card from Nexus AI Platform to local.
   list    List model card(s) at local environment or Nexus AI Platform.
   delete  Delete a local or remote model card.
@@ -61,6 +62,7 @@ Deploy model to the Local | On-premise | GPU Cloud.
 | `--worker_ids` or `-w` | `None`    | Device Id(s) for on-premise worker node(s).                                                                                     |
 | `--version` or `-v`    | `release` | The backend environment of FEDML Nexus AI Cloud.                                                                                |
 | `--use_remote` or `-r` | `False`   | Use a remote model card. [is-flag] <br/> If not specify, fedml will first push your local model card to remote, then deploy it. |
+| `--delete` or `-d`     | `""`      | Indicate an Endpoint ID to be deleted.                                                                                          |
 
 #### Examples {#example-1}
 
@@ -79,13 +81,52 @@ login your device to Nexus AI Platform.
 ```
 fedml login $api_key
 ```
-Check your device id on Nexus AI Platform (In our example is 32314).  
-![OnPremDevices.jpg](pics%2FgetDeviceId.jpg)
+Check your device id for master role and worker role.
+```
+Welcome to FedML.ai!
+Start to login the current device to the FedML® Nexus AI Platform
 
-For single machine deploy, use same device id: 32314 for master and worker.
+Congratulations, your device is connected to the FedML MLOps platform successfully!
+Your FedML Edge ID is xxx, unique device ID is xxx, master deploy ID is 31240, worker deploy ID is 31239
 ```
-fedml model deploy -n my_model -m 32314 -w 32314
+From above, we can know that the master ID is 31240, worker deploy ID is 31239
+
+For single machine deploy, mention 31240 for master and 31239 for worker.
 ```
+fedml model deploy -n my_model -m 31240 -w 31239
+```
+
+##### Delete an endpoint using endpoint id
+To Delete an endpoint, you can use `fedml model deploy -d $endpoint_id`.
+```
+fedml model deploy -d 1215
+```
+```
+Are you sure to delete the model endpoint: 1215 [y/N]: y
+
+Model endpoint 1215 deleted successfully.
+```
+
+### `fedml model run [OPTIONS] JSON_STRING`
+Request the endpoint using a JSON string.
+#### Options {#options-1}
+
+| Name                 | Default   | Description                                                |
+|----------------------|-----------|------------------------------------------------------------|
+| `--endpoint` or `-e` |           | Endpoint ID.  [required]                                   |
+| `JSON_STRING`        |           | Json string used to request the model endpoint. [required] |
+| `--version` or `-v`  | `release` | The backend environment of FEDML Nexus AI Cloud.           |
+
+#### Examples {#example-1}
+##### Query a LLM Model from Nexus AI Platform.
+```
+fedml model run -e 1215 '{"text": "What is a good cure for hiccups?"}'
+```
+Response:
+```
+Result: {"generated_text": {"generated_text": "Solved by add ..."}}
+```
+
 
 ### `fedml model push [OPTIONS]`
 
@@ -93,11 +134,11 @@ Push a model card (local or S3) to remote.
 
 #### Options {#options-1}
 
-| Name                          | Default | Description                                 |
-|-------------------------------|---------|---------------------------------------------|
-| `--name` or `-n`              |         | Model Card name.  [required]                |
-| `--model_storage_url` or `-s` | `None`  | A S3 address to the model card zip file. |
-| `--version` or `-v`           | `release` | The backend environment of FEDML Nexus AI Cloud.             |
+| Name                          | Default   | Description                                            |
+|-------------------------------|-----------|--------------------------------------------------------|
+| `--name` or `-n`              |           | Model Card name.  [required]                           |
+| `--model_storage_url` or `-s` | `None`    | A S3 address to the model card zip file.               |
+| `--version` or `-v`           | `release` | The backend environment of FEDML Nexus AI Cloud.       |
 
 #### Examples {#example-1}
 ##### Push a local model card to Nexus AI Platform.

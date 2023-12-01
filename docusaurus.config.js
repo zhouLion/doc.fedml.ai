@@ -108,7 +108,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       colorMode: {
         defaultMode: 'light',
       },
@@ -273,7 +273,7 @@ const config = {
       // support algolia for high level document query
       algolia: {
         appId: 'AFINDOYCE8',
-        apiKey: 'dbc6b095cadb32b759ac54fd671cb104',
+        apiKey: '64b3fd509ffcc7e1aeeab049604ec649',
         indexName: 'fedml',
         contextualSearch: true,
       },
