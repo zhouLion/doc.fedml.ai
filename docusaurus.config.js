@@ -273,9 +273,8 @@ const config = {
       // support algolia for high level document query
       algolia: {
         appId: 'AFINDOYCE8',
-        apiKey: '64b3fd509ffcc7e1aeeab049604ec649',
+        apiKey: 'dbc6b095cadb32b759ac54fd671cb104',
         indexName: 'fedml',
-        contextualSearch: true,
       },
     }),
 
