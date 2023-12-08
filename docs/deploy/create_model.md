@@ -105,6 +105,13 @@ if __name__ == "__main__":
     fedml_inference_runner.run()
 ```
 
+:::tip
+For input type, we currently only support JSON.
+For return type, aside from JSON like obj. 
+FedML predictor also support returning stream, file response. See more at [Advanced_Features](advanced_features.md)
+:::
+
+
 ### Create a Local Model Card
 Create a local model card by indicating the model card configuration file, support you are in the same
 folder as `config.yaml`. This level folder architecture is:
