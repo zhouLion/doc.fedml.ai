@@ -147,12 +147,12 @@ const config = {
             position: 'left',
             label: 'Launch',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'train',
-            position: 'left',
-            label: 'Train',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'train',
+          //   position: 'left',
+          //   label: 'Train',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'deploy',
