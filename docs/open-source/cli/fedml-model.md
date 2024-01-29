@@ -169,11 +169,11 @@ List model card(s) at local environment or Nexus AI Platform.
 
 #### Options {#options-1}
 
-| Name                          | Default   | Description                                    |
-|-------------------------------|-----------|------------------------------------------------|
-| `--name` or `-n`              | `"*"`     | Model Card name(s).                  |
-| `--local` or `-l`      |           | List Local Model. [isflag]                     |
-| `--version` or `-v`           | `release` | The backend environment of FEDML Nexus AI Cloud. |
+| Name                     | Default   | Description                                      |
+|--------------------------|-----------|--------------------------------------------------|
+| `--name` or `-n`         | `"*"`     | Model Card name(s).                              |
+| `--local` or `-l`        |           | List Local Model. [isflag]                       |
+| `--version` or `-v`      | `release` | The backend environment of FEDML Nexus AI Cloud. |
 
 #### Examples {#example-1}
 ##### List all model cards from Nexus AI Platform.
@@ -195,11 +195,11 @@ Delete a local or remote model card.
 
 #### Options {#options-1}
 
-| Name                          | Default | Description                                      |
-|-------------------------------|------|--------------------------------------------------|
-| `--name` or `-n`              |      | Model Card name. [required]                      |
-| `--local` or `-l`      |      | Delete a Local Model. [isflag]                   |
-| `--version` or `-v`           | `release` | The backend environment of FEDML Nexus AI Cloud. |
+| Name                 | Default   | Description                                      |
+|----------------------|-----------|--------------------------------------------------|
+| `--name` or `-n`     |           | Model Card name. [required]                      |
+| `--local` or `-l`    |           | Delete a Local Model. [isflag]                   |
+| `--version` or `-v`  | `release` | The backend environment of FEDML Nexus AI Cloud. |
 
 #### Examples {#example-1}
 ##### Delete a model card from Nexus AI Platform.
