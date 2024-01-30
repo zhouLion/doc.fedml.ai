@@ -26,7 +26,7 @@ Please check out [this publication list](./papers.md) for details.
 ![overview architecture](./../_static/image/fedml.png)
 
 - FedML Open Source Library ([https://github.com/FedML-AI](https://github.com/FedML-AI))
-- FedML Edge SDK and MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai))
+- FedML Edge SDK and MLOps Platform ([https://fedml.ai](https://fedml.ai))
 
 The software architecture of the open-source library is on the left side.
 MLOps platform further reuses the source code of the open-source library (the green-colored box).

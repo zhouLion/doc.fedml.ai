@@ -421,8 +421,8 @@ if __name__ == "__main__":
 
 ![img.png](cross_silo_hi_arch_refactored.png)
 
-## A Better User-experience with FedML MLOps (nexus.fedml.ai)
-To reduce the difficulty and complexity of these CLI commands. We recommend you to use our MLOps (nexus.fedml.ai).
+## A Better User-experience with FedML MLOps (fedml.ai)
+To reduce the difficulty and complexity of these CLI commands. We recommend you to use our MLOps (fedml.ai).
 FedML MLOps provides:
 - Install Client Agent and Login
 - Inviting Collaborators and group management

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # What is FEDML Nexus AI?
 
-FEDML® stands for **_F_**oundational **_E_**cosystem **_D_**esign for **_M_**achine **_L_**earning. [FEDML Nexus AI](https://nexus.fedml.ai) is the next-gen cloud service for LLMs & Generative AI. It helps developers to *launch* complex model *training*, *deployment*, and *federated learning* anywhere on decentralized GPUs, multi-clouds, edge servers, and smartphones, *easily, economically, and securely*.
+FEDML® stands for **_F_**oundational **_E_**cosystem **_D_**esign for **_M_**achine **_L_**earning. [FEDML Nexus AI](https://fedml.ai) is the next-gen cloud service for LLMs & Generative AI. It helps developers to *launch* complex model *training*, *deployment*, and *federated learning* anywhere on decentralized GPUs, multi-clouds, edge servers, and smartphones, *easily, economically, and securely*.
 
 Highly integrated with [FEDML open source library](https://github.com/fedml-ai/fedml), FEDML Nexus AI provides holistic support of three interconnected AI infrastructure layers: user-friendly MLOps, a well-managed scheduler, and high-performance ML libraries for running any AI jobs across GPU Clouds.
 

@@ -8,7 +8,7 @@ Low Code Web UI is a web-based user interface that allows users to manage the mo
 deploy models to GPU Cloud and on-premise devices, as well as monitor the endpoint status.
 
 ## Register an Nexus AI Platform Account
-Before you start, you will need to create an account on [FedML Nexus AI Cloud](https://nexus.fedml.ai/home).
+Before you start, you will need to create an account on [FedML Nexus AI Cloud](https://fedml.ai/home).
 After you create an account, you will see an Account Key (API Key) from the profile page.
 ![getApiKey.jpg](pics%2FgetApiKey.jpg)
 

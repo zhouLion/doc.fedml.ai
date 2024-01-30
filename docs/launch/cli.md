@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ## FedML Launch CLI Overview
 
-Launch jobs on the FedML® Launch platform (nexus.fedml.ai).
+Launch jobs on the FedML® Launch platform (fedml.ai).
 
 ```bash
 ❯ fedml launch -h
