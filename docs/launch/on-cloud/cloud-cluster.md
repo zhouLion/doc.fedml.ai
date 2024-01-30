@@ -15,7 +15,9 @@ pip install fedml
 Before launch any job, at first, you need to define your job properties in the job yaml file, e.g. workspace, job, bootstrap, etc.
 
 :::tip Tip
-The workspace folder is the folder where your source code for execution resides
+The workspace folder is the folder where your sour
+
+ce code for execution resides
 :::
 
 Below is an example of job yaml file:
@@ -27,6 +29,8 @@ fedml_env:
 # Local directory where your source code resides.
 # It should be the relative path to this job yaml file.
 # If your job doesn't contain any source code, it can be empty.
+
+
 workspace: hello_world
 
 # Bootstrap shell commands which will be executed before running entry commands.
@@ -52,7 +56,9 @@ computing:
   # max cost per hour of all machines for your job.
   # E.g., if your job are assigned 2 x A100 nodes (8 GPUs), each GPU cost $1/GPU/Hour, "maximum_cost_per_hour" = 16 * $1 = $16
   maximum_cost_per_hour: $1.75
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://nexus.fedml.ai/compute/distributed
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai
+  
+  
 ```
 For more details and properties about the job yaml file, please refer to [job yaml file](../yaml).
 
@@ -95,7 +101,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 Do you want to launch the job with the above matched GPU resource? [y/N]:
 ```
 
@@ -106,7 +112,7 @@ Once resources are confirmed, it will then create a cluster out of these matched
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
 You can track your run details at this URL:
-https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048
@@ -123,7 +129,7 @@ More run management CLIs can be found [here](../../open-source/cli/fedml-run.md)
 
 ## 5. You can also view the details of run on the FedML® AI Nexus platform:
 
-Log into to the FedML® AI Nexus Platform (https://nexus.fedml.ai) and go to `Train > Projects (my_project)`
+Log into to the FedML® AI Nexus Platform (https://fedml.ai) and go to `Train > Projects (my_project)`
 Select the run you just launched and click on it to view the details of the run.
 
 ![Train > Projects (my_project)](static/image/train_project_my_project.png)
@@ -137,7 +143,7 @@ The url link to FedML® AI Nexus Platform for your run is printed in the output 
 
 ```bash
 You can track your run details at this URL:
-https://nexus.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048

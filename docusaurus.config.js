@@ -147,12 +147,12 @@ const config = {
             position: 'left',
             label: 'Launch',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'train',
-            position: 'left',
-            label: 'Train',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'train',
+          //   position: 'left',
+          //   label: 'Train',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'deploy',
@@ -188,7 +188,7 @@ const config = {
           },
           {
             label: 'Login',
-            href: 'https://nexus.fedml.ai',
+            href: 'https://fedml.ai',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },

@@ -37,7 +37,7 @@ Congratulations, your device is connected to the FedML MLOps platform successful
 Your FedML Edge ID is 1717367167533584384, unique device ID is 0xa11081eb21f1@Linux.Edge.GPU.Supplier
 
 You may visit the following url to fill in more information with your device.
-https://nexus.fedml.ai/gpu-supplier/gpu/edit/1717367167533584384
+https://fedml.ai/gpu-supplier/gpu/edit/1717367167533584384
 ```
 
 As instructed by the output, next you need to visit the url to fill in more information about your GPU server.

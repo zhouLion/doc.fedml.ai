@@ -87,83 +87,32 @@ string and return.
 
 ## Customized Image Support
 
-The following code example can be found at:  
-https://github.com/FedML-AI/FedML/blob/master/devops/dockerfile/fedml-inference/default/Dockerfile
+To use your own docker image, you can specify the `inference_image_name` field in the `config.yaml` file.  
 
-```dockerfile
-ARG BASE_IMAGE=fedml/fedml:latest-torch1.13.1-cuda11.6-cudnn8-devel
-FROM ${BASE_IMAGE}
-
-## Only Modify if you want to use a different version of FedML
-RUN mkdir -p /fedml-pip
-ADD ./python ./fedml-pip
-WORKDIR ./fedml-pip
-RUN pip3 install -e ./
-
-# 1. Specify Bootrap path (If any)
-ENV BOOTSTRAP_DIR=""
-    
-# 2. MOUNT User's Local Folder (If any)
-ENV DATA_CACHE_FOLDER=""
-VOLUME [ DATA_CACHE_FOLDER ]
-
-# 3. MOUNT Model Serving Folder
-VOLUME [ "/home/fedml/models_serving" ]
-
-# 4. Enter the entrypoint
-WORKDIR /home/fedml/models_serving
-ENV MAIN_ENTRY=""
-# if bootstrap dir is not empty, then run the bootstrap script
-CMD /bin/bash ${BOOTSTRAP_DIR}; python3 ${MAIN_ENTRY}
-```
-
-Above is the dockerfile example that we usually use to build a serviceable docker image. You can imitate this.  
-To use a customized docker, let say you have a workspace folder like:
-```
-- build.yaml
-- src
-    - setup
-        - bootstrap.sh
-    - main_entry.py
-```
-
-And inside your build.yaml, you have:
 ```yaml
-workspace: "./src"
+inference_image_name: your_image_name
 ```
 
-During the deployment stage, the `src` folder will be **automatically** mount by FedML framework to 
-`/home/fedml/models_serving/`.
+Also, you should specify `enable_custom_image` to `true` in the `config.yaml` file.  
 
-So, every code you have in your workspace, will be under `/home/fedml/models_serving/` inside the docker.
-
-Say you want to indicate an entry command for docker container, which, for example, enter your main entry.
-
-You may indicate `entry_cmd` in the `build.yaml`:
 ```yaml
-entry_cmd: "/bin/bash python3 /home/fedml/models_serving/main_entry.py"
+enable_custom_image: true
 ```
 
-Also, the value (string) for the key `bootstrap` 
+Then, for the `bootstrap` key, you can write some command that install the requirements.
+
 ```yaml
 bootstrap: |
-  echo "Bootstrap start..."
-  sh /home/fedml/models_serving/setup/bootstrap.sh
-  echo "Bootstrap finished"
+  echo "Installing dependency..."
 ```
 
-will be transfer to file and mount to
-`/home/fedml/models_serving/fedml-deploy-bootstrap-auto-gen.sh` inside container.
-```shell
-echo "Bootstrap start..."
-sh /home/fedml/models_serving/setup/bootstrap.sh
-echo "Bootstrap finished"
-```
+Finally, for the `job` key, you can write some command that start the inference service.
 
-So, if you want to execute the bootstrap inside docker, in your build.yaml, write:
 ```yaml
-entry_cmd: "/bin/bash /home/fedml/models_serving/fedml-deploy-bootstrap-auto-gen.sh"
+job: |
+  python3 serve_main.py
 ```
 
-
+A picture of the workflow is shown below.
+![Customized_Docker_Image.png](pics/Customized_Docker_Image.png)
 

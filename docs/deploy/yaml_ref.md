@@ -19,7 +19,8 @@ docker_registry_user_password: passwd
 docker_registry: fedml-official
 entry_cmd: tritonserver --model-repository=/model
 port_inside_docker: 8000
-worker_port: 5001
+server_external_port: 2204
+server_internal_port: 2203
 use_gpu: true
 use_triton: true
 request_input_example: '{"text": "Hello"}'
@@ -60,4 +61,8 @@ computing:
 | `environment_variables`                 | None                                      | Environment variable that can be read in entry_point file.                                                                                                                      |
 | `deploy_timeout`                        | 900                                       | Maximum waiting time for endpoint to be established.                                                                                                                            |
 | `auto_detect_public_ip`                 | false                                     | For on-premise mode, auto detect the ip of the master and workers public ip.                                                                                                    |
-| `computing`                             | None                                      | For gpu cloud mode, indicate the resource you need for inference. You can visiting URL and check: https://nexus.fedml.ai/compute/distributed .                               |
+| `computing`                             | None                                      | For gpu cloud mode, indicate the resource you need for inference. You can visiting URL and check: https://nexus.fedml.ai/compute/
+
+
+.                               |
+
