@@ -27,7 +27,7 @@ MLOps works following the figure above; this workflow is handled by a web UI and
 To begin, please create an account:
 
 - Instructions for registration: \
-  Please open [https://nexus.fedml.ai](https://nexus.fedml.ai) and click "Sign Up".
+  Please open [https://fedml.ai](https://fedml.ai) and click "Sign Up".
 
 ### Local Development and Building MLOps Packages
 
@@ -49,7 +49,7 @@ fedml build -t client -sf $SOURCE -ep $ENTRY -cf $CONFIG -df $DEST
 
 Usage: fedml build [OPTIONS]
 
-  Commands for nexus.fedml.ai MLOps platform
+  Commands for fedml.ai MLOps platform
 
 Options:
   -t, --type TEXT            client or server? (value: client; server)

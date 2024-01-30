@@ -9,7 +9,7 @@ sidebar_position: 1
 
 FEDML Federate Simulation is also called Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
 Compared to other simulators, FedML Parrot brings additional values as follows:
-1. <b>mitigating the gap between research and engineering</b>: before convincing your ML infrastructure team to do non-trivial algorithmic and system upgrades, you can use FedML Parrot to demonstrate the benefits of newly developed federated learning algorithms or applying FL to your existing ML applications. FedML Parrot can smoothly transplant your simulation code to real-world deployment with our MLOps platform (nexus.fedml.ai). This has been demonstrated by real business use cases served by FedML Inc.
+1. <b>mitigating the gap between research and engineering</b>: before convincing your ML infrastructure team to do non-trivial algorithmic and system upgrades, you can use FedML Parrot to demonstrate the benefits of newly developed federated learning algorithms or applying FL to your existing ML applications. FedML Parrot can smoothly transplant your simulation code to real-world deployment with our MLOps platform (fedml.ai). This has been demonstrated by real business use cases served by FedML Inc.
 
 2. <b>simplifying your research</b>: ML researchers can  try quick algorithmic ideas without handling tedious engineering. For example, Dr. Aiden Chaoyang He. has published 30+ FL-related publications using the FedML framework in just 2-3 years.
 
@@ -76,7 +76,7 @@ To do a sanity check of FedML Parrot in your environment or to fairly compare ne
 
 # Config MLOps parameters
 You may set the following parameters in the 'fedml_config.yaml' file
-to upload metrics and logs to MLOps (nexus.fedml.ai)
+to upload metrics and logs to MLOps (fedml.ai)
 ```
 enable_tracking: true
 mlops_api_key: your_api_key
@@ -85,7 +85,7 @@ mlops_run_name: your_run_name_prefix
 ```
 
 # Login to MLOps
-You may run the following command to login to MLOps (nexus.fedml.ai), 
+You may run the following command to login to MLOps (fedml.ai), 
 then simulation metrics and logs will be uploaded to MLOps.
 ```
 fedml login userid(or API Key) -c -r edge_simulator

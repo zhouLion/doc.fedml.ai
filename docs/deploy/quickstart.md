@@ -63,7 +63,7 @@ You should see the output from the terminal with the response of that model.
 
 ### Deploy the model to Serverless GPU cloud
 :::note
-Before you start, you will need to create an account on [FedML Nexus AI Cloud](https://nexus.fedml.ai/home).
+Before you start, you will need to create an account on [FedML Nexus AI Cloud](https://fedml.ai/home).
 After you create an account, you will see an Account Key (API Key) from the profile page.
 ![getApiKey.jpg](pics%2FgetApiKey.jpg)
 

@@ -32,7 +32,7 @@ The entire workflow is as follows:
 2. Deploy the fedml client:  ```kubectl apply -f ./fedml-edge-client-server/deployment-client.yml```
 3. In the file fedml-edge-client-server/deployment-server.yml, modify the variable ACCOUNT_ID to your desired value
 4. Deploy the fedml server:  ```kubectl apply -f ./fedml-edge-client-server/deployment-server.yml```
-5. Login the FedML MLOps platform (https://nexus.fedml.ai), the above deployed client and server will be found in the edge devices
+5. Login the FedML MLOps platform (https://fedml.ai), the above deployed client and server will be found in the edge devices
 
 If you want to scale up or scal down the pods to your desired count, you may run the following command:
 
@@ -43,7 +43,7 @@ If you want to scale up or scal down the pods to your desired count, you may run
 ## Installation with Helm Charts
 
 Also, you may use the helm charts to deploy your fedml client and server to target Kubernetes cluster.
-You just need to run the following commands with your user id at the nexus.fedml.ai.
+You just need to run the following commands with your user id at the fedml.ai.
 ```
 kubectl create namespace fedml
 helm install --set image.repository="fedml/fedml-edge-client-server-light" --set env.fedmlAccountId="$YourUserId" --set env.role="client" fedml-client-deployment ./fedml-client-deployment-latest.tgz

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Getting Started
 
-Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://nexus.fedml.ai](https://nexus.fedml.ai)) with examples for different scenarios.
+Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://fedml.ai](https://fedml.ai)) with examples for different scenarios.
 
 ## **FedML Feature Overview**
 
@@ -61,7 +61,7 @@ Other low-level APIs related to security and privacy are also supported. All alg
 
 **serve**: Model serving, tailored for edge inference
 
-**mlops**: APIs related to machine learning operation platform (nexus.fedml.ai)
+**mlops**: APIs related to machine learning operation platform (fedml.ai)
 
 **centralized**: Some centralized trainer code examples for benchmarking purposes.
 
@@ -181,7 +181,7 @@ comm_args:
   #customized_training_s3_config: {'CN_S3_SAK': 'your s3 aws_secret_access_key', 'CN_REGION_NAME': 'your s3 region name', 'CN_S3_AKI': 'your s3 aws_access_key_id', 'BUCKET_NAME': 'your s3 bucket name'}
 
 tracking_args:
-  # When running on MLOps platform(nexus.fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
+  # When running on MLOps platform(fedml.ai), the default log path is at ~/fedml-client/fedml/logs/ and ~/fedml-server/fedml/logs/
   enable_wandb: false
 ```
 
@@ -222,7 +222,7 @@ Hierarchical Federated Learning:
 
 ## **MLOps User Guide**
 
-[https://nexus.fedml.ai](https://nexus.fedml.ai)
+[https://fedml.ai](https://fedml.ai)
 
 Currently, the project developed based on FedML Octopus (cross-silo) and Beehive (cross-device) can be smoothly deployed into the real-world system using FedML MLOps.
 

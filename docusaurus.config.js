@@ -188,7 +188,7 @@ const config = {
           },
           {
             label: 'Login',
-            href: 'https://nexus.fedml.ai',
+            href: 'https://fedml.ai',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
