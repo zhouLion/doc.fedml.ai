@@ -15,7 +15,9 @@ pip install fedml
 Before launch any job, at first, you need to define your job properties in the job yaml file, e.g. workspace, job, bootstrap, etc.
 
 :::tip Tip
-The workspace folder is the folder where your source code for execution resides
+The workspace folder is the folder where your sour
+
+ce code for execution resides
 :::
 
 Below is an example of job yaml file:
@@ -27,6 +29,8 @@ fedml_env:
 # Local directory where your source code resides.
 # It should be the relative path to this job yaml file.
 # If your job doesn't contain any source code, it can be empty.
+
+
 workspace: hello_world
 
 # Bootstrap shell commands which will be executed before running entry commands.
@@ -52,7 +56,9 @@ computing:
   # max cost per hour of all machines for your job.
   # E.g., if your job are assigned 2 x A100 nodes (8 GPUs), each GPU cost $1/GPU/Hour, "maximum_cost_per_hour" = 16 * $1 = $16
   maximum_cost_per_hour: $1.75
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai/accelerator_resource_type
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai
+  
+  
 ```
 For more details and properties about the job yaml file, please refer to [job yaml file](../yaml).
 
@@ -119,7 +125,7 @@ You can query the realtime status of your run with the following command.
 fedml run logs -rid <run_id>
 ```
 
-More run management CLIs can be found [here](/open-source/cli/fedml-run)
+More run management CLIs can be found [here](../../open-source/cli/fedml-run.md)
 
 ## 5. You can also view the details of run on the FedML® AI Nexus platform:
 
