@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Create Your Model
+# Create a Model Card
 
 There are two ways to create a model card: 
 1. Using a pre-built model.

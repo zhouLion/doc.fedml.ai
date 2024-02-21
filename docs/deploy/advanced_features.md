@@ -84,35 +84,3 @@ then FedML framework will parse the string that predictor's return, take it as a
 requester do not include `Accept: image/png` in their header. Then FedML framework will treat the return obj from the 
 predictor as a string, not file path. So in the user-level code, developer will need to transfer the file to base64 
 string and return.
-
-## Customized Image Support
-
-To use your own docker image, you can specify the `inference_image_name` field in the `config.yaml` file.  
-
-```yaml
-inference_image_name: your_image_name
-```
-
-Also, you should specify `enable_custom_image` to `true` in the `config.yaml` file.  
-
-```yaml
-enable_custom_image: true
-```
-
-Then, for the `bootstrap` key, you can write some command that install the requirements.
-
-```yaml
-bootstrap: |
-  echo "Installing dependency..."
-```
-
-Finally, for the `job` key, you can write some command that start the inference service.
-
-```yaml
-job: |
-  python3 serve_main.py
-```
-
-A picture of the workflow is shown below.
-![Customized_Docker_Image.png](pics/Customized_Docker_Image.png)
-
