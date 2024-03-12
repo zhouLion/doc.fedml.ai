@@ -90,7 +90,7 @@ framework_type: fedml        # options: fedml, deepspeed, pytorch, general
 # train subtype: general_training, single_machine_training, cluster_distributed_training, cross_cloud_training
 # federate subtype: cross_silo, simulation, web, smart_phone
 # deploy subtype: none
-job_subtype: generate_training
+job_subtype: general_training
 
 # Running entry commands on the server side which will be executed as the job entry point.
 # Support multiple lines, which can not be empty.
