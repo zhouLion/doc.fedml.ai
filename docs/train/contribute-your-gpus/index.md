@@ -1,3 +1,0 @@
-#  Share your GPUs and Earn
-
-Updating ...

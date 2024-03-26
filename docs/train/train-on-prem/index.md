@@ -1,3 +1,0 @@
-#  Train On-premise (Local) Servers
-
-Updating ...
