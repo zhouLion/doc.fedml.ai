@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Cross-cloud Training
 
-[FEDML® UnitedLLM](https://blog.fedml.ai/releasing-fedllm-build-your-own-large-language-models-on-proprietary-data-using-the-fedml-platform/)
+[FEDML® UnitedLLM](https://github.com/FedML-AI/FedML/tree/master/python/spotlight_prj/unitedllm)
 is an MLOps-supported training pipeline for decentralized pretraining and finetuning of large language models.
 
 ## Getting Started
@@ -44,7 +44,7 @@ pip install fedml
 ### 2. Prepare a Configuration File
 
 To train/fine-tune in decentralized setting, you need to provide a FedML config file.
-A concrete example can be found in [fedml_config/fedml_config.yaml](fedml_config/fedml_config.yaml).
+A concrete example can be found in `fedml_config/fedml_config.yaml`.
 
 ```yaml
 common_args:
