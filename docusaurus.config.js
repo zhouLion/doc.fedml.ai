@@ -143,21 +143,21 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'deploy',
+            position: 'left',
+            label: 'Deploy',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'launch',
             position: 'left',
             label: 'Launch',
           },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'train',
-          //   position: 'left',
-          //   label: 'Train',
-          // },
           {
             type: 'docSidebar',
-            sidebarId: 'deploy',
+            sidebarId: 'train',
             position: 'left',
-            label: 'Deploy',
+            label: 'Train',
           },
           {
             type: 'docSidebar',
