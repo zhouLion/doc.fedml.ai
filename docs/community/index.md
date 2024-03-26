@@ -6,10 +6,3 @@
 
 ## Join our Discord:
 https://discord.gg/9xkW8ae6RV
-
-## Join our WeChat Group:
-
-Our WeChat group has 200+ members, please add the following account and ask for an invitation to join. 
-
-
-![./_static/image/wechat.jpeg](./../federate/_static/image/wechat.jpeg)

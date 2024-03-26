@@ -4,13 +4,24 @@ sidebar_position: 1
 
 # What is FEDML Train?
 
-FEDML Train is part of FEDML Nexus AI cloud service. It's expertly designed for distributed, multi-cloud, and cross-silo training. Ideal for both generative and traditional models, it offers enhanced optimization and transparent observability. Benefit from FEDML GPU marketplace for an efficient, cost-effective AI development journey. Plus, enjoy the flexibility of on-prem deployment on your private clusters.
-
-- Concept
-- Experimental Tracking
-- Train on Cloud
-- LLM Fine-tuning as a Service
-- Train on On-premise Cluster
-- Cross-cloud Training
-- Training Cluster management
-- Share your GPUs and Earn
+FEDML® Train is a scalable distributed training service platform under FEDML® Nexus AI. It covers the following capabilities:
+- **Training As a Cloud Service**
+  - [Train on FEDML Cloud with FEDML Launch, Only Pay Per Usage](./train-on-cloud/train-on-fedml-cloud.md)
+  - [Zero-code Serverless LLM Fine-tuning LLM](./train-on-cloud/zero-code-serverless-llm-training.md)
+  - [Job Store: Pre-built Training Jobs for Diverse Generative AI Models](./train-on-cloud/job_store.md)
+- **Train on Your Own GPU Cluster**
+  - [Train on Your Own On-premise GPU cluster](./train/train-on-prem/train_on_premise_cluster)
+  - [Train on Your Own Cloud GPU cluster](./train/train-on-prem/train_on_cloud_cluster)
+- **[High Concurrent Batch Job](./batch_job.md)**
+- **[Workflow for Compound Training Jobs](./workflow.md)**
+- **[Experimental Tracking](./experimental_tracking.md)**
+  - Run Overview
+  - Metrics
+  - Logs
+  - Hardware Monitoring
+  - Model
+  - Artifacts
+- **Advanced Training Libraries**
+  - [Cross-cloud Training](./train/advanced/cross_cloud)
+  - [Cross-silo Federated Learning](./train/advanced/cross_silo_fl)
+  - [Cross-device Federated Learning](./train/advanced/cross_device_fl)

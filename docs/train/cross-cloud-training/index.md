@@ -1,3 +1,0 @@
-#  FEDML Cross-cloud Training Library
-
-Updating ...
