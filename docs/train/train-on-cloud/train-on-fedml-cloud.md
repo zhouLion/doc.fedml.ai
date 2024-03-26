@@ -78,7 +78,7 @@ computing:
  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by
 ```
 
-For more details and properties about the job yaml file, please refer to job yaml file.
+For more details and properties about the job yaml file, please refer to [job yaml file](./../../launch/yaml).
 
 ### 3. Launch a job
 
@@ -127,7 +127,7 @@ You can query the real time status of your run with the following command.
 ```python
 fedml run logs -rid <run_id>
 ```
-More run management CLIs can be found here.
+More run management CLIs can be found [here](../../open-source/cli/fedml-run.md).
 
 ### 5. View run details
 
