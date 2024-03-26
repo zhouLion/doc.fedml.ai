@@ -178,6 +178,11 @@ const config = {
             position: 'left',
           },
           {
+            label: 'FEDML.ai Home',
+            href: 'https://fedml.ai',
+            position: 'left',
+          },
+          {
             label: 'GitHub',
             href: 'https://github.com/FedML-AI/FedML',
             position: 'right',
