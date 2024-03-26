@@ -5,17 +5,24 @@ sidebar_position: 1
 # Train on Your Own On-premise GPU cluster
 
 You can also build your own cluster and launch jobs there. The GPU nodes in the cluster can be GPU instances launched under your AWS/GCP/Azure account or your in-house GPU devices. The workflow is as follows.
-Step 1. Bind the machines on the Platform
+
+## Step 1. Bind the machines on the Platform
 Log into the platform, head to the Compute / My Servers Page and copy the fedml login command:
 
-[Image]
+![ ](./static/image/train_on_your_onprem_gpu_cluster/1_bind_machines.png)
 
-Step 2. SSH into your on-prem devices and do the following individually for each device:
+## Step 2. SSH into your on-prem devices and do the following individually for each device:
+
 Install the fedml library if not installed already:
+```
 pip install fedml
+```
 Run the login command copied from the platform:
+```
 fedml login 3b24dd2f****206e8669
+```
 It should show something similar as below:
+```
 (fedml) alay@a6000:~$ fedml login 3b24dd2f9b3e478084c517bc206e8669 -v dev
 
  Welcome to FedML.ai!
@@ -36,15 +43,30 @@ Requirement already satisfied: numpy>=1.21 in ./.pyenv/versions/fedml/lib/python
 
 Congratulations, your device is connected to the FedML MLOps platform successfully!
 Your FedML Edge ID is 201610, unique device ID is 0xffdc89fad658@Linux.Edge.Device
+```
+
 Head back to the Compute / My Servers page on platform and verify that the devices are bounded to the FEDML Nexus AI Platform:
-[Image]
-Step 3. Create a cluster of your servers bounded to the FEDML Nexus AI Platform:
+![ ](./static/image/train_on_your_onprem_gpu_cluster/2_my_servers.png)
+
+
+## Step 3. Create a cluster of your servers bounded to the FEDML Nexus AI Platform:
 Navigate to the Compute / Create Clusters page and create a cluster of your servers:
-[Image]
+
+![ ](./static/image/train_on_your_onprem_gpu_cluster/3_create_cluster.png)
+
+
 All your created clusters will be listed on the Compute / My Clusters page:
-[Image]
-Step 4. Launch the job on your cluster:
+
+![ ](./static/image/train_on_your_onprem_gpu_cluster/4_my_clusters.png)
+
+
+## Step 4. Launch the job on your cluster
+
 The way to create the job YAML file is the same as “Training as a Cloud Service”. All that is left to do to launch a job to the on-premise cluster is to run following one-line command:
+```
 fedml launch job.yaml -c <cluster_name>
+```
 For our example, the command and respective output would be as follows:
+```
 fedml launch job.yaml -c hello-world
+```
