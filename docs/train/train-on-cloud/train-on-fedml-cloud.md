@@ -30,10 +30,10 @@ As shown in the figure above, FEDML Launch works as following consecutive steps:
 6. Provide Machine Learning as a Service (MLaaS) with Launch: if you have GPU resources, valuable datasets, or even a foundation model and hope to provide cloud service for your own customers to use them as Inference API or Training As a Service, FEDML Launch would be the off-the-shelf enterprise solution for it.
 7. FEDML Launch is versatile in any AI jobs, including training, deployment, and federated learning. It can also be used for complex multi-step jobs such as serving AI agents, building a customized machine learning pipeline for model continual refinement.
 
-## Quick start
-![Quick start](static/image/quickstart.png)
+## Quick Start
+![Quick Start](static/image/quickstart.png)
 
-### 1. Set up the FEDML library
+### 1. Setup the FEDML library
 Install Python library for interacting with FEDML Launch APIs.
 ```python
 pip install fedml
@@ -129,7 +129,7 @@ fedml run logs -rid <run_id>
 ```
 More run management CLIs can be found here.
 
-### 5. You can also view the details of the run on the FEDML Nexus AI platform
+### 5. View run details
 
 Log into to the FEDML Nexus AI Platform (https://fedml.ai) and go to Train > Projects (my_project) Select the run you just launched and click on it to view the details of the run.
 ![Run Details](static/image/run_details.png)
