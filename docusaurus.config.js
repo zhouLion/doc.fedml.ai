@@ -161,6 +161,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "shareAndEarn",
+            position: "left",
+            label: "Share & Earn"
+          },
+          {
+            type: "docSidebar",
             sidebarId: "community",
             position: "left",
             label: "Join the Community",
