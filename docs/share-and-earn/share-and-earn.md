@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## 1. Supplier Setup 
 
-### 1.1) Login to the FedML® AI Nexus Platform and navigate to the `Share & Earn / Add GPU` page.
+### 1.1) Login to the FEDML® Nexus AI Platform and navigate to the `Share & Earn / Add GPU` page.
 
 ![Supplier Setup](static/image/supplier_setup.png)
 
