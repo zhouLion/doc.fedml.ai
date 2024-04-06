@@ -39,27 +39,17 @@ nvidia-smi
 If the above commands don't work, you can follow the instructions on NVIDIA's official website
 [here](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html).
 
-### 2.2) Download following script to the GPU server you want to bind:
-
-[bind_gpu.sh](static/bind_gpu.sh)
-
-> **Note**: Make sure to save the script with filename `bind_gpu.sh` on your GPU server.
-
-Next, give execute permission to the script:
+### 2.2) Execute the following binding script on your GPU server:
 
 ```bash
-chmod +x bind_gpu.sh
+sudo curl -sSf https://doc.fedml.ai/shell/bind_gpu.sh | sh
 ```
 
-Now, execute the script:
+This script will install the fedml library and all required dependencies on your GPU server.
 
-```bash
-./bind_gpu.sh
-```
+### 2.3) Verify the environment setup on your GPU server:
 
-This script will install the tools and software packages required for fedml library to work on your GPU server.
-
-### 2.3) Verify the installation of fedml library:
+#### Verify the installation of fedml library on your GPU server:
 
 ```bash
 fedml env
@@ -101,7 +91,7 @@ The connection to S3 Object Storage is OK.
 The connection to mqtt.fedml.ai (port:1883) is OK.
 ```
 
-### 2.4) Verify the installation of docker on your GPU server:
+#### Verify the installation of fedml library on your GPU server:
 ```bash
 (base) DGX-7% docker ps
 CONTAINER ID IMAGE COMMAND  CREATED  STATUS  PORTS  NAMES```
@@ -118,7 +108,7 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 ````
 
 
-### 2.5) Navigate to `Share & Earn / Add GPU` page and copy one-line login command for binding your GPU servers.
+### 2.4) Navigate to `Share & Earn / Add GPU` page and copy one-line login command for binding your GPU servers.
 
 ![Add GPU](static/image/add_gpu.png)
 
