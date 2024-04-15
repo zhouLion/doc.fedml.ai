@@ -38,6 +38,10 @@ const resources = [
   },
 ];
 
+const resourceMapper = Object.fromEntries(
+  resources.map((resource) => [resource.label, resource]),
+);
+
 const plugins = [
   tailwindPlugin,
   // ...docs_plugins,
@@ -166,36 +170,34 @@ const config = {
             label: "Share & Earn"
           },
           {
-            type: "docSidebar",
-            sidebarId: "community",
-            position: "left",
-            label: "Join the Community",
+            type: 'docSidebar',
+            sidebarId: 'community',
+            position: 'left',
+            label: 'Community',
           },
           {
-            label: "Resources",
-            type: "dropdown",
-            items: [...resources],
-            position: "left",
-          },
-          {
-            label: 'FEDML.ai Home',
-            href: 'https://fedml.ai',
+            ...resourceMapper['Blog'],
             position: 'left',
           },
           {
-            label: 'GitHub',
-            href: 'https://github.com/FedML-AI/FedML',
+            label: 'FEDML Home',
+            href: 'https://fedml.ai',
+            position: 'left',
+          },
+          // {
+          //   label: 'GitHub',
+          //   href: 'https://github.com/FedML-AI/FedML',
+          //   position: 'right',
+          // },
+          {
+            type: 'search',
             position: 'right',
           },
           {
-            type: "search",
-            position: "right",
-          },
-          {
-            label: "Login",
-            href: "https://fedml.ai",
-            position: "right",
-            className: "dev-portal-signup dev-portal-link",
+            label: 'Login',
+            href: 'https://fedml.ai',
+            position: 'right',
+            className: 'dev-portal-signup dev-portal-link',
           },
         ],
       },
