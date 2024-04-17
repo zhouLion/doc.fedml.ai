@@ -165,6 +165,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "storage",
+            position: "left",
+            label: "Storage",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "shareAndEarn",
             position: "left",
             label: "Share & Earn"
