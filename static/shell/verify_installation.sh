@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Run the script to install everything
+# Initialize miniconda shell
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
 
 # Check if Miniconda is installed
