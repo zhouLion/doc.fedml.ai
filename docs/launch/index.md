@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# What is FEDML Launch?
+# What is FEDML®Launch?
 
 No servers? No problem! Tap into a massive GPU marketplace (multi-cloud and multi-provider), offering high availability and low cost, to effortlessly launch your intricate ML jobs with a one line command:
 ```
