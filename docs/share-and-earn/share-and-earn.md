@@ -42,7 +42,7 @@ If the above commands don't work, you can follow the instructions on NVIDIA's of
 ### 2.2) Execute the following binding script on your GPU server:
 
 ```bash
-sudo curl -sSf https://doc.fedml.ai/shell/bind_gpu.sh | sh
+sudo curl -sSf https://doc.fedml.ai/shell/bind_gpu.sh | bash && exec $SHELL && sudo curl -sSf https://doc.fedml.ai/shell/verify_installation.sh | bash
 ```
 
 This script will install the fedml library and all required dependencies on your GPU server.
