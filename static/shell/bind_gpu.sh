@@ -22,12 +22,11 @@ install_wget() {
 
 # Function to download and install Miniconda
 install_miniconda() {
-    echo "ALAY DEBUG Detected shell: $1"
-    mkdir -p ~/miniconda3
+    mkdir -p "$HOME/miniconda3"
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-    chmod +x /home/ubuntu/miniconda3/miniconda.sh
-    $1 ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-    rm -rf ~/miniconda3/miniconda.sh
+    chmod +x "$HOME/miniconda3/miniconda.sh"
+    $1 "$HOME/miniconda3/miniconda.sh" -b -u -p "$HOME/miniconda3"
+    rm -rf "$HOME/miniconda3/miniconda.sh"
 }
 
 # Function to initialize Miniconda shell
@@ -105,6 +104,7 @@ set_default_conda_env() {
 }
 
 # Call the functions
+sudo -v
 detect_default_shell
 install_wget
 install_miniconda "$default_shell"
