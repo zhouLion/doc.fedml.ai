@@ -49,14 +49,30 @@ context: str  # can be empty
 response: str  # expected output
 ```
 
+Example:
+```json lines
+{"instruction": "When did Virgin Australia start operating?", "context": "Virgin Australia, the trading name of Virgin Australia Airlines Pty Ltd, is an Australian-based airline. It is the largest airline by fleet size to use the Virgin brand. It commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route. It suddenly found itself as a major airline in Australia's domestic market after the collapse of Ansett Australia in September 2001. The airline has since grown to directly serve 32 cities in Australia, from hubs in Brisbane, Melbourne and Sydney.", "response": "Virgin Australia commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route."}
+{"instruction": "Which is a species of fish? Tope or Rope", "context": "", "response": "Tope"}
+{"instruction": "Why can camels survive for long without water?", "context": "", "response": "Camels use the fat in their humps to keep them filled with energy and hydration for long periods of time."}
+{"instruction": "Alice's parents have three daughters: Amy, Jessy, and what's the name of the third daughter?", "context": "", "response": "The name of the third daughter is Alice"}
+...
+```
+
 (2) `Text` only: each sample is a dictionary with the following format
 
 ```python
 text: str  # contains the entire text sample
 ```
 
+Example:
+```json lines
+{"text": "When did Virgin Australia start operating?\nVirgin Australia, the trading name of Virgin Australia Airlines Pty Ltd, is an Australian-based airline. It is the largest airline by fleet size to use the Virgin brand. It commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route. It suddenly found itself as a major airline in Australia's domestic market after the collapse of Ansett Australia in September 2001. The airline has since grown to directly serve 32 cities in Australia, from hubs in Brisbane, Melbourne and Sydney.\nVirgin Australia commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route."}
+{"text": "Which is a species of fish? Tope or Rope\nTope"}
+...
+```
 
-## 3. Hyperparameter Setting (Optional)
+
+## 3. Hyper-parameter Setting (Optional)
 ![Hyperparameter Setting](static/image/hyperparameter_setting.png)
 
 ## 4. Select GPU Resource Type (Optional)
