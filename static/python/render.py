@@ -3,6 +3,8 @@ import sys
 import yaml
 import requests
 
+BACKEND_URL = "https://open-test.fedml.ai/cheetah/cli/web3/token-node-rel"
+
 TOKEN_MISSING_ERROR_MESSAGE = ("\033[1;31m\u2717 Error: Render Auth Token is missing. Kindly execute the last command again, "
                                "and enter Render Auth Token when prompted\033[0m")
 
@@ -43,10 +45,9 @@ def read_api_key():
 
 
 def send_request(render_token, edge_id, api_key):
-    url = "https://open-test.fedml.ai/cheetah/cli/web3/token-node-rel"
     headers = {"Authorization": f"Bearer {api_key}"}
     payload = {"nodeId": edge_id, "token": render_token}
-    response = requests.post(url, headers=headers, json=payload)
+    response = requests.post(BACKEND_URL, headers=headers, json=payload)
     return response
 
 def get_public_ip():
