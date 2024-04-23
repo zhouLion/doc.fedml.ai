@@ -103,8 +103,11 @@ set_default_conda_env() {
     echo "conda" activate fedml >> "$HOME/.$1rc"
 }
 
+
+# Stop unattended upgrades which result in /var/lib/dpkg/lock acquire race condition
+sudo systemctl stop unattended-upgrades
+
 # Call the functions
-sudo -v
 detect_default_shell
 install_wget
 install_miniconda "$default_shell"
@@ -116,3 +119,6 @@ install_redis
 install_nvidia_container_toolkit
 set_default_conda_env "$default_shell"
 source ~/."${default_shell}rc"
+
+# Restore unattended-upgrades
+sudo systemctl start unattended-upgrades
