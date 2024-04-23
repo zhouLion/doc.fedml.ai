@@ -61,7 +61,6 @@ def get_public_ip():
     except requests.RequestException as e:
         return None
 
-
 def validate_input(render_token, edge_id, api_key):
     if render_token.strip() == "":
         print(TOKEN_MISSING_ERROR_MESSAGE)
@@ -70,6 +69,15 @@ def validate_input(render_token, edge_id, api_key):
     if edge_id.strip() == "" or api_key.strip() == "":
         print(FEDML_CONFIG_MISSING_ERROR_MESSAGE)
         sys.exit(1)
+
+def is_request_successful(response):
+    if response.status_code != 200:
+        return False
+    resp_data = response.json()
+    code = resp_data.get("code", None)
+    if code and code.lower() == "success":
+        return True
+    return False
 
 
 def main():
@@ -80,7 +88,7 @@ def main():
     validate_input(render_token=render_token, edge_id=edge_id, api_key=api_key)
     response = send_request(render_token=render_token, edge_id=edge_id, api_key=api_key, public_ip=public_ip)
 
-    if response.status_code == 200:
+    if is_request_successful(response):
         print(NODE_BIND_SUCCESS_MESSAGE)
     else:
         print("\033[1;31m\u2717 The attempt to bind the node to the FEDML platform has encountered a failure. "
