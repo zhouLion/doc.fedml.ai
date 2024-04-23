@@ -11,11 +11,12 @@ TOKEN_MISSING_ERROR_MESSAGE = ("\033[1;31m\u2717 Error: Render Auth Token is mis
 FEDML_CONFIG_MISSING_ERROR_MESSAGE = ("\033[1;31m\u2717 Error: Your node failed to bind to the FEDML platform. "
                                       "Please try the binding process from start again.\033[0m")
 
-NODE_BIND_SUCCESS_MESSAGE = ("\033[1;32m\u2713 Congratulations! Your node is successfully binded to the FEDML platform!\033[0m")
+NODE_BIND_SUCCESS_MESSAGE = ("\033[1;32m🏆 Congratulations! "
+                             "Your node is successfully binded to the FEDML platform!\033[0m")
 
 
 def get_user_render_token():
-    user_render_token = input("Enter your render auth token: ")
+    user_render_token = input("\033[1;35m🔑 Enter your render auth token:\033[0m ")
     return user_render_token
 
 
@@ -44,9 +45,9 @@ def read_api_key():
     return api_key
 
 
-def send_request(render_token, edge_id, api_key):
+def send_request(render_token, edge_id, api_key, public_ip=None):
     headers = {"Authorization": f"Bearer {api_key}"}
-    payload = {"nodeId": edge_id, "token": render_token}
+    payload = {"nodeId": edge_id, "token": render_token, "ip": public_ip}
     response = requests.post(BACKEND_URL, headers=headers, json=payload)
     return response
 
@@ -56,20 +57,18 @@ def get_public_ip():
         if response.status_code == 200:
             return response.text
         else:
-            # print("Failed to retrieve public IP. Status code:", response.status_code)
             return None
     except requests.RequestException as e:
-        # print("Error occurred during request:", e)
         return None
 
 
 def validate_input(render_token, edge_id, api_key):
     if render_token.strip() == "":
-        print(TOKEN_MISSING_ERROR)
+        print(TOKEN_MISSING_ERROR_MESSAGE)
         sys.exit(1)
 
     if edge_id.strip() == "" or api_key.strip() == "":
-        print(FEDML_CONFIG_MISSING_ERROR)
+        print(FEDML_CONFIG_MISSING_ERROR_MESSAGE)
         sys.exit(1)
 
 
@@ -79,7 +78,7 @@ def main():
     api_key = read_api_key()
     public_ip = get_public_ip()
     validate_input(render_token=render_token, edge_id=edge_id, api_key=api_key)
-    response = send_request(render_token=render_token, edge_id=edge_id, api_key=api_key)
+    response = send_request(render_token=render_token, edge_id=edge_id, api_key=api_key, public_ip=public_ip)
 
     if response.status_code == 200:
         print(NODE_BIND_SUCCESS_MESSAGE)
