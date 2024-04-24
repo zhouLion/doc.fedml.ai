@@ -2,6 +2,7 @@ import os
 import sys
 import yaml
 import requests
+import time
 
 BACKEND_URL = "https://open-test.fedml.ai/cheetah/cli/web3/token-node-rel"
 
@@ -23,14 +24,17 @@ def get_user_render_token():
 def read_edge_id():
     home_dir = os.path.expanduser("~")
     edge_id_file = os.path.join(home_dir, ".fedml/fedml-client/fedml/data/runner_infos/runner_infos.yaml")
-    try:
-        with open(edge_id_file, "r") as f:
-            runner_infos = yaml.safe_load(f)
-            edge_id = runner_infos.get("edge_id")
-    except Exception as e:
-        print(FEDML_CONFIG_MISSING_ERROR_MESSAGE)
-        sys.exit(1)
-    return edge_id
+    start_time = time.time()
+    while time.time() - start_time < 180:  # 3-minute timeout
+        try:
+            with open(edge_id_file, "r") as f:
+                runner_infos = yaml.safe_load(f)
+                edge_id = runner_infos.get("edge_id")
+                if edge_id:
+                    return edge_id
+        except Exception as e:
+            time.sleep(1)  # Sleep for 1 second before retrying
+    sys.exit(1)
 
 
 def read_api_key():
@@ -96,7 +100,7 @@ def main():
               response.status_code,
               "\033[0m")
         print("Error message:", response.text)
-        exit(1)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
