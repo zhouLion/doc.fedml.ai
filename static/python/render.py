@@ -85,9 +85,9 @@ def is_request_successful(response):
 
 
 def main():
+    render_token = get_user_render_token()
     edge_id = read_edge_id()
     api_key = read_api_key()
-    render_token = get_user_render_token()
     public_ip = get_public_ip()
     validate_input(render_token=render_token, edge_id=edge_id, api_key=api_key)
     response = send_request(render_token=render_token, edge_id=edge_id, api_key=api_key, public_ip=public_ip)
