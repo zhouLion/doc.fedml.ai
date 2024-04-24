@@ -96,6 +96,7 @@ def main():
               response.status_code,
               "\033[0m")
         print("Error message:", response.text)
+        exit(1)
 
 
 if __name__ == "__main__":
