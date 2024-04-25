@@ -2,27 +2,21 @@
 sidebar_position: 1
 ---
 
-# 🚀 How to onboard Render nodes to FEDML!
-
-# Structure
-
-![Structure](./static/image/structure.png)
+# 🚀 How to onboard Render compute nodes into FEDML?
 
 # Introduction
 
+As announced earlier (https://github.com/rendernetwork/RNPs/blob/main/RNP-007.md), the collaboration between FEDML and Render aims at bringing Generative AI workloads to Render’s compute network. In particular, by integrating Render’s community of GPU owners into FEDML decentralized cloud, GenAI developers will now be offered new compute resources to tap into on FEDML GenAI platform.
+
+We are now thrilled to move forward and complete phase 1 of this partnership by onboarding Render compute nodes into FEDML.
+
+The process is very simple and each GPU provider from the Render community needs to only follow two steps as described below!
 
 
-##### Empowering the AI Revolution: FEDML Partners with Render Networks 
-We are thrilled to announce the next steps of our exciting partnership with Render Networks, a leading decentralized compute platform. This collaboration will empower the Render community to contribute their GPU resources to the FEDML marketplace, enabling AI developers to access scalable and cost-effective computing power for their generative AI projects. 
-
-Through this partnership, Render's community of GPU owners can now contribute their computing resources to the FEDML marketplace. AI developers can then leverage these resources to train and deploy their generative AI models, benefiting from the scalability, cost-efficiency, and decentralized nature of the Render network. The potential of this partnership is immense. AI developers can now access a vast pool of GPU resources, allowing them to scale their generative AI projects with ease. At the same time, Render's community members can earn passive income by making their GPUs available on the FEDML platform, further strengthening the decentralized compute ecosystem. 
-
-We are excited about the potential of this partnership to accelerate the adoption of generative AI and empower a new generation of AI-powered applications. By combining the strengths of FEDML's generative AI expertise and Render's decentralized compute network, we are poised to revolutionize the way AI is developed, deployed, and scaled.
-
-# Easy installation requiring executing only 2 commands
+# Onboarding instructions (requiring execution of only 2 commands)
 
 :::note 
-The following two commands are to be executed from within the node which you would like to bind to the FEDML platform
+The following two commands are to be executed from within the compute nodes which you would like to bind to the FEDML platform
 :::
 
 
@@ -72,7 +66,7 @@ sudo curl -sSf https://doc.fedml.ai/shell/verify_installation_driver.sh | bash &
 </details>
 
 
-### Frequently Asked Questions?
+# Frequently Asked Questions?
 
 <details>
 <summary> What if my node binding failed? </summary>
