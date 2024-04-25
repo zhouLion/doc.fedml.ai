@@ -9,6 +9,7 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 - `docs/train` provides docs for FEDML®Train
 - `docs/deploy` provides docs for FEDML®Deploy
 - `docs/federate` provides docs for FEDML®Federate (reusing our existing contents from federated learning)
+- `docs/storage` provides docs for FEDML® Storage
 
 # How to edit and release?
 
