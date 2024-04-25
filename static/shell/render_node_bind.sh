@@ -37,4 +37,4 @@ cd ..
 # Removing the tmp folder and its contents
 rm -rf "$tmp_folder"
 
-echo -e "\033[1;35m🚀 Your token was successfully linked to this node and binded to FEDML Platform! Render to the moon🌙\033[0m"
+echo -e "\033[1;35m🚀 Your token was successfully linked to this node and binded to FEDML Platform! Render to the moon 🌙\033[0m"
