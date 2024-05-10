@@ -27,15 +27,7 @@ const resources = [
   {
     label: "Blog",
     href: "https://blog.tensoropera.ai",
-  },
-  {
-    label: "Medium",
-    href: "https://medium.com/@FedML",
-  },
-  {
-    label: "Press",
-    href: "https://tensoropera.ai/press",
-  },
+  }
 ];
 
 const plugins = [
@@ -165,11 +157,16 @@ const config = {
             position: "left",
             label: "Join the Community",
           },
+          // {
+          //   label: "Resources",
+          //   type: "dropdown",
+          //   items: [...resources],
+          //   position: "left",
+          // },
           {
-            label: "Resources",
-            type: "dropdown",
-            items: [...resources],
-            position: "left",
+            label: 'Blog',
+            href: 'https://blog.TensorOpera.ai',
+            position: 'left',
           },
           {
             label: 'TensorOpera AI Home',
