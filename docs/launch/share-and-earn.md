@@ -1,25 +1,24 @@
 ---
 sidebar_position: 5
 ---
-
 # Share GPUs and Earn
 
 ## 1. Supplier Setup 
 
 #### Login to the TensorOpera® AI Platform and navigate to the `Share & Earn / Add GPU` page.
 
-![Supplier Setup](static/image/supplier_setup.png)
+![Supplier Setup](./../share-and-earn/static/image/supplier_setup.png)
 
 #### Setup Stripe account or just connect if you have one already to get paid by FedML, Inc.
 
-![Stripe Setup](static/image/stripe_setup.png)
+![Stripe Setup](./../share-and-earn/static/image/stripe_setup.png)
 
 
 ## 2. Add GPUs
 
 #### Navigate to `Share & Earn / Add GPU` page and copy one-line login command for binding your GPU servers.
 
-![Add GPU](static/image/add_gpu.png)
+![Add GPU](./../share-and-earn/static/image/add_gpu.png)
 
 #### From your GPU server terminal, execute the login command copied in from the platform.
 
@@ -54,7 +53,7 @@ You can also click through or copy the url link in the terminal output of previo
 :::
 
 
-![Edit GPU](static/image/edit_gpu.png)
+![Edit GPU](./../share-and-earn/static/image/edit_gpu.png)
 
 #### Fill in the details of your GPU server and click on `Update` button.
 
@@ -64,11 +63,11 @@ You can also click through or copy the url link in the terminal output of previo
 Be mindful while deciding Cost per hour for your GPU server. Setting the cost very high may put you at disadvantage as the matching algorithm prioritizes the cheaper GPU servers first.
 :::
 
-![Update GPU](static/image/update_gpu.png)
+![Update GPU](./../share-and-earn/static/image/update_gpu.png)
 
 Head back to the `Share & Earn / My GPUs` page on platform and verify that the GPU server is added to your list of active GPUs:
 
-![My GPUs](static/image/my_gpus.png)
+![My GPUs](./../share-and-earn/static/image/my_gpus.png)
 
 
 ## 4. Sit back, relax and get paid by FedML, Inc.
@@ -77,7 +76,7 @@ Hard part is over, now comes the fun part.
 
 Your GPU server will automatically be added to the resource pool and jobs that match the specifications will be scheduled.
 
-![GPU Marketplace](static/image/gpu_marketplace.png)
+![GPU Marketplace](./../share-and-earn/static/image/gpu_marketplace.png)
 
 :::tip Tip
 All you have to do is sit back, relax and get paid (💵) by FedML, Inc.
@@ -85,7 +84,7 @@ All you have to do is sit back, relax and get paid (💵) by FedML, Inc.
 
 You can also monitor your earnings on the `Share & Earn / Earnings` page:
 
-![Earnings](static/image/earnings.png)
+![Earnings](./../share-and-earn/static/image/earnings.png)
 
 
 
