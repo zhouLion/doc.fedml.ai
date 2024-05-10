@@ -2,9 +2,9 @@
 sidebar_position: 8
 ---
 
-# Deploy Federated Models as Endpoints on NexusAI
+# Deploy Federated Models as Endpoints on TensorOpera AI
 
-During the execution of an FL job, all the global (aggregated) models are stored on the NexusAI platform. Once the FL job is complete, you can deploy any of the stored global models for inference with just one-click either on one of the available resources of **FedML Cloud** or your own devices, i.e., **On-Premise**. To accomplish this, navigate to the Deploy tab, select the model and click the `Publish` button.
+During the execution of an FL job, all the global (aggregated) models are stored on the TensorOpera AI platform. Once the FL job is complete, you can deploy any of the stored global models for inference with just one-click either on one of the available resources of **FedML Cloud** or your own devices, i.e., **On-Premise**. To accomplish this, navigate to the Deploy tab, select the model and click the `Publish` button.
 
 ![My Models](_static/image/deploy-federated-models-mymodels.png)
 
