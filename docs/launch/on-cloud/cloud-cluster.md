@@ -166,7 +166,7 @@ You can run as many consequent jobs as you like on your cluster now. It will que
 Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 17.4kB/s]
 
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
+https://TensorOpera.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717314053350756352
@@ -177,7 +177,7 @@ fedml run logs -rid 1717314053350756352
 Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 11.8kB/s]
 
 You can track your run details at this URL:
-https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096
+https://TensorOpera.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717314101526532096

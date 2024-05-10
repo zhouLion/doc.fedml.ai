@@ -10,7 +10,7 @@ sidebar_position: 3
 :::tip
 Before using some of the apis that require remote operation (e.g. `fedml.api.model_push()`), 
 please use one of the following methods to login 
-to FedML MLOps platform first:
+to TensorOpera AI platform first:
 
 1. CLI: `fedml login $api_key`
 

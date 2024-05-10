@@ -86,7 +86,7 @@ Check your device id for master role and worker role.
 Welcome to FedML.ai!
 Start to login the current device to the TensorOpera AI Platform
 
-Congratulations, your device is connected to the FedML MLOps platform successfully!
+Congratulations, your device is connected to the TensorOpera AI platform successfully!
 Your FedML Edge ID is xxx, unique device ID is xxx, master deploy ID is 31240, worker deploy ID is 31239
 ```
 From above, we can know that the master ID is 31240, worker deploy ID is 31239

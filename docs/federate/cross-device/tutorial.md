@@ -67,12 +67,12 @@ Next show you the step-by-step user experiment of using FedML Beehive.
 
 ![./../_static/image/launch_android_app.png](./../_static/image/launch_android_app.png)
 
-## 2. Bind FedML Android App to FedML MLOps Platform
+## 2. Bind FedML Android App to TensorOpera AI Platform
 
-This section guides you through 1) installing Android Apk, 2) binding your Android smartphone devices to FedML MLOps Platform, and 3) set the data path for training.
+This section guides you through 1) installing Android Apk, 2) binding your Android smartphone devices to TensorOpera AI Platform, and 3) set the data path for training.
 
-### 2.1 Connect Android App with FedML MLOps Platform
-After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://open.fedml.ai](https://open.fedml.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
+### 2.1 Connect Android App with TensorOpera AI Platform
+After installing FedML Android App ([https://github.com/FedML-AI/FedML/tree/master/android/app](https://github.com/FedML-AI/FedML/tree/master/android/app)), please go to the MLOps platform ([https://TensorOpera.ai](https://TensorOpera.ai)) - Beehive and switch to the `Edge Devices` page, you can see a list of **My Edge Devices** at the bottom, as well as a QR code and **Account Key** at the top right.
 
 ![./../_static/image/beehive-device.png](./../_static/image/beehive-device.png)
 
@@ -122,11 +122,11 @@ To set data path on your device, click the top green bar. Set it as the path to 
 
 #### 3. **Deploy FL Server**
 
-- Create an account at FedML MLOps Platform ([https://open.fedml.ai](https://open.fedml.ai))
+- Create an account at TensorOpera AI Platform ([https://TensorOpera.ai](https://TensorOpera.ai))
 
 - Run local test fo
 
-- Build Python Server Package and Upload to FedML MLOps Platform ("Create Application")
+- Build Python Server Package and Upload to TensorOpera AI Platform ("Create Application")
 
 Our example code is provided at:
 [https://github.com/FedML-AI/FedML/tree/master/python/examples/federate/quick_start/beehive]https://github.com/FedML-AI/FedML/tree/master/python/examples/federate/quick_start/beehive)
@@ -143,11 +143,11 @@ bash build_mlops_pkg.sh
 ```
 After correct execution, you can find the package `server-package.zip` under `mlops` folder. 
 
-3) Then you need to upload the `server-package.zip` package to FedML MLOps Platform as the UI shown below.
+3) Then you need to upload the `server-package.zip` package to TensorOpera AI Platform as the UI shown below.
 
 ![./../_static/image/android-pkg-uploading.png](./../_static/image/android-pkg-uploading.png)
 
-- Launch the training by using FedML MLOps ([https://open.fedml.ai](https://open.fedml.ai))
+- Launch the training by using TensorOpera AI Platform ([https://TensorOpera.ai](https://TensorOpera.ai))
 
 Steps at MLOps: create group -> create project -> create run -> select application (the one we uploaded server package for Android) -> start run
 
@@ -188,7 +188,7 @@ or
 <meta-data android:name="fedml_account" android:resource="@string/fed_ml_account" />
 ```
 
-You can find your account ID at FedML Open Platform (https://open.fedml.ai):
+You can find your account ID at FedML Open Platform (https://TensorOpera.ai):
 ![account](./../_static/image/beehive_account.png)
 
 4. initial FedML Android SDK on your `Application` class.
@@ -234,7 +234,7 @@ This is the message flow to interact between FedML Android SDK and your host APP
 
 - ai.fedml.edge.request.RequestManager
 
-This is used to connect your Android SDK with FedML Open Platform (https://open.fedml.ai), which helps you to simplify the deployment, edge collaborative training, experimental tracking, and more.
+This is used to connect your Android SDK with TensorOpera AI Platform (https://TensorOpera.ai), which helps you to simplify the deployment, edge collaborative training, experimental tracking, and more.
 
 You can import them in your Java/Android projects as follows. See [https://github.com/FedML-AI/FedML/blob/master/android/fedmlsdk_demo/src/main/java/ai/fedml/edgedemo/ui/main/MainFragment.java](https://github.com/FedML-AI/FedML/blob/master/android/fedmlsdk_demo/src/main/java/ai/fedml/edgedemo/ui/main/MainFragment.java) as an example.
 ```

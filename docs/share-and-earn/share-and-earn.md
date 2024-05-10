@@ -84,7 +84,7 @@ device_count = 0
 No GPU devices
 
 ======== Network Connection Checking ========
-The connection to https://open.fedml.ai is OK.
+The connection to https://TensorOpera.ai is OK.
 
 The connection to S3 Object Storage is OK.
 
@@ -124,7 +124,7 @@ Below is output of command when executed on a FedML® GPU server:
 
 (fedml) alay@a6000:~$
 
-Congratulations, your device is connected to the FedML MLOps platform successfully!
+Congratulations, your device is connected to the TensorOpera AI platform successfully!
 Your FedML Edge ID is 1717367167533584384, unique device ID is 0xa11081eb21f1@Linux.Edge.GPU.Supplier
 
 You may visit the following url to fill in more information with your device.

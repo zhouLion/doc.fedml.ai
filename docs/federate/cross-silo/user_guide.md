@@ -9,7 +9,7 @@ https://www.youtube.com/embed/Xgm0XEaMlVQ
 
 **Write Once, Run Anywhere: Seamlessly Migrate Your Local Development to the Real-world Edge-cloud Deployment**
 
-- How Does FedML MLOps Platform Work?
+- How Does TensorOpera AI Platform Work?
 - Local Development and Building MLOps Packages
 - Create Application and Upload Local Packages
 - Install FedML Agent: fedml login $account_id
@@ -18,7 +18,7 @@ https://www.youtube.com/embed/Xgm0XEaMlVQ
 - Experimental Tracking via Simplified Project Management
 - FedML OTA (Over-the-Air) upgrade mechanism
 
-### How Does FedML MLOps Platform Work?
+### How Does TensorOpera AI Platform Work?
 
 ![image](../_static/image/mlops_workflow_new.png) \
 Figure 1: the workflow describing how MLOps works
@@ -157,7 +157,7 @@ login: edge_id = 266
 subscribe: flserver_agent/266/start_train
 subscribe: flserver_agent/266/stop_train
 subscribe: fl_client/flclient_agent_266/status
-Congratulations, you have logged into the FedML MLOps platform successfully!
+Congratulations, you have logged into the TensorOpera AI platform successfully!
 Your device id is @0xb6ff42da6a7e.MacOS. You may review the device in the MLOps edge device list.
 ```
 

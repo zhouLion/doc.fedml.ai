@@ -224,9 +224,9 @@ Hierarchical Federated Learning:
 
 [https://tensoropera.ai](https://tensoropera.ai)
 
-Currently, the project developed based on FedML Octopus (cross-silo) and Beehive (cross-device) can be smoothly deployed into the real-world system using FedML MLOps.
+Currently, the project developed based on FedML Octopus (cross-silo) and Beehive (cross-device) can be smoothly deployed into the real-world system using TensorOpera AI.
 
-The FedML MLOps Platform simplifies the workflow of federated learning from anywhere and at any scale.
+The TensorOpera AI Platform simplifies the workflow of federated learning from anywhere and at any scale.
 It enables zero-code, lightweight, cross-platform, and provably secure federated learning.
 It enables machine learning from decentralized data at various users/silos/edge nodes, without the need to centralize any data to the cloud, hence providing maximum privacy and efficiency.
 
