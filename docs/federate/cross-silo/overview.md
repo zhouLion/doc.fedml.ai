@@ -29,7 +29,7 @@ where different data silos may have different numbers of GPUs or even multiple n
 ![./../_static/image/cross-silo-hi.png](./../_static/image/cross-silo-hi.png)
 
 FedML Octopus addresses this challenge by enabling a distributed training paradigm (PyTorch DDP, distributed data parallel) to run inside each data-silo, and further orchestrate different silos with asynchronous or synchronous federated optimization method. 
-As a result, FedML Octopus can support this scenario in a flexible, secure, and efficient manner. FedML MLOps platform also simplifies its real-world deployment.
+As a result, FedML Octopus can support this scenario in a flexible, secure, and efficient manner. TensorOpera AI platform also simplifies its real-world deployment.
 
 
 Please read the detailed [examples and tutorial](./example/example.md) for details.

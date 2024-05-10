@@ -46,7 +46,7 @@ ddocker run -v $LOCAL_WORKSPACE:$DOCKER_WORKSPACE --shm-size=64g --ulimit nofile
 
 **(3) Run examples**
 
-Now, you should now be inside the container. First, you need to log into the MLOps platform. The `USERID` placeholder used below refers to your user id in the FedML MLOps platform:
+Now, you should now be inside the container. First, you need to log into the MLOps platform. The `USERID` placeholder used below refers to your user id in the TensorOpera AI platform:
 ```
 root@142ffce4cdf8:/#
 root@142ffce4cdf8:/# fedml login <USERID>

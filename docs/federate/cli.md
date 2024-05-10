@@ -26,7 +26,7 @@ fedml version
 
 ```
 
-## 1. Login to the FedML MLOps platform (fedml.ai)
+## 1. Login to the TensorOpera AI platform (fedml.ai)
 login as client with local pip mode:
 ```
 fedml login userid(or API Key)
@@ -52,19 +52,19 @@ login as edge server with docker mode:
 fedml login userid(or API Key) -s --docker --docker-rank rank_index
 ```
 
-### 1.1. Examples for Logging in to the FedML MLOps platform (fedml.ai)
+### 1.1. Examples for Logging in to the TensorOpera AI platform (fedml.ai)
 
 ```
 fedml login 90 
-Notes: this will login the production environment for FedML MLOps platform 
+Notes: this will login the production environment for TensorOpera AI platform 
 ```
 
 ```
 fedml login 90 --docker --docker-rank 1
-Notes: this will login the production environment with docker mode for FedML MLOps platform
+Notes: this will login the production environment with docker mode for TensorOpera AI platform
 ```
 
-## 2. Build the client and server package in the FedML MLOps platform (fedml.ai)
+## 2. Build the client and server package in the TensorOpera AI platform (fedml.ai)
 
 ```
 fedml build -t client(or server) -sf source_folder -ep entry_point_file -cf config_folder -df destination_package_folder --ignore ignore_file_and_directory(concat with ,)

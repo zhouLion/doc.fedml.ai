@@ -4,7 +4,7 @@ import yaml
 import requests
 import time
 
-BACKEND_URL = "https://open.fedml.ai/cheetah/cli/web3/token-node-rel"
+BACKEND_URL = "https://TensorOpera.ai/cheetah/cli/web3/token-node-rel"
 
 TOKEN_MISSING_ERROR_MESSAGE = ("\033[1;31m\u2717 Error: Render Auth Token is missing. Kindly execute the last command again, "
                                "and enter Render Auth Token when prompted\033[0m")

@@ -46,7 +46,7 @@ Requirement already satisfied: numpy>=1.21 in ./.pyenv/versions/fedml/lib/python
 .
 .
 
-Congratulations, your device is connected to the FedML MLOps platform successfully!
+Congratulations, your device is connected to the TensorOpera AI platform successfully!
 Your FedML Edge ID is 201610, unique device ID is 0xffdc89fad658@Linux.Edge.Device
 ```
 
