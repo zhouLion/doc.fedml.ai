@@ -81,7 +81,8 @@ if __name__ == "__main__":
     # Create Workflow
     workflow = Workflow(name="ml_workflow", loop=False)
     workflow.add_job(data_collection_job)
-    workflow.add_job(model_deployment_job, dependencies=[training_job])
+    workflow.add_job(training_job, dependencies=[data_collection_job])
+    workflow.add_job(evaluation_job. dependencies=[training_job])
     workflow.set_workflow_input({"S3": "<S3_API_KEY>")
     workflow.run()
 

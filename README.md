@@ -21,8 +21,9 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 # Installation, Build, and Start
 
 ```
-npm install 
+npm install
 npm run build
 npm run start
 ```
-Note: please the above commands are the same as we use in CI/CD. Please make sure you 
+
+Note: please the above commands are the same as we use in CI/CD. Please make sure you

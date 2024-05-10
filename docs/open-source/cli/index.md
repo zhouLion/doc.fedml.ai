@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: TensorOpera provides a set of CLIs to help you develop, launch, train, and deploy your model. 
+description: TensorOpera provides a set of CLIs to help you develop, launch, train, and deploy your model.
 ---
 
 # CLI Overview
@@ -35,8 +35,3 @@ Before you run any CLI command, it's better to do a sanity check of your environ
 :::
 
 All CLI commands and their usages are as follows:
-
-
-
-
-
