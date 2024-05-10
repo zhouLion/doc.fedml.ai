@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ![./../_static/image/octopus.jpeg](./../_static/image/octopus.jpeg)
 
-FEDML® Federate Cross-silo is also called FedML Octopus. It is the industrial grade platform of cross-silo federated learning for cross-organization/account training. 
+TensorOpera® Federate Cross-silo is also called FedML Octopus. It is the industrial grade platform of cross-silo federated learning for cross-organization/account training. 
 It provides the federated learning service and edge AI SDK for developers or companies to conduct open collaboration from anywhere at any scale in a secure manner. 
 
 ## Seamlessly transplant the simulation code (Parrot) to real-world cross-device FL (Octopus)
@@ -18,7 +18,7 @@ A detailed workflow is shown as below.
 
 ![image](./../_static/image/MLOps_workflow.png)
 
-You can also read [the tutorial](https://doc.fedml.ai/federate/cross-silo/user_guide)  to see how easy it is to simplify the real-world deployment (including an video tutorial).
+You can also read [the tutorial](https://docs.tensoropera.ai/federate/cross-silo/user_guide)  to see how easy it is to simplify the real-world deployment (including an video tutorial).
 
 ## Heterogeneous hierarchical federated learning: supporting local AllReduce-based distributed training
 System heterogeneity is one of the key challenges in practical federated learning. All existing open federated learning frameworks do not consider the practical scenario 

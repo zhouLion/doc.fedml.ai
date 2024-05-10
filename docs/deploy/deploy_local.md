@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 # Deploy to Local
-Deploy the model to local machine without sign in to Nexus AI Platform. Support you have a model card at local
+Deploy the model to local machine without sign in to TensorOpera AI Platform. Support you have a model card at local
 called `my_model`, you can deploy it to local machine by:
 ```
 fedml model deploy -n my_model --local
@@ -10,8 +10,8 @@ fedml model deploy -n my_model --local
 
 :::tip
 The local model deploy command can only deploy the model card that is located at local.
-if you want to deploy the model card that is located at Nexus AI Platform, please `fedml login` command
-to Nexus AI Platform first, then use `fedml model pull` command to pull the model card to the local environment first.
+if you want to deploy the model card that is located at TensorOpera AI Platform, please `fedml login` command
+to TensorOpera AI Platform first, then use `fedml model pull` command to pull the model card to the local environment first.
 :::
 
 :::note

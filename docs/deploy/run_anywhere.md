@@ -7,11 +7,11 @@ sidebar_position: 8
 `fedml model run -e $endpoint_id $json_string`
 
 For more information, please refer to 
-[FedML Model Run CLI](/docs/open-source/cli/fedml-model.md#fedml-model-run-options-json_string).
+[TensorOpera Model Run CLI](/docs/open-source/cli/fedml-model.md#fedml-model-run-options-json_string).
 
 ### Other Language Support
 We support language bindings for **Python, Java, JQuery, etc**.
-After you deploy a model card to Nexus AI Platform, you can go to "Deploy" -> "Endpoints" -> Your Endpoint.
+After you deploy a model card to TensorOpera AI Platform, you can go to "Deploy" -> "Endpoints" -> Your Endpoint.
 
 ![runAnywhere.jpg](pics/runAnywhere.jpg)
 
@@ -30,14 +30,14 @@ def predict(self, request):
     return {f"AlohaV2From{self.worker_id}": request}
 ```
 
-Recreate the model card, then upload to the Nexus AI Platform. By using:
+Recreate the model card, then upload to the TensorOpera AI Platform. By using:
 ```bash
 fedml model create -n $model_card_name -cf $config_file
 ```
 ```bash
 fedml model push -n $model_card_name
 ```
-You can see the model card has been updated on the Nexus AI Platform.
+You can see the model card has been updated on the TensorOpera AI Platform.
 ![checkNewVersion.png](pics/checkNewVersion.png)
 
 ### Edit the endpoint

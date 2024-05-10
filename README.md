@@ -5,10 +5,10 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 ### Document Structure
 
 - `docs/platform` provides docs for our MLOps platform
-- `docs/launch` provides docs for FEDML®Launch
-- `docs/train` provides docs for FEDML®Train
-- `docs/deploy` provides docs for FEDML®Deploy
-- `docs/federate` provides docs for FEDML®Federate (reusing our existing contents from federated learning)
+- `docs/launch` provides docs for TensorOpera®Launch
+- `docs/train` provides docs for TensorOpera®Train
+- `docs/deploy` provides docs for TensorOpera®Deploy
+- `docs/federate` provides docs for TensorOpera®Federate (reusing our existing contents from federated learning)
 
 # How to edit and release?
 
@@ -21,8 +21,9 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 # Installation, Build, and Start
 
 ```
-npm install 
+npm install
 npm run build
 npm run start
 ```
-Note: please the above commands are the same as we use in CI/CD. Please make sure you 
+
+Note: please the above commands are the same as we use in CI/CD. Please make sure you

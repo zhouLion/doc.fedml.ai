@@ -82,7 +82,7 @@ computing:
   
   allow_cross_cloud_resources: false # true, false
   device_type: GPU              # options: GPU, CPU, hybrid
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai/accelerator_resource_type
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://tensoropera.ai/accelerator_resource_type
   
 job_type: train              # options: train, deploy, federate
 framework_type: fedml        # options: fedml, deepspeed, pytorch, general
@@ -108,7 +108,7 @@ server_job: |
 # If you want to create the job with specific name, just uncomment the following line and set job_name to your desired job name.
 #job_name: cv_job
 
-# If you want to pass your API key to your job for calling FEDML APIs, you may uncomment the following line and set your API key here.
+# If you want to pass your API key to your job for calling TensorOpera APIs, you may uncomment the following line and set your API key here.
 # You may use the environment variable FEDML_RUN_API_KEY to get your API key in your job commands or scripts.
 #run_api_key: my_api_key
 

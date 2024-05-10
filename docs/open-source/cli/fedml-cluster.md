@@ -5,34 +5,34 @@ sidebar_position: 5
 
 ## FedML Cluster CLI Overview
 
-Manage clusters on FedML® Nexus AI Platform
+Manage clusters on TensorOpera AI Platform
 
 ```
 Usage: fedml cluster [OPTIONS] COMMAND [ARGS]...
 
-  Manage clusters on FedML® Nexus AI Platform
+  Manage clusters on TensorOpera AI Platform
 
 Options:
   -h, --help          Show this message and exit.
   -k, --api_key TEXT  The user API key.
-  -v, --version TEXT  Version of FedML® Nexus AI Platform. It should
+  -v, --version TEXT  Version of TensorOpera AI Platform. It should
                       be dev, test or release.
 
 Commands:
-  kill      Kill (tear down) clusters from FedML® Nexus AI Platform.
-  killall   Kill (tear down) ALL clusters from FedML® Nexus AI Platform.
-  list      List clusters from FedML® Nexus AI Platform.
-  start     Start clusters from FedML® Nexus AI Platform.
-  startall  Start ALL clusters from FedML® Nexus AI Platform.
-  status    Status of clusters from FedML® Nexus AI Platform.
-  stop      Stop clusters from FedML® Nexus AI Platform.
-  stopall   Stop ALL clusters from FedML® Nexus AI Platform.
+  kill      Kill (tear down) clusters from TensorOpera AI Platform.
+  killall   Kill (tear down) ALL clusters from TensorOpera AI Platform.
+  list      List clusters from TensorOpera AI Platform.
+  start     Start clusters from TensorOpera AI Platform.
+  startall  Start ALL clusters from TensorOpera AI Platform.
+  status    Status of clusters from TensorOpera AI Platform.
+  stop      Stop clusters from TensorOpera AI Platform.
+  stopall   Stop ALL clusters from TensorOpera AI Platform.
 ```
 
 
 ### `fedml cluster kill [OPTIONS] [CLUSTER_NAMES]...`
 
-Kill (tear down) clusters from FedML® Nexus AI Platform.
+Kill (tear down) clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -40,7 +40,7 @@ Kill (tear down) clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.                                                            |
 
 
 :::info 
@@ -49,7 +49,7 @@ Note that kill is different from stop. Clusters once killed cannot be restarted.
 
 #### Example
 
-###### Kill selected clusters on the FedML® Nexus AI Platform
+###### Kill selected clusters on the TensorOpera AI Platform
 
 ```
 fedml cluster kill demo_cluster
@@ -58,7 +58,7 @@ Clusters have been killed.
 
 ### `fedml cluster killall [OPTIONS]`
 
-Kill (tear down) ALL clusters from FedML® Nexus AI Platform.
+Kill (tear down) ALL clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -66,14 +66,14 @@ Kill (tear down) ALL clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.                                                             |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.                                                             |
 
 
 > **_NOTE:_** Note that kill is different from stop. Clusters once killed cannot be restarted.
 
 #### Example
 
-###### Kill ALL clusters on the FedML® Nexus AI Platform
+###### Kill ALL clusters on the TensorOpera AI Platform
 
 ```
 fedml cluster killall
@@ -93,7 +93,7 @@ Clusters have been killed.
 
 ### `fedml cluster list [OPTIONS] [CLUSTER_NAMES]...`
 
-List clusters from FedML® Nexus AI Platform.
+List clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -101,11 +101,11 @@ List clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.   |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.   |
 
 #### Example
 
-###### List selected clusters from FedML® Nexus AI Platform
+###### List selected clusters from TensorOpera AI Platform
 
 ```
 fedml cluster list test_cluster demo_cluster
@@ -120,7 +120,7 @@ Found the following matching clusters.
 +--------------+---------------------+------------+
 ```
 
-###### List ALL clusters from FedML® Nexus AI Platform
+###### List ALL clusters from TensorOpera AI Platform
 
 ```
 fedml cluster list
@@ -137,7 +137,7 @@ Found the following matching clusters.
 
 ### `fedml cluster start [OPTIONS] [CLUSTER_NAMES]...`
 
-Start clusters from FedML® Nexus AI Platform.
+Start clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -145,7 +145,7 @@ Start clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.   |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.   |
 
 #### Example
 
@@ -157,7 +157,7 @@ Cluster my_cluster have been started.
 
 ### `fedml cluster startall [OPTIONS]`
 
-Start ALL clusters from FedML® Nexus AI Platform.
+Start ALL clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -165,7 +165,7 @@ Start ALL clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.                                                     |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.                                                     |
 
 
 #### Example
@@ -188,7 +188,7 @@ Clusters have been started.
 
 ### `fedml cluster status [OPTIONS] CLUSTER_NAME`
 
-Status of clusters from FedML® Nexus AI Platform.
+Status of clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -196,7 +196,7 @@ Status of clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 |  `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.   |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.   |
 
 #### Example
 
@@ -213,7 +213,7 @@ Found the following matching clusters.
 
 ### `fedml cluster stop [OPTIONS] [CLUSTER_NAMES]...`
 
-Stop clusters from FedML® Nexus AI Platform.
+Stop clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -221,7 +221,7 @@ Stop clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.   |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.   |
 
 
 ```
@@ -232,7 +232,7 @@ Cluster test_cluster have been stopped.
 
 ### `fedml cluster stopall [OPTIONS]`
 
-Stop ALL clusters from FedML® Nexus AI Platform.
+Stop ALL clusters from TensorOpera AI Platform.
 
 #### Options
 
@@ -240,7 +240,7 @@ Stop ALL clusters from FedML® Nexus AI Platform.
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | `--help`  or `-h`      | Show this message and exit.                                                                                                        |
 | `--api_key`  or `-k`| The user API key.                                                                                                                     |
-| `--version`  or `-v` | Version of the FedML® Nexus AI Platform. It should be dev, test or release.   |
+| `--version`  or `-v` | Version of the TensorOpera AI Platform. It should be dev, test or release.   |
 
 
 #### Example

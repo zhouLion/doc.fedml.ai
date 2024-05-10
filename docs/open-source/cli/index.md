@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-description: FEDML provides a set of CLIs to help you develop, launch, train, and deploy your model. 
+description: TensorOpera provides a set of CLIs to help you develop, launch, train, and deploy your model.
 ---
 
 # CLI Overview
 
-FEDML provides a set of CLIs to help you develop, launch, train, and deploy your model. To get the latest version of the CLI, run `fedml -h` or `fedml --help`:
+TensorOpera provides a set of CLIs to help you develop, launch, train, and deploy your model. To get the latest version of the CLI, run `fedml -h` or `fedml --help`:
 
 ```
 Usage: fedml [OPTIONS] COMMAND [ARGS]...
@@ -14,20 +14,20 @@ Options:
   -h, --help  Show this message and exit.
 
 Commands:
-  login     Login the FedML® Nexus AI Platform.
-  logout    Logout from the FedML® Nexus AI Platform.
-  launch    Launch job at the FedML® Nexus AI platform.
-  cluster   Manage clusters on FedML® Nexus AI Platform.
-  run       Manage runs on the FedML® Nexus AI Platform.
-  device    Bind/unbind devices to the FedML® Nexus AI Platform.
+  login     Login the TensorOpera AI Platform.
+  logout    Logout from the TensorOpera AI Platform.
+  launch    Launch job at the TensorOpera AI platform.
+  cluster   Manage clusters on TensorOpera AI Platform.
+  run       Manage runs on the TensorOpera AI Platform.
+  device    Bind/unbind devices to the TensorOpera AI Platform.
   model     Deploy and infer models.
-  build     Build packages for the FedML® Nexus AI Platform.
+  build     Build packages for the TensorOpera AI Platform.
   logs      Display logs for ongoing runs.
-  train     Manage training resources on FedML® Nexus AI Platform.
-  federate  Manage federated learning resources on FedML® Nexus AI Platform.
+  train     Manage training resources on TensorOpera AI Platform.
+  federate  Manage federated learning resources on TensorOpera AI Platform.
   env       Get environment info such as versions, hardware, and networking.
-  network   Check the Nexus AI backend network connectivity.
-  version   Display FEDML library version.
+  network   Check the TensorOpera AI backend network connectivity.
+  version   Display TensorOpera library version.
 ```
 
 :::tip
@@ -35,8 +35,3 @@ Before you run any CLI command, it's better to do a sanity check of your environ
 :::
 
 All CLI commands and their usages are as follows:
-
-
-
-
-

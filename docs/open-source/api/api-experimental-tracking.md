@@ -24,7 +24,7 @@ fedml.log(
 **Returns**  
 `None`
 
-log dictionary of metric data to the FedML® Nexus AI Platform.
+log dictionary of metric data to the TensorOpera AI Platform.
 
 
 **Examples**
@@ -54,14 +54,14 @@ fedml.log_artifact(
 
 **Arguments**
 - `artifact (Artifact)`: An artifact object, e.g., file, log, model, etc.
-- `version (str=None)`: The version of FedML® Nexus AI Platform, options: dev, test, release. Default is release (fedml.ai).
+- `version (str=None)`: The version of TensorOpera AI Platform, options: dev, test, release. Default is release (fedml.ai).
 - `run_id (str=None)`: Run id for the artifact object. Default is `None`, which will be filled automatically.
 - `edge_id (str=None)`: Edge id for current device. Default is `None`, which will be filled automatically.
 
 **Returns**  
 `None`
 
-log artifacts to the FedML® Nexus AI Platform (fedml.ai), such as file, log, model, etc.
+log artifacts to the TensorOpera AI Platform (fedml.ai), such as file, log, model, etc.
 
 
 **Examples**
@@ -105,12 +105,12 @@ fedml.log_model(
 **Arguments**
 - `model_name (str)`: model name.
 - `model_file_path (str)`: The file path of model name.
-- `version (str=None)`: The version of FedML® Nexus AI Platform, options: dev, test, release. Default is release (fedml.ai).
+- `version (str=None)`: The version of TensorOpera AI Platform, options: dev, test, release. Default is release (fedml.ai).
 
 **Returns**  
 `None`
 
-log model to the FedML® Nexus AI Platform (fedml.ai).
+log model to the TensorOpera AI Platform (fedml.ai).
 
 
 **Examples**

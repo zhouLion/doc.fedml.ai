@@ -22,7 +22,7 @@ Publication: https://openreview.net/forum?id=GgM5DiAb6A2
 https://github.com/FedML-AI/FedML/tree/master/python/examples/federate/prebuilt_jobs/healthcare
 
 - Platform Support
-https://fedml.ai
+https://tensoropera.ai
 
 
 ![FEDML Provides Cross-silo FL Dataset with Okwin, Allowing Research to Face Real Scenario](./_static//image/owkin.png)

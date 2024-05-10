@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# FEDML Deploy APIs
+# TensorOpera Deploy APIs
 
 ## API Workflow
 ![API Workflow](pics%2FAPIsWorkflow.png)
@@ -61,13 +61,13 @@ e.g. `"master_id1,master_id2"`.
 - `worker_ids (Optional[str])`: This is for on-premise deploy mode. If `local` is `False`, indicate the worker node(s) 
 id(s) to deploy the model card. If you want to deploy to multiple worker nodes, use `","` to separate them. 
 e.g. `"worker_id1,worker_id2"`.
-- `use_remote (Optional[bool])`: If `True`, then use a remote model card on the Nexus AI Platform. Default is `False`, 
-which means use a local model card, and FedML will push the model card to Nexus AI Platform first, 
+- `use_remote (Optional[bool])`: If `True`, then use a remote model card on the TensorOpera AI Platform. Default is `False`, 
+which means use a local model card, and FedML will push the model card to TensorOpera AI Platform first, 
 then deploy it. 
 
 :::tip
 If you do not indicate `master_ids` and `worker_ids`, and `local` is `False`, 
-it will automatically deploy the model card to GPU cloud node(s) / cluster using FedML® Launch.
+it will automatically deploy the model card to GPU cloud node(s) / cluster using TensorOpera® Launch.
 :::
 
 **Returns**  
@@ -92,7 +92,7 @@ Return the response string (After `json.dumps()`).
 
 ### `fedml.api.model_delete()`
 
-Delete a model card at local environment or a model card at Nexus AI Platform.
+Delete a model card at local environment or a model card at TensorOpera AI Platform.
 
 **Example**
 ```py
@@ -102,7 +102,7 @@ fedml.api.model_delete(name: str, local: bool = True) -> bool
 **Arguments**  
 - `name (str)`: Model card name.
 - `local (Optional[bool])`: If `True`, will delete the model card in local environment, If `False`, will
-delete the model card at Nexus AI Platform.
+delete the model card at TensorOpera AI Platform.
 
 **Returns**  
 `True` if the model card is deleted successfully, otherwise `False`.
@@ -112,7 +112,7 @@ delete the model card at Nexus AI Platform.
 
 ### `fedml.api.model_list()`
 
-List model card(s) at local environment or Nexus AI Platform.
+List model card(s) at local environment or TensorOpera AI Platform.
 
 **Example**
 ```py
@@ -123,7 +123,7 @@ fedml.api.model_list(name: str = "*", local: bool = True) -> any
 - `name (Optional[str])`: Model card(s) name. `"*"` means all model cards. To select multiple model cards,
 use `","` to separate them. e.g. `"model1,model2"`.
 - `local (Optional[bool])`: If `True`, will show the model card(s) in local environment, If `False`,
-will show the model card(s) at Nexus AI Platform.
+will show the model card(s) at TensorOpera AI Platform.
 
 **Returns**  
 Return a list of found model card(s) name (return an `[]` if no model card is found).  
@@ -135,7 +135,7 @@ Return a `None` if api_key is not indicated or incompatible.
 ### `fedml.api.model_package()`
 
 Pacakge a model card at local environment to a .zip file format, so that one can use UI 
-to upload to Nexus AI Platform.  
+to upload to TensorOpera AI Platform.  
 
 :::tip
 If you do not plan to use UI to upload the model card, you do not need to use this api. 
@@ -158,7 +158,7 @@ Return the absolute path string of the zip file if the model card is packaged su
 
 ### `fedml.api.model_push()`
 
-Push a local model card or a remote stored model card to Nexus AI Platform.
+Push a local model card or a remote stored model card to TensorOpera AI Platform.
 
 **Example**
 ```py
@@ -177,7 +177,7 @@ fedml.api.model_push(name: str, model_storage_url: str = None) -> bool
 
 ### `fedml.api.model_pull()`
 
-Pull a model card from Nexus AI Platform to local.
+Pull a model card from TensorOpera AI Platform to local.
 
 **Example**
 ```py
@@ -197,7 +197,7 @@ Return a `None` if api_key is not indicated or incompatible.
 
 ### `fedml.api.delete_endpoint()`
 
-Delete an inference endpoint on Nexus platform.
+Delete an inference endpoint on TensorOpera® AI platform.
 
 **Example**
 ```py

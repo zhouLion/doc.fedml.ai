@@ -27,7 +27,7 @@ More about the launch APIs can be found [here](../open-source/api/api-launch#lau
 
 ## FedML Cluster API Overview
 
-APIs to manage clusters on FedML® Nexus AI Platform
+APIs to manage clusters on TensorOpera AI Platform
 
 #### Example Usage
 
@@ -53,7 +53,7 @@ More about the cluster APIs can be found [here](../open-source/api/api-launch#cl
 
 ## FedML Run API Overview
 
-APIs to manage run on FedML® Nexus AI Platform
+APIs to manage run on TensorOpera AI Platform
 
 #### Example Usage
 

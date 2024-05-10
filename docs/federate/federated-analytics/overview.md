@@ -28,6 +28,6 @@ discuss various existing solutions and potential use case applications for diffe
 ```
 
 
-FEDML®Federate Federated analytics (FA) is the industrial grade library of cross-silo federated analytics for cross-organization/account analytics. 
+TensorOpera®Federate Federated analytics (FA) is the industrial grade library of cross-silo federated analytics for cross-organization/account analytics. 
 Researchers and engineers do not need to maintain the complex geo-distributed clusters.
 Essentially, Our MLOps can seamlessly migrate the local development to the real-world edge-cloud deployment without code changes. 

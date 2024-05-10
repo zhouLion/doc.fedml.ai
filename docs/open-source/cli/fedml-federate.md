@@ -11,7 +11,7 @@ sidebar_position: 9
 |-------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `--dest_folder` or `-d`       | `true`  | The destination package folder path. If this option is not specified, the built packages will be located in a subdirectory named fedml-federate-packages in the directory of YAML_FILE. |
 
-Here is the command for building FEDML Federate packages.
+Here is the command for building TensorOpera Federate packages.
 
 At first, you need to define your job properties in the job yaml file, e.g., workspace, job entry commands.
 

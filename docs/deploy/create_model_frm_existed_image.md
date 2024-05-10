@@ -31,5 +31,5 @@ job: |
 ```
 
 
-A graph of the procedure that FedML Library will internally do when you deploy this model card is shown below.
+A graph of the procedure that TensorOpera Library will internally do when you deploy this model card is shown below.
 ![img.png](pics/InternalDeployProc.png)

@@ -14,7 +14,7 @@ export type Product = {
 
 export const LAUNCH_PRODUCT: Product[] = [
   {
-    title: 'FEDML®Launch: Run Any Job on GPU Marketplace or On-Premise Cluster',
+    title: 'TensorOpera®Launch: Run Any Job on GPU Marketplace or On-Premise Cluster',
     link: '/launch',
     icon: () => <Icon icon="bi:gpu-card" />,
     lightImage: '/img/landing-page/hero/video-graphic.png',
@@ -32,7 +32,7 @@ export const LAUNCH_PRODUCT: Product[] = [
             and/or decentralized GPU cloud
           </li>
           <li>Offering lower prices, higher GPU availability</li>
-          <li>Support FedML® Train, FedML® Serve, FedML® Federate</li>
+          <li>Support TensorOpera® Train, TensorOpera® Serve, TensorOpera® Federate</li>
         </ul>
       </>
     ),
@@ -41,7 +41,7 @@ export const LAUNCH_PRODUCT: Product[] = [
 
 export const MLOPS_PRODUCTS: Product[] = [
   {
-    title: 'FEDML® Nexus AI',
+    title: 'TensorOpera AI',
     beta: true,
     link: '/platform',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
@@ -50,7 +50,7 @@ export const MLOPS_PRODUCTS: Product[] = [
     text: 'The dedicated cloud platform for next-gen AI/ML development and operations',
   },
   {
-    title: 'FEDML® Open Source',
+    title: 'TensorOpera® Open Source',
     beta: true,
     link: '/open-source',
     icon: () => <Icon icon="carbon:ibm-watson-studio" />,
@@ -94,7 +94,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
         </ul>
       </>
     ),
-    // text: '- FEDML® Serve is a model serving platform for high scalability and low latency.',
+    // text: '- TensorOpera® Serve is a model serving platform for high scalability and low latency.',
   },
   {
     title: 'Federate',
@@ -117,7 +117,7 @@ export const COMPUTE_FRAMEWORK: Product[] = [
 
 export const IaaS: Product[] = [
   {
-    title: 'FEDML®Launch: Distributed GPU Cloud',
+    title: 'TensorOpera®Launch: Distributed GPU Cloud',
     // TODO: Supplement with the correct documentation links
     link: '/platform/todo',
     icon: () => <Icon icon="bi:gpu-card" />,
@@ -136,7 +136,7 @@ export const IaaS: Product[] = [
             and/or decentralized GPU cloud
           </li>
           <li>Offering lower prices, higher GPU availability</li>
-          <li>Support FedML® Train, FedML® Serve, FedML® Federate</li>
+          <li>Support TensorOpera® Train, TensorOpera® Serve, TensorOpera® Federate</li>
         </ul>
       </>
     ),

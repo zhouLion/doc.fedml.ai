@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Quickstart
 ### Prerequisites
-Install fedml library on your machine
+Install TensorOpera library on your machine
 ```bash
 pip install fedml
 ```
@@ -63,7 +63,7 @@ You should see the output from the terminal with the response of that model.
 
 ### Deploy the model to Serverless GPU cloud
 :::note
-Before you start, you will need to create an account on [FedML Nexus AI Cloud](https://fedml.ai/home).
+Before you start, you will need to create an account on [TensorOpera AI](https://TensorOpera.ai/home).
 After you create an account, you will see an Account Key (API Key) from the profile page.
 ![getApiKey.jpg](pics%2FgetApiKey.jpg)
 
@@ -71,7 +71,7 @@ Next you need to bind your credit card to your account. This is required to use 
 ![payment.jpg](pics%2Fpayment.jpg)
 :::
 
-Use `fedml login $api_key` to login to Nexus AI Cloud. Replace `$api_key` with your own API key.
+Use `fedml login $api_key` to login to TensorOpera AI Cloud. Replace `$api_key` with your own API key.
 ```bash
 fedml login $api_key
 ```
