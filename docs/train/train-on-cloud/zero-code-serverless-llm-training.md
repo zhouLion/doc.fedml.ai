@@ -2,8 +2,8 @@
 sidebar_position: 2
 ---
 
-# Zero-code Serverless LLM Training on FEDML Nexus AI
-LLM Fine-tune is the feature of FEDML Studio that is responsible for serverless model training. It is a no-code LLM training platform. Developers can directly specify open-source models for fine-tuning or model Pre-training.
+# Zero-code Serverless LLM Training on TensorOpera AI
+LLM Fine-tune is the feature of TensorOpera Studio that is responsible for serverless model training. It is a no-code LLM training platform. Developers can directly specify open-source models for fine-tuning or model Pre-training.
 ## 1. Select a Model to Build a New Run
 There are two choices for specifying the model to train:
 

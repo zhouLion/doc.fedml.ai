@@ -48,7 +48,7 @@ To check out the details of the latest definition of each API, the best resource
 
 # Algorithm Reference Implementations
 
-FedML®Federate supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
+TensorOpera®Federate supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
 
 
 ![./../_static/image/fedml-topology.png](./../_static/image/fedml-topology.png)

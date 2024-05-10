@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# FEDML Train APIs
+# TensorOpera® Train APIs
 
 ### `fedml.init()`
 

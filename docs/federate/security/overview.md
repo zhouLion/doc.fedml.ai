@@ -6,7 +6,7 @@ sidebar_position: 6
 # Overview
 
 
-FEDML®Federate FedMLSecurity is a benchmark that simulates attacks and defenses in FL. FedMLSecurity comprises two primary components: FedMLAttacker and FedMLDefender. FedMLAttacker simulates attacks in FL to help understand and prepare for potential security risks, while FedMLDefender is equipped with various defense mechanisms to counteract the threats injected by FedMLAttacker.
+TensorOpera®Federate FedMLSecurity is a benchmark that simulates attacks and defenses in FL. FedMLSecurity comprises two primary components: FedMLAttacker and FedMLDefender. FedMLAttacker simulates attacks in FL to help understand and prepare for potential security risks, while FedMLDefender is equipped with various defense mechanisms to counteract the threats injected by FedMLAttacker.
 
 
 We summarize the injections of attacks and defenses to the FL framework in FedMLSecurity as follows. 

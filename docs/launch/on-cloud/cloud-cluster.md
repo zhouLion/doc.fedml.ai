@@ -5,7 +5,7 @@ sidebar_position: 2
 # Launch on Fixed Cloud GPU Cluster (Airbnb Mode)
 
 ## 1. Set up the fedml library
-Install Python library for interacting with FedML® Launch APIs.
+Install Python library for interacting with TensorOpera® Launch APIs.
 
 ```bash
 pip install fedml
@@ -56,7 +56,7 @@ computing:
   # max cost per hour of all machines for your job.
   # E.g., if your job are assigned 2 x A100 nodes (8 GPUs), each GPU cost $1/GPU/Hour, "maximum_cost_per_hour" = 16 * $1 = $16
   maximum_cost_per_hour: $1.75
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://tensoropera.ai
   
   
 ```
@@ -78,7 +78,7 @@ tree -l
 ## 3. Launch a job on a cluster cloud
 Launch a job to the GPU Cloud Cluster.
 
-> **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML® AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
+> **_NOTE:_** Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on TensorOpera® AI Platform. You can also specify the API_KEY with the `-k` option.
 
 ```bash
 fedml launch /path/to/job.yaml -c my_cluster
@@ -91,7 +91,7 @@ fedml launch /path/to/job.yaml -c my_cluster
 After the launch CLI is executed, you will get the following output prompting for confirmation of resources:
 
 ```
-Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 4.87kB/s]
+Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 4.87kB/s]
 
 Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
@@ -101,7 +101,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://tensoropera.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 Do you want to launch the job with the above matched GPU resource? [y/N]:
 ```
 
@@ -112,7 +112,7 @@ Once resources are confirmed, it will then create a cluster out of these matched
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
 You can track your run details at this URL:
-https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://tensoropera.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048
@@ -127,9 +127,9 @@ fedml run logs -rid <run_id>
 
 More run management CLIs can be found [here](../../open-source/cli/fedml-run.md)
 
-## 5. You can also view the details of run on the FedML® AI Nexus platform:
+## 5. You can also view the details of run on the TensorOpera® AI platform:
 
-Log into to the FedML® AI Nexus Platform (https://fedml.ai) and go to `Train > Projects (my_project)`
+Log into to the TensorOpera® AI Platform (https://tensoropera.ai) and go to `Train > Projects (my_project)`
 Select the run you just launched and click on it to view the details of the run.
 
 ![Train > Projects (my_project)](static/image/train_project_my_project.png)
@@ -139,11 +139,11 @@ Alternatively, you can also go to `Train / Runs` to find all of your runs scatte
 ![Train / Runs](static/image/train_runs.png)
 
 :::tip Tip
-The url link to FedML® AI Nexus Platform for your run is printed in the output of the launch command for quick reference.
+The url link to TensorOpera® AI Platform for your run is printed in the output of the launch command for quick reference.
 
 ```bash
 You can track your run details at this URL:
-https://fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
+https://tensoropera.ai/train/project/run?projectId=1717276102352834560&runId=1717307383354626048
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1717307383354626048
@@ -163,7 +163,7 @@ You can run as many consequent jobs as you like on your cluster now. It will que
 
 ```bash
 ❯ fedml launch job_1.yaml -c hello_world_cluster
-Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 17.4kB/s]
+Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 17.4kB/s]
 
 You can track your run details at this URL:
 https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314053350756352
@@ -174,7 +174,7 @@ fedml run logs -rid 1717314053350756352
 
 ```bash
 ❯ fedml launch job_2.yaml -c hello_world_cluster
-Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 11.8kB/s]
+Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.92k/2.92k [00:00<00:00, 11.8kB/s]
 
 You can track your run details at this URL:
 https://open.fedml.ai/train/project/run?projectId=1717276102352834560&runId=1717314101526532096

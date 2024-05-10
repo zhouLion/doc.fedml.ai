@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# FEDML Federate APIs
+# TensorOpera Federate APIs
 
 ### `fedml.init()`
 Initialize the fedml library.

@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Cross-cloud Training
 
-[FEDML® UnitedLLM](https://github.com/FedML-AI/FedML/tree/master/python/spotlight_prj/unitedllm)
+[TensorOpera® UnitedLLM](https://github.com/FedML-AI/FedML/tree/master/python/spotlight_prj/unitedllm)
 is an MLOps-supported training pipeline for decentralized pretraining and finetuning of large language models.
 
 ## Getting Started
@@ -163,8 +163,8 @@ bash scripts/run_fedml_client.sh 3 "$RUN_ID"
 ...
 ```
 
-_See FedML's [Getting Started](https://doc.fedml.ai/federate/getting_started) for details._
+_See TensorOpera® FedML's [Getting Started](https://docs.tensoropera.ai/federate/getting_started) for details._
 
-# Use FEDML® Nexus AI for Scalable Experiments
+# Use TensorOpera AI for Scalable Experiments
 
 Please refer to https://github.com/FedML-AI/FedML/tree/master/python/spotlight_prj/unitedllm

@@ -7,7 +7,7 @@ sidebar_position: 6
 Running remote tasks often requires a transparent monitoring environment to facilitate troubleshooting and real-time analysis of machine learning experiments. This section guides through the monitoring capabilities of a job launched using the “fedml launch” command.
 
 ## Run Overview
-Log into to the FEDML Nexus AI Platform (https://fedml.ai) and go to Train > Runs. And select the run you just launched and click on it to view the details of the run.
+Log into to the TensorOpera AI Platform (https://tensoropera.ai) and go to Train > Runs. And select the run you just launched and click on it to view the details of the run.
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/1-run_ui.png)
 
@@ -16,7 +16,7 @@ FedML offers a convenient set of APIs for logging metrics. The execution code ca
 
 **fedml.log()**
 
-log dictionary of metric data to the FEDML Nexus AI Platform.
+log dictionary of metric data to the TensorOpera AI Platform.
 
 **Usage**
 
@@ -48,7 +48,7 @@ fedml.log({"loss": 0.33}, customized_step_key="x_index", commit=False)
 fedml.log({"acc": 0.34}, step=4, customized_step_key="x_index", commit=True)
 ```
 
-Metrics logged using fedml.log() can be viewed under Runs > Run Detail > Metrics on FEDML Nexus AI Platform.
+Metrics logged using fedml.log() can be viewed under Runs > Run Detail > Metrics on TensorOpera AI Platform.
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/2_metrics.png)
 
@@ -60,26 +60,26 @@ You can query the realtime status of your run on your local terminal with the fo
 fedml run logs -rid <run_id>
 ```
 
-Additionally, logs of the run also appear in realtime on the FEDML Nexus AI Platform under the Runs > Run Detail > Logs
+Additionally, logs of the run also appear in realtime on the TensorOpera AI Platform under the Runs > Run Detail > Logs
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/3_logs.png)
 
 
 ## Hardware Monitoring
 
-The FEDML library automatically captures hardware metrics for each run, eliminating the need for user code or configuration. These metrics are categorized into two main groups:
+The TensorOpera library automatically captures hardware metrics for each run, eliminating the need for user code or configuration. These metrics are categorized into two main groups:
 - Machine Metrics: This encompasses various metrics concerning the machine's overall performance and usage, encompassing CPU usage, memory consumption, disk I/O, and network activity.
-- GPU Metrics: In environments equipped with GPUs, FEDML seamlessly records metrics related to GPU utilization, memory usage, temperature, and power consumption. This data aids in fine-tuning machine learning tasks for optimized GPU-accelerated performance.
+- GPU Metrics: In environments equipped with GPUs, TensorOpera seamlessly records metrics related to GPU utilization, memory usage, temperature, and power consumption. This data aids in fine-tuning machine learning tasks for optimized GPU-accelerated performance.
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/4_hardware_monitoring.png)
 
 ## Model
 
-FEDML additionally provides an API for logging models, allowing users to upload model artifacts.
+TensorOpera additionally provides an API for logging models, allowing users to upload model artifacts.
 
 **fedml.log_model()**
 
-Log model to the FEDML Nexus AI Platform (fedml.ai).
+Log model to the TensorOpera AI Platform (fedml.ai).
 ```
 fedml.log_model(
     model_name, 
@@ -91,23 +91,23 @@ fedml.log_model(
 
 - model_name (str): model name.
 - model_file_path (str): The file path of model name.
-- version (str=None): The version of FEDML Nexus AI Platform, options: dev, test, release. Default is release (fedml.ai).
+- version (str=None): The version of TensorOpera AI Platform, options: dev, test, release. Default is release (fedml.ai).
 
 **Examples**
 ```
 fedml.log_model("cv-model", "./cv-model.bin")
 ```
-Models logged using fedml.log_model() can be viewed under Runs > Run Detail > Model on FEDML Nexus AI Platform
+Models logged using fedml.log_model() can be viewed under Runs > Run Detail > Model on TensorOpera AI Platform
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/5_models.png)
 
 
 ## Artifacts:
-Artifacts, as managed by FEDML, encapsulate information about items or data generated during task execution, such as files, logs, or models. This feature streamlines the process of uploading any form of data to the FEDML Nexus AI Platform, facilitating efficient management and sharing of job outputs. FEDML facilitates the uploading of artifacts to the FEDML Nexus AI Platform through the following artifact api:
+Artifacts, as managed by TensorOpera, encapsulate information about items or data generated during task execution, such as files, logs, or models. This feature streamlines the process of uploading any form of data to the TensorOpera AI Platform, facilitating efficient management and sharing of job outputs. TensorOpera facilitates the uploading of artifacts to the TensorOpera AI Platform through the following artifact api:
 
 **fedml.log_artifact()**
 
-log artifacts to the FEDML Nexus AI Platform (fedml.ai), such as file, log, model, etc.
+log artifacts to the TensorOpera AI Platform (fedml.ai), such as file, log, model, etc.
 
 ```
 fedml.log_artifact(
@@ -118,10 +118,10 @@ fedml.log_artifact(
 ```
 **Arguments**
 - artifact (Artifact): An artifact object represents the item to be logged, which could be a file, log, model, or similar.
-- version (str=None): The version of FEDML Nexus AI Platform, options: dev, test, release. Default is release (fedml.ai).
+- version (str=None): The version of TensorOpera AI Platform, options: dev, test, release. Default is release (fedml.ai).
 - run_id (str=None): Run id for the artifact object. Default is None, which will be filled automatically.
 - edge_id (str=None): Edge id for current device. Default is None, which will be filled automatically.
 
-Artifacts logged using fedml.log_artifact() can be viewed under Runs > Run Detail > Artifactson FEDML Nexus AI Platform.
+Artifacts logged using fedml.log_artifact() can be viewed under Runs > Run Detail > Artifactson TensorOpera AI Platform.
 
 ![ ](./train-on-cloud/static/image/experimental_tracking/6_artifacts.png)

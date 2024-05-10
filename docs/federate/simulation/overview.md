@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ![./../_static/image/parrot.jpeg](./../_static/image/parrot.jpeg)
 
-FEDML Federate Simulation is also called Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
+TensorOpera® Federate Simulation is also called Parrot, named after the beloved pet which mimics human speech, helps researchers and engineers to try new algorithms before deploying FL into real world. 
 Compared to other simulators, FedML Parrot brings additional values as follows:
 1. <b>mitigating the gap between research and engineering</b>: before convincing your ML infrastructure team to do non-trivial algorithmic and system upgrades, you can use FedML Parrot to demonstrate the benefits of newly developed federated learning algorithms or applying FL to your existing ML applications. FedML Parrot can smoothly transplant your simulation code to real-world deployment with our MLOps platform (fedml.ai). This has been demonstrated by real business use cases served by FedML Inc.
 
@@ -35,7 +35,7 @@ pip install fedml
 For more installation methods, please follow instructions at [installing FedML](./../../open-source/installation/installation.md).
 
 ## Algorithm Reference Implementation
-FedML®Federate Simulation supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
+TensorOpera®Federate Simulation supports representative algorithms in different communication topologies (as the figure shown below), including Fedvg, FedOpt (ICLR 2021), FedNova (NeurIPS 2020), FedGKT (NeurIPS 2020), Decentralized FL, Vertical FL, Hierarchical FL, FedNAS, and Split Learning.
 
 ![./../_static/image/fedml-topology.png](./../_static/image/fedml-topology.png)
 

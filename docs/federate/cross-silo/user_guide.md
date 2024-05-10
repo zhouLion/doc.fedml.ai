@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Tutorial on FEDML Nexus AI Platform
+# Tutorial on TensorOpera AI Platform
 
 Video Tutorial:
 https://www.youtube.com/embed/Xgm0XEaMlVQ
@@ -27,11 +27,11 @@ MLOps works following the figure above; this workflow is handled by a web UI and
 To begin, please create an account:
 
 - Instructions for registration: \
-  Please open [https://fedml.ai](https://fedml.ai) and click "Sign Up".
+  Please open [https://tensoropera.ai](https://tensoropera.ai) and click "Sign Up".
 
 ### Local Development and Building MLOps Packages
 
-After you finish the local developing/debugging of the FedML project using FedML library (e.g., successfully run the example [https://doc.fedml.ai/federate/cross-silo/example/mqtt_s3_fedavg_mnist_lr_example](https://doc.fedml.ai/federate/cross-silo/example/mqtt_s3_fedavg_mnist_lr_example)),
+After you finish the local developing/debugging of the FedML project using FedML library (e.g., successfully run the example [https://docs.tensoropera.ai/federate/cross-silo/example/mqtt_s3_fedavg_mnist_lr_example](https://docs.tensoropera.ai/federate/cross-silo/example/mqtt_s3_fedavg_mnist_lr_example)),
 you can now deploy it into the real-world edge-cloud system.
 
 Next, we use the cross-silo project example at
@@ -129,7 +129,7 @@ The output package is located in `mlops` folder.
 
 ### 2. Install FedML Agent: fedml login $account_id
 
-After [installing the FedML library](https://doc.fedml.ai/open-source/installation) at your edge devices, you can bind it to MLOps platform with a simple CLI:
+After [installing the FedML library](https://docs.tensoropera.ai/open-source/installation) at your edge devices, you can bind it to MLOps platform with a simple CLI:
 
 ```
 fedml login $account_id

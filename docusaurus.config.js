@@ -10,9 +10,9 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: "FEDML® Documentation",
-  // tagline: 'FEDML® AI Pla',
-  url: "https://doc.fedml.ai",
+  title: "TensorOpera® Documentation",
+  // tagline: 'TensorOpera® AI Platform',
+  url: "https://docs.tensoropera.ai",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   onBrokenLinks: "throw",
@@ -26,7 +26,7 @@ const meta = {
 const resources = [
   {
     label: "Blog",
-    href: "https://blog.fedml.ai",
+    href: "https://blog.tensoropera.ai",
   },
   {
     label: "Medium",
@@ -34,7 +34,7 @@ const resources = [
   },
   {
     label: "Press",
-    href: "https://fedml.ai/press",
+    href: "https://tensoropera.ai/press",
   },
 ];
 
@@ -112,13 +112,13 @@ const config = {
         },
       },
       navbar: {
-        title: "FEDML Docs",
+        title: "TensorOpera AI Docs",
         logo: {
           href: "/",
           src: "img/logo.png",
           // TODO: design a icon for dark mode.
           // srcDark: 'img/logo-dark.png',
-          alt: "FEDML Docs",
+          alt: "TensorOpera AI Docs",
           height: "40px",
           // width: '40px',
         },
@@ -127,7 +127,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "platform",
             position: "left",
-            label: "Nexus AI Platform",
+            label: "Platform",
           },
           {
             type: "docSidebar",
@@ -172,8 +172,8 @@ const config = {
             position: "left",
           },
           {
-            label: 'FEDML.ai Home',
-            href: 'https://fedml.ai',
+            label: 'TensorOpera AI Home',
+            href: 'https://TensorOpera.ai',
             position: 'left',
           },
           {
@@ -187,7 +187,7 @@ const config = {
           },
           {
             label: "Login",
-            href: "https://fedml.ai",
+            href: "https://TensorOpera.ai",
             position: "right",
             className: "dev-portal-signup dev-portal-link",
           },
@@ -199,7 +199,7 @@ const config = {
           src: "/img/logo.png",
           // TODO:
           // srcDark: '/img/logo-dark.png',
-          alt: "FEDML Docs",
+          alt: "TensorOpera AI Docs",
           width: "40px",
           height: "40px",
         },
@@ -209,11 +209,11 @@ const config = {
           //   items: [
           //     {
           //       label: 'Demo',
-          //       href: 'https://fedml.ai',
+          //       href: 'https://TensorOpera.ai',
           //     },
           //     {
           //       label: 'Developer Portal',
-          //       href: 'https://fedml.ai',
+          //       href: 'https://TensorOpera.ai',
           //     },
           //   ],
           // },
@@ -222,19 +222,19 @@ const config = {
             items: [
               // {
               //   label: 'About Us',
-              //   href: 'https://fedml.ai',
+              //   href: 'https://TensorOpera.ai',
               // },
               // {
               //   label: 'Join Us',
-              //   href: 'https://fedml.ai',
+              //   href: 'https://TensorOpera.ai',
               // },
               // {
               //   label: 'Privacy Policy',
-              //   href: 'https://fedml.ai',
+              //   href: 'https://TensorOpera.ai',
               // },
               // {
               //   label: 'Contact Us',
-              //   href: 'https://fedml.ai',
+              //   href: 'https://TensorOpera.ai',
               // },
             ],
           },
@@ -243,7 +243,7 @@ const config = {
           //   items: [...resources],
           // },
         ],
-        copyright: "Copyright © FEDML since 2023. All rights reserved.",
+        copyright: "Copyright © TensorOpera since 2022. All rights reserved.",
       },
       prism: {
         theme: code_themes.light,
