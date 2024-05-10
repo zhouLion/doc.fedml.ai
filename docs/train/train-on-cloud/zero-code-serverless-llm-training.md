@@ -2,9 +2,12 @@
 sidebar_position: 2
 ---
 
-# Zero-code Serverless LLM Training on FEDML Nexus AI
-LLM Fine-tune under FEDML Studio is FEDML's serverless model training solution. It is a no-code LLM training platform. Developers can directly specify open-source models for fine-tuning or model Pre-training.
+# Zero-code Serverless LLM Training on TensorOpera AI
+
+LLM Fine-tune is the feature of TensorOpera Studio that is responsible for serverless model training. It is a no-code LLM training platform. Developers can directly specify open-source models for fine-tuning or model Pre-training.
+
 ## 1. Select a Model to Build a New Run
+
 There are two options for selecting the model to train:
 
 (1) Select verified base models from Open Source LLMs.
@@ -21,7 +24,7 @@ LLM Finetune currently only supports [decoder-only LLMs](https://cameronrwolfe.s
 
 ## 2. Prepare Training Data
 
-There are three ways to prepare the training data. 
+There are three ways to prepare the training data.
 
 (1) Select the default data experience platform
 ![Select Data](static/image/select_data.png)
@@ -30,6 +33,7 @@ There are three ways to prepare the training data.
 ![Customize Training Data](static/image/training_data.png)
 
 (3) Data upload API: fedml.api.storage
+
 ```
 fedml storage upload '/path/Prompts_for_Voice_cloning_and_TTS'
 Uploading Package to Remote Storage: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 42.0M/42.0M [00:36<00:00, 1.15MB/s]
@@ -37,6 +41,7 @@ Data uploaded successfully. | url: (https://03aa47c68e20656e11ca9e0765c6bc1f.r2.
 ```
 
 ### Dataset Format for Custom Dataset
+
 FEDML currently supports files in [JSON Lines](https://jsonlines.org/) format.
 In JSON lines files (usually ends with `.jsonl`), each line contains a JSON object.
 
@@ -50,6 +55,7 @@ response: str  # expected output
 ```
 
 Example:
+
 ```json lines
 {"instruction": "When did Virgin Australia start operating?", "context": "Virgin Australia, the trading name of Virgin Australia Airlines Pty Ltd, is an Australian-based airline. It is the largest airline by fleet size to use the Virgin brand. It commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route. It suddenly found itself as a major airline in Australia's domestic market after the collapse of Ansett Australia in September 2001. The airline has since grown to directly serve 32 cities in Australia, from hubs in Brisbane, Melbourne and Sydney.", "response": "Virgin Australia commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route."}
 {"instruction": "Which is a species of fish? Tope or Rope", "context": "", "response": "Tope"}
@@ -65,14 +71,15 @@ text: str  # contains the entire text sample
 ```
 
 Example:
+
 ```json lines
 {"text": "When did Virgin Australia start operating?\nVirgin Australia, the trading name of Virgin Australia Airlines Pty Ltd, is an Australian-based airline. It is the largest airline by fleet size to use the Virgin brand. It commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route. It suddenly found itself as a major airline in Australia's domestic market after the collapse of Ansett Australia in September 2001. The airline has since grown to directly serve 32 cities in Australia, from hubs in Brisbane, Melbourne and Sydney.\nVirgin Australia commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route."}
 {"text": "Which is a species of fish? Tope or Rope\nTope"}
 ...
 ```
 
-
 ## 3. Hyper-parameter Setting (Optional)
+
 ![Hyperparameter Setting](static/image/hyperparameter_setting.png)
 
 ## 4. Select GPU Resource Type (Optional)
@@ -84,8 +91,6 @@ The GPU resource type can be found through the Compute - Secure Cloud page under
 ![Hyperparameter Setting](static/image/hyperparameter_setting.png)
 To select a specific resource type, enter `resource_type: <resource type>` in Hyper-parameters section
 
-
 ## 5. Initiate Training and Track Experimental Results
 
 ![Initiate Training](static/image/initiate_training.png)
-

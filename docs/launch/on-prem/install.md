@@ -31,7 +31,7 @@ It should something similar as below:
 (fedml) alay@a6000:~$ fedml login 3b24dd2f9b3e478084c517bc206e8669 -v dev
 
  Welcome to FedML.ai!
- Start to login the current device to the MLOps (https://fedml.ai)...
+ Start to login the current device to the MLOps (https://tensoropera.ai)...
 
 (fedml) alay@a6000:~$ Found existing installation: fedml 0.8.7
 Uninstalling fedml-0.8.7:
@@ -50,12 +50,12 @@ Congratulations, your device is connected to the FedML MLOps platform successful
 Your FedML Edge ID is 201610, unique device ID is 0xffdc89fad658@Linux.Edge.Device
 ```
 
-Head back to the `Compute / My Servers` page on platform and verify that the devices are bounded to the FedML® AI Nexus Platform:
+Head back to the `Compute / My Servers` page on platform and verify that the devices are bounded to the TensorOpera® AI Platform:
 
 ![OnPremDevicesBind.png](static/image/binded_servers.png)
 
 
-## 2: Create a cluster of your servers bounded to the FedML® AI Nexus Platform:
+## 2: Create a cluster of your servers bounded to the TensorOpera® AI Platform:
 
 Navigate to the `Compute / Create Clusters` page and create a cluster of your servers:
 
@@ -67,7 +67,7 @@ All your created clusters will be listed on the `Compute / My Clusters` page:
 
 
 ## 3. Set up the fedml library
-Install Python library for interacting with FedML® Launch APIs.
+Install Python library for interacting with TensorOpera® Launch APIs.
 
 ```bash
 pip install fedml

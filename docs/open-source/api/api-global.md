@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# FEDML Library Global APIs
+# TensorOpera Library Global APIs
 
 ### `fedml.init()`
 

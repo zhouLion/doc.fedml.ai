@@ -7,48 +7,48 @@ sidebar_position: 6
 
 ## FedML Run CLI Overview
 
-Manage runs on the FedML® Nexus AI Platform
+Manage runs on the TensorOpera AI Platform
 
 ```
 Usage: fedml run [OPTIONS] COMMAND [ARGS]...
 
-  Manage runs on the FedML® Nexus AI Platform.
+  Manage runs on the TensorOpera AI Platform.
 
 Options:
   -h, --help            Show this message and exit.
   -k, --api_key TEXT    The user API key.
-  -v, --version TEXT    Version of FedML® Nexus AI Platform. It should be dev,
+  -v, --version TEXT    Version of TensorOpera AI Platform. It should be dev,
                         test or release.
-  -pf, --platform TEXT  The platform name at the FedML® Nexus AI Platform
+  -pf, --platform TEXT  The platform name at the TensorOpera AI Platform
                         (options: octopus, parrot, spider, beehive, falcon,
                         launch, default is falcon).
 
 Commands:
-  list    List runs from the FedML® Nexus AI Platform.
-  logs    Get logs of run from the FedML® Nexus AI Platform.
-  status  Get status of run from the FedML® Nexus AI Platform.
-  stop    Stop a run from the FedML® Nexus AI Platform.
+  list    List runs from the TensorOpera AI Platform.
+  logs    Get logs of run from the TensorOpera AI Platform.
+  status  Get status of run from the TensorOpera AI Platform.
+  stop    Stop a run from the TensorOpera AI Platform.
 ```
 
 ### `fedml run list [OPTIONS]`
 
-List runs from the FedML® Nexus AI Platform.
+List runs from the TensorOpera AI Platform.
 
 #### Options
 
 | Option          | Description                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
-| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the FedML® Nexus AI Platform.                                                                                         |
-| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the TensorOpera AI Platform.                                                                                         |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the TensorOpera AI Platform.                                                                                           |
 | <nobr> `--api_key` </nobr> <br/> or `-k`   | The user API key.                                                                                                                     |
-| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
-| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of TensorOpera AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
 
-###### List all runs on the FedML® Nexus AI Platform.
+###### List all runs on the TensorOpera AI Platform.
 
 ```
 feml run list
@@ -65,7 +65,7 @@ Found the following matched runs.
 
 ```
 
-###### List selected runs on the FedML® Nexus AI Platform.
+###### List selected runs on the TensorOpera AI Platform.
 
 ```
 fedml run list -r tight_ready
@@ -80,20 +80,20 @@ Found the following matched runs.
 
 ### `fedml run logs [OPTIONS]`
 
-Get logs of run from the FedML® Nexus AI Platform.
+Get logs of run from the TensorOpera AI Platform.
 
 #### Options
 
 | Option              | Description                                                                                                                       |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
-| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the TensorOpera AI Platform.                                                                                           |
 | <nobr> `--need_all_logs` </nobr> <br/> or `-a` | Boolean value representing if all logs are needed. Default to True.                                                                |
 | <nobr> `--page_num` </nobr> <br/> or `-pn` | request page num for logs. --need_all_logs should be set to False if you want to use this option.                                 |
 | <nobr> `--page_size` </nobr> <br/> or `-ps` | request page size for logs, --need_all_logs should be set to False if you want to use this option.                                |
 | <nobr> `--api_key` </nobr> <br/> or `-k`       | The user API key.                                                                                                                     |
-| <nobr> `--version` </nobr> <br/> or `-v`       | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
-| <nobr> `--platform` </nobr> <br/> or `-pf`     | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--version` </nobr> <br/> or `-v`       | Version of TensorOpera AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf`     | The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
@@ -131,18 +131,18 @@ All logs is as follows.
 
 ### `fedml run status [OPTIONS]`
 
-Get status of run from the FedML® Nexus AI Platform.
+Get status of run from the TensorOpera AI Platform.
 
 #### Options
 
 | Option          | Description                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit                                                                                                        |
-| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the FedML® Nexus AI Platform.                                                                                         |
-| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the FedML® Nexus AI Platform.                                                                                           |
+| <nobr> `--run_name` </nobr> <br/> or `-r` | Run name at the TensorOpera AI Platform.                                                                                         |
+| <nobr> `--run_id` </nobr> <br/> or `-rid` | Run id at the TensorOpera AI Platform.                                                                                           |
 | <nobr> `--api_key` </nobr> <br/> or `-k` | The user API key.                                                                                                                     |
-| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                           |
-| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of TensorOpera AI Platform. It should be dev, test or release.                                                           |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example
@@ -159,7 +159,7 @@ Found the following matched runs.
 
 ### `fedml run stop [OPTIONS]`
 
-Stop a run from the FedML® Nexus AI Platform.
+Stop a run from the TensorOpera AI Platform.
 
 #### Options
 
@@ -168,8 +168,8 @@ Stop a run from the FedML® Nexus AI Platform.
 | <nobr> `--help` </nobr> <br/> or `-h` | Show this message and exit.                                                                                                        |
 | <nobr> `--run_id` </nobr> <br/> or `-rid` | Id of the run.                                                                                                                    |
 | <nobr> `--api_key` </nobr> <br/> or `-k` | The user API key.                                                                                                                     |
-| <nobr> `--version` </nobr> <br/> or `-v` | Version of FedML® Nexus AI Platform. It should be dev, test or release.                                                            |
-| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
+| <nobr> `--version` </nobr> <br/> or `-v` | Version of TensorOpera AI Platform. It should be dev, test or release.                                                            |
+| <nobr> `--platform` </nobr> <br/> or `-pf` | The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon). |
 
 
 #### Example

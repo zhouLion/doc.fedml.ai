@@ -153,7 +153,7 @@ fedml logs --docker --docker-rank 1
 ```
 
 ## 6. Diagnosis
-Diagnosis for connection to https://fedml.ai, AWS S3 and MQTT (mqtt.fedml.ai:1883)
+Diagnosis for connection to https://tensoropera.ai, AWS S3 and MQTT (mqtt.fedml.ai:1883)
 ```
 fedml diagnosis --open --s3 --mqtt
 ```

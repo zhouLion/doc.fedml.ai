@@ -8,13 +8,13 @@ sidebar_position: 10
 ### `fedml env`
 
 
-Do a sanity check of the FEDML library's current running environment information, including versions of the library, OS, CPU/GPU hardwares and network connectivity (HTTPS, S3, MQTT). 
+Do a sanity check of the TensorOpera library's current running environment information, including versions of the library, OS, CPU/GPU hardwares and network connectivity (HTTPS, S3, MQTT). 
 
 #### Options {#options}
 
 | Name | Default | Description |
 | --- | --- | --- |
-| <nobr>`--version`</nobr> <br/> or `-v` | `release` | The backend environment of FEDML Nexus AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by FEDML team for internal development. |
+| <nobr>`--version`</nobr> <br/> or `-v` | `release` | The backend environment of TensorOpera AI Cloud. It supports values: `local`, `dev`, `test`, `release`. This is normally used by TensorOpera team for internal development. |
 
 :::info
 
@@ -22,7 +22,7 @@ If the environment setup is correct, `fedml env` will print a message similar as
 
 ```
 
-======== FedML (https://fedml.ai) ========
+======== FedML (https://tensoropera.ai) ========
 FedML version: 0.8.8a153
 FedML ENV version: release
 Execution path:/Users/chaoyanghe/sourcecode/FedML-inc/FedML-all-in-one-dev/FedML/python/fedml/__init__.py
@@ -43,7 +43,7 @@ Available CPU Memory: 24.8 G / 64.0G
 No GPU devices
 
 ======== Network Connection Checking ========
-The connection to https://fedml.ai is OK.
+The connection to https://tensoropera.ai is OK.
 
 The connection to S3 Object Storage is OK.
 

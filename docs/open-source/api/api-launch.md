@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# FEDML Launch APIs
+# TensorOpera® Launch APIs
 
 ## Launch APIs
 
@@ -21,7 +21,7 @@ to FedML MLOps platform first:
 
 ### `fedml.api.launch_job()`
 
-Launch a job on the FedML AI Nexus platform.
+Launch a job on the TensorOpera AI platform.
 
 ```py
 fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=None, device_edges=None)
@@ -29,7 +29,7 @@ fedml.api.launch_job(yaml_file, api_key=None, resource_id=None, device_server=No
 
 **Arguments**  
 - `yaml_file (str)`: Full path of your job yaml file.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 - `resource_id (str=None)`: Specific `resource_id` to use. Typically, you won't need to specify a specific `resource_id`. Instead, we will match resources based on your job yaml, and then automatically launch the job using matched resources.
 - `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
 - `device_edges (List[str]=None)`: List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
@@ -61,7 +61,7 @@ if login_ret == 0:
 
 ### `fedml.api.launch_job_on_cluster()`
 
-Launch a job on a cluster on the FedML AI Nexus platform.
+Launch a job on a cluster on the TensorOpera AI platform.
 
 ```py
 fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=None, device_server=None, device_edges=None)
@@ -70,7 +70,7 @@ fedml.api.launch_job_on_cluster(yaml_file, cluster, api_key=None, resource_id=No
 **Arguments**  
 - `yaml_file (str)`: Full path of your job yaml file.
 - `cluster (str)`: Cluster name to use. If a cluster with provided name doesn't exist, one will be created.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 - `resource_id (str=None)`: Specific `resource_id` to use. Typically, you won't need to specify a specific `resource_id`. Instead, we will match resources based on your job yaml, and then automatically launch the job using the matched resources.
 - `device_server (str=None)`: `device_server` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
 - `device_edges (List[str]=None)`: List of `device_edges` to use. Only needed when you want to launch a federated learning job with specific `device_server` and `device_edges`.
@@ -103,16 +103,16 @@ if login_ret == 0:
 
 ### `fedml.api.run_stop()`
 
-Stop a run on FedML AI Nexus platform. 
+Stop a run on TensorOpera AI platform. 
 
 ```PY
 fedml.api.run_stop(run_id, platform="falcon", api_key=None)
 ```
 
 **Arguments**  
-- `run_id (str)`: Id of the run to stop. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `run_id (str)`: Id of the run to stop. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on TensorOpera AI Platform.
+- `platform (str=falcon)`: The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the run was successfully stopped or not.
@@ -120,17 +120,17 @@ Boolean indicating whether the run was successfully stopped or not.
 
 ### `fedml.api.run_list()`
 
-List a run on FedML AI Nexus platform.
+List a run on TensorOpera AI platform.
 
 ```py
 fedml.api.run_list(run_name, run_id=None, platform="falcon", api_key=None)
 ```
 
 **Arguments**
-- `run_name (str)`:Name of the run. This can also be found out from the Runs page on FedML AI Nexus Platform.
-- `run_id (str=None)`: Id of the run to list (Only required if run_name is not provided). Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `run_name (str)`:Name of the run. This can also be found out from the Runs page on TensorOpera AI Platform.
+- `run_id (str=None)`: Id of the run to list (Only required if run_name is not provided). Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on TensorOpera AI Platform.
+- `platform (str=falcon)`: The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon)
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 `FedMLRunModelList` object which is a list of `FedMLRunModel` objects with attributes like `status`, `running_time`, `cost`, `run_url` etc.
@@ -138,17 +138,17 @@ fedml.api.run_list(run_name, run_id=None, platform="falcon", api_key=None)
 
 ### `fedml.api.run_status()`
 
-Get status a run on FedML AI Nexus platform.
+Get status a run on TensorOpera AI platform.
 
 ```py
 fedml.api.run_status(run_name, run_id, platform: str = "falcon", api_key: str = None)
 ```
 
 **Arguments**
-- `run_name (str)`:Name of the run. This can also be found out from the Runs page on FedML AI Nexus Platform.
-- `run_id (str)`: Id of the run to get status of (Only required if run_name is not provided). Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `run_name (str)`:Name of the run. This can also be found out from the Runs page on TensorOpera AI Platform.
+- `run_id (str)`: Id of the run to get status of (Only required if run_name is not provided). Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on TensorOpera AI Platform.
+- `platform (str=falcon)`: The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Tuple of `FedMLRunModelList` and `status (str)` denoting status of the run.
@@ -156,18 +156,18 @@ Tuple of `FedMLRunModelList` and `status (str)` denoting status of the run.
 
 ### `fedml.api.run_logs()`
 
-Fetches logs of run from FedML AI Nexus platform.
+Fetches logs of run from TensorOpera AI platform.
 
 ```py
 fedml.api.run_logs(run_id, page_num=1, page_size=10, need_all_logs=False, platform="falcon", api_key=None)
 ```
 
 **Arguments**
-- `run_id (str)`: Id of the run to fetch logs of. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on FedML AI Nexus Platform.
+- `run_id (str)`: Id of the run to fetch logs of. Each run has a unique identifier that should have been returned LaunchResult after launching a job and can also be found out from the Runs page on TensorOpera AI Platform.
 - `page_num (int)`: Page number of logs to fetch. Defaults to 1.
 - `page_size (int)`: Page size of logs to fetch. Defaults to 10.
-- `platform (str=falcon)`: The platform name at the FedML® Nexus AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `platform (str=falcon)`: The platform name at the TensorOpera AI Platform (options: octopus, parrot, spider, beehive, falcon, launch, default is falcon).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 `RunLogResult` object with the following attributes:
@@ -181,7 +181,7 @@ fedml.api.run_logs(run_id, page_num=1, page_size=10, need_all_logs=False, platfo
 
 ### `fedml.api.cluster_list()`
 
-List clusters associated with your account on FedML AI Nexus platform.
+List clusters associated with your account on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_list(cluster_names=(), api_key=None)
@@ -189,7 +189,7 @@ fedml.api.cluster_list(cluster_names=(), api_key=None)
 
 **Arguments**
 - `cluster_names (Tuple[str])`: List of cluster names. Defaults to empty, which means all clusters will be listed.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 `FedMLClusterModelList` object with the following attributes:
@@ -201,7 +201,7 @@ fedml.api.cluster_list(cluster_names=(), api_key=None)
 
 ### `fedml.api.cluster_exists()`
 
-Check whether cluster with provided name exists on your account on FedML AI Nexus platform.
+Check whether cluster with provided name exists on your account on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_exists(cluster_name, api_key=None)
@@ -209,14 +209,14 @@ fedml.api.cluster_exists(cluster_name, api_key=None)
 
 **Arguments**
 - `cluster_name (str)`: Name of cluster
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the cluster with provided name exists or not.
 
 ### `fedml.api.cluster_status()`
 
-Check status of your cluster on FedML AI Nexus platform.
+Check status of your cluster on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_status(cluster_name, api_key=None)
@@ -224,7 +224,7 @@ fedml.api.cluster_status(cluster_name, api_key=None)
 
 **Arguments**
 - `cluster_name (str)`: Name of cluster
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelList` can be found [here](#fedmlapicluster_list).
@@ -232,7 +232,7 @@ Tuple (`str`(status), `FedMLClusterModelList`). More about `FedMLClusterModelLis
 
 ### `fedml.api.cluster_start()`
 
-Start selected clusters on FedML AI Nexus platform.
+Start selected clusters on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_start(cluster_names: Tuple[str], api_key=None)
@@ -240,7 +240,7 @@ fedml.api.cluster_start(cluster_names: Tuple[str], api_key=None)
 
 **Arguments**
 - `cluster_name (Tuple[str])`: Tuple of cluster names to start.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully started or not.
@@ -248,14 +248,14 @@ Boolean indicating whether the clusters were successfully started or not.
 
 ### `fedml.api.cluster_startall()`
 
-Start all existing clusters on your account on FedML AI Nexus platform.
+Start all existing clusters on your account on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_startall(api_key=None)
 ```
 
 **Arguments**
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully started or not.
@@ -263,7 +263,7 @@ Boolean indicating whether the clusters were successfully started or not.
 
 ### `fedml.api.cluster_stop()`
 
-Stop selected clusters on FedML AI Nexus platform.
+Stop selected clusters on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_stop(cluster_names: Tuple[str], api_key=None)
@@ -271,7 +271,7 @@ fedml.api.cluster_stop(cluster_names: Tuple[str], api_key=None)
 
 **Arguments**
 - `cluster_name (Tuple[str])`: Tuple of cluster names to stop.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully stopped or not.
@@ -279,14 +279,14 @@ Boolean indicating whether the clusters were successfully stopped or not.
 
 ### `fedml.api.cluster_stopall()`
 
-Stop all existing clusters on your account on FedML AI Nexus platform.
+Stop all existing clusters on your account on TensorOpera AI platform.
 
 ```py
 fedml.api.cluster_stopall(api_key=None)
 ```
 
 **Arguments**
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully stopped or not.
@@ -294,7 +294,7 @@ Boolean indicating whether the clusters were successfully stopped or not.
 
 ### `fedml.api.cluster_kill()`
 
-Kill (Tear Down) selected clusters on FedML AI Nexus platform.
+Kill (Tear Down) selected clusters on TensorOpera AI platform.
 
 > **_NOTE:_** Note that kill is different from stop. Clusters once killed cannot be restarted.
 
@@ -304,7 +304,7 @@ fedml.api.cluster_kill(cluster_names: Tuple[str], api_key=None)
 
 **Arguments**
 - `cluster_name (Tuple[str])`: Tuple of cluster names to stop.
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully killed or not.
@@ -312,7 +312,7 @@ Boolean indicating whether the clusters were successfully killed or not.
 
 ### `fedml.api.cluster_killall()`
 
-Kill (Tear Down) all existing clusters on your account on FedML AI Nexus platform. 
+Kill (Tear Down) all existing clusters on your account on TensorOpera AI platform. 
 
 > **_NOTE:_** Note that kill is different from stop. Clusters once killed cannot be restarted.
 
@@ -320,7 +320,7 @@ Kill (Tear Down) all existing clusters on your account on FedML AI Nexus platfor
 fedml.api.cluster_killall(api_key=None)
 ```
 **Arguments**
-- `api_key (str=None)`: Your API key from FedML AI Nexus platform (if not configured already).
+- `api_key (str=None)`: Your API key from TensorOpera AI platform (if not configured already).
 
 **Returns**  
 Boolean indicating whether the clusters were successfully killed or not.

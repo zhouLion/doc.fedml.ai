@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Deploy to Cloud
 
-`fedml model deploy` is a high level CLI to deploy a model card to FedML GPU cloud marketplace.  
+`fedml model deploy` is a high level CLI to deploy a model card to TensorOpera GPU cloud marketplace.  
 
 If you do not use `--local` option for local deploy, nor specify the `---master_ids`
 and `--worker_ids` options for on-premise deploy, the model card will be deployed to the cloud. 
@@ -14,7 +14,7 @@ fedml model deploy -n my_model
 ```
 
 :::tip
-In this cloud deploy mode, what `fedml model deploy` cli do is just wrapping the fedml®launch related apis. 
+In this cloud deploy mode, what `fedml model deploy` cli do is just wrapping the TensorOpera®launch related apis. 
 So you can also use both `fedml model deploy` and `fedml launch` command to deploy a model card to the cloud.
 :::
 
@@ -34,5 +34,5 @@ computing:
   #device_type: CPU              # options: GPU, CPU, hybrid
   resource_type: A100-80G       # e.g., A100-80G,
   # please check the resource type list by "fedml show-resource-type"
-  # or visiting URL: https://fedml.ai/compute
+  # or visiting URL: https://tensoropera.ai/compute
 ```

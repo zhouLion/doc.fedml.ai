@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Getting Started
 
-Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://fedml.ai](https://fedml.ai)) with examples for different scenarios.
+Thank you for visiting! Here is a quick tour of FedML Open Source Library ([https://github.com/FedML-AI/FedML](https://github.com/FedML-AI/FedML)) and MLOps Platform ([https://tensoropera.ai](https://tensoropera.ai)) with examples for different scenarios.
 
 ## **FedML Feature Overview**
 
@@ -13,11 +13,11 @@ Thank you for visiting! Here is a quick tour of FedML Open Source Library ([http
 The FedML logo reflects the mission of FedML Inc. We aim to build simple and versatile APIs for machine learning running anywhere and at any scale.
 In other words, FedML supports both federated learning for data silos and distributed training for acceleration with MLOps and Open Source support, covering both cutting-edge academia research and industrial grade use cases.
 
-- **FedML Federate Simulation** - Simulating federated learning in the real world: (1) simulate FL using a single process (2) MPI-based FL Simulator (3) NCCL-based FL Simulator (fastest)
-- **FedML Fedeate Cross-silo** - Cross-silo Federated Learning for cross-organization/account training, including Python-based edge SDK.
-- **FedML Federate Smartphones** - Cross-device Federated Learning for Smartphones and IoTs, including edge SDK for Android/iOS and embedded Linux.
+- **TensorOpera Federate Simulation** - Simulating federated learning in the real world: (1) simulate FL using a single process (2) MPI-based FL Simulator (3) NCCL-based FL Simulator (fastest)
+- **TensorOpera Fedeate Cross-silo** - Cross-silo Federated Learning for cross-organization/account training, including Python-based edge SDK.
+- **TensorOpera Federate Smartphones** - Cross-device Federated Learning for Smartphones and IoTs, including edge SDK for Android/iOS and embedded Linux.
 
-- **FedML Nexus AI - Federate**: FedML's federated learning operation pipeline for AI running anywhere and at any scale.
+- **TensorOpera FedML**: TensorOpera FedML's federated learning operation pipeline for AI running anywhere and at any scale.
 
 ## **Quick Start for Open Source Library**
 
@@ -222,7 +222,7 @@ Hierarchical Federated Learning:
 
 ## **MLOps User Guide**
 
-[https://fedml.ai](https://fedml.ai)
+[https://tensoropera.ai](https://tensoropera.ai)
 
 Currently, the project developed based on FedML Octopus (cross-silo) and Beehive (cross-device) can be smoothly deployed into the real-world system using FedML MLOps.
 
@@ -238,7 +238,7 @@ The above figure shows the workflow, which is handled by a web UI that avoids us
 
 3-Minute Introduction: [https://www.youtube.com/watch?v=E1k05jd1Tyw](https://www.youtube.com/watch?v=E1k05jd1Tyw)
 
-Detailed guidance for the MLOps can be found at [FEDML Nexus AI User Guide](./cross-silo/user_guide.md).
+Detailed guidance for the MLOps can be found at [TensorOpera AI User Guide](./cross-silo/user_guide.md).
 
 ## **More Resources**
 

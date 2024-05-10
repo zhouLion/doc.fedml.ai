@@ -5,7 +5,7 @@ sidebar_position: 4
 
 ### `fedml launch [OPTIONS] YAML_FILE`
 
-Launch jobs on the FedML® Launch platform (fedml.ai).
+Launch jobs on the TensorOpera® Launch platform (fedml.ai).
 
 #### Options
 
@@ -14,7 +14,7 @@ Launch jobs on the FedML® Launch platform (fedml.ai).
 | <nobr>`--help`</nobr> <br/> or `-h` | Show this message and exit.                                                                                                                                  |
 | <nobr>`--cluster`</nobr> <br/> or `-c` | Please provide a cluster name. If a cluster with that name already exists, it will be used; otherwise, a new cluster with the provided name will be created. |
 | <nobr>`--api_key`</nobr> <br/> or `-k` | The user API key.                                                                                                                                               |
-| <nobr>`--version`</nobr> <br/> or `-v` | The version of the FedML® Nexus AI Platform. It should be dev, test or release.                                                                                      |
+| <nobr>`--version`</nobr> <br/> or `-v` | The version of the TensorOpera AI Platform. It should be dev, test or release.                                                                                      |
                                                                                                                                                                                                                                                                                                                     
 
 #### Notes
@@ -55,7 +55,7 @@ computing:
 
   allow_cross_cloud_resources: false # true, false
   device_type: GPU              # options: GPU, CPU, hybrid
-  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://fedml.ai/compute
+  resource_type: A100-80G       # e.g., A100-80G, please check the resource type list by "fedml show-resource-type" or visiting URL: https://tensoropera.ai/compute
 
 framework_type: fedml         # options: fedml, deepspeed, pytorch, general
 task_type: train              # options: serve, train, dev-environment
@@ -80,7 +80,7 @@ You just need to customize the following config items:
 Then you can use the following example CLI to launch the job at the MLOps platform.
 (Replace `$YourApiKey` with your own account API key from fedml.ai)
 
-#### Example: Launch job on FedML® Launch platform
+#### Example: Launch job on TensorOpera® Launch platform
  
 
 ```
@@ -88,14 +88,14 @@ fedml launch hello_job.yaml
 ```
 
 :::info 
-Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on FedML AI Nexus Platform. You can also specify the API_KEY with the `-k` option.
+Note that you might be prompted for **API_KEY** the first time you run the command. Please get this key from your account on TensorOpera AI Platform. You can also specify the API_KEY with the `-k` option.
 :::
 
 
 After the launch CLI is executed, you will get the following output prompting for confirmation of resources:
 
 ```
-Submitting your job to FedML® Launch platform: 100%|████████████████████████████████████████████████████████████████████████████████████████| 6.07k/6.07k [00:01<00:00, 4.94kB/s]
+Submitting your job to TensorOpera® Launch platform: 100%|████████████████████████████████████████████████████████████████████████████████████████| 6.07k/6.07k [00:01<00:00, 4.94kB/s]
 
 Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
@@ -105,7 +105,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://fedml.ai/launch/confirm-start-job?projectId=1692900612607447040&projectName=default-project&jobId=1716563514434392064
+https://tensoropera.ai/launch/confirm-start-job?projectId=1692900612607447040&projectName=default-project&jobId=1716563514434392064
 
 Are you sure to launch it? [y/N]:
 
@@ -125,13 +125,13 @@ Your launch result is as follows:
 +-------------------+---------------------+--------------+---------------------+------------------+------+
 
 You can track your run details at this URL:
-https://fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716563514434392064
+https://tensoropera.ai/train/project/run?projectId=1692900612607447040&runId=1716563514434392064
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1716563514434392064
 ```
 
-#### Example: Launch job on a cluster on FedML® Launch platform
+#### Example: Launch job on a cluster on TensorOpera® Launch platform
 
 ```
 fedml launch hello_job.yaml -c demo_cluster
@@ -143,7 +143,7 @@ Note that if a cluster with provided name already exists, it will be used; other
 :::
 
 ```
-Submitting your job to FedML® Nexus AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 3.48k/3.48k [00:00<00:00, 9.34kB/s]
+Submitting your job to TensorOpera AI Platform: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 3.48k/3.48k [00:00<00:00, 9.34kB/s]
 
 Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
@@ -153,7 +153,7 @@ Searched and matched the following GPU resource for your job:
 +-----------+-------------------+---------+------------+-------------------------+---------+-------+----------+
 
 You can also view the matched GPU resource with Web UI at:
-https://fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
+https://tensoropera.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
 Do you want to launch the job with the above matched GPU resource? [y/N]: y
 
 Your run result is as follows:
@@ -164,7 +164,7 @@ Your run result is as follows:
 +--------------+---------------------+---------+---------------------+------------------+------+
 
 You can track your run details at this URL:
-https://fedml.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
+https://tensoropera.ai/train/project/run?projectId=1692900612607447040&runId=1716580465432989696
 
 For querying the realtime status of your run, please run the following command.
 fedml run logs -rid 1716580465432989696

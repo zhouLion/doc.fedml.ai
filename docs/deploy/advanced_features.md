@@ -4,20 +4,20 @@ sidebar_position: 11
 
 # Advanced Features
 ## Geo-distributed Model Deployment
-Without building and configuring a complex Kubernetes Cluster. FedML®Deploy can deploy models to nodes located
+Without building and configuring a complex Kubernetes Cluster. TensorOpera®Deploy can deploy models to nodes located
 at multiple regions and manage the traffic routing automatically. 
 
 ![GeoDistributed.jpg](pics/GeoDistributed.jpg)
 
 ## Heterogeneity Model Deployment
-FedML®Deploy can deploy models to different types of devices, such as CPU, GPU, TPU, etc. Whether it is a single
+TensorOpera®Deploy can deploy models to different types of devices, such as CPU, GPU, TPU, etc. Whether it is a single
 Macbook or a power A100, they can be connected together in an easy manner.
 
 
 ![Heterogeneity.jpg](pics/Heterogeneity.jpg)
 
 ## Autoscaling and Fail-over
-FedML®Deploy can automatically scale up and down the number of replicas of the model deployment based on the QPS,
+TensorOpera®Deploy can automatically scale up and down the number of replicas of the model deployment based on the QPS,
 CPU, GPU, and memory usage. It can also automatically recover from failures through backup nodes.
 
 If you want to scale out to more gpu nodes. Go to deploy -> Endpoint, click `Edit` button. 
@@ -49,7 +49,7 @@ async def _async_predict(self, *args) -> AsyncGenerator[str, None]:
 
 In this example, we have a predictor that print a number every 1 second. The core part is that, apart from the original
 `predict` method, which return json obj as usual. If the user put `"stream: true"` in their request body.   
-e.g. `curl -XPOST xxx -d '{"text": "my input ...", "stream": true}'`, then fedml will automatically call the
+e.g. `curl -XPOST xxx -d '{"text": "my input ...", "stream": true}'`, then TensorOpera will automatically call the
 `async_predict`. So, to implement this, you will need to override this class method. The code above is an example 
 returning a StreamingResponse, which take a AsyncGenerator as an input.
 
@@ -79,8 +79,8 @@ def predict(self, request: dict, header=None):
 ```
 In this example, we have a predictor that generate a file to a local directory `paths[0]`, here we have two ways to
 return it to the requester. The first way is that, if the header of the request, if there exist `Accept: image/png`, 
-then FedML framework will parse the string that predictor's return, take it as a local file path, and use 
+then TensorOpera framework will parse the string that predictor's return, take it as a local file path, and use 
 `fastapi.responses.FileResponse` to transfer this file to binary string and return it. The second way is that, if 
-requester do not include `Accept: image/png` in their header. Then FedML framework will treat the return obj from the 
+requester do not include `Accept: image/png` in their header. Then TensorOpera framework will treat the return obj from the 
 predictor as a string, not file path. So in the user-level code, developer will need to transfer the file to base64 
 string and return.
