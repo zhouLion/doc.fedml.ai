@@ -161,6 +161,12 @@ const config = {
             position: 'left',
             label: 'Storage',
           },
+          {
+            type: "docSidebar",
+            sidebarId: "shareAndEarn",
+            position: "left",
+            label: "Share & Earn"
+          },          
           // {
           //   label: "Resources",
           //   type: "dropdown",
