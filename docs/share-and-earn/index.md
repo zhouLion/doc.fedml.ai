@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 # Share GPUs and Earn
@@ -41,74 +41,56 @@ If the above commands don't work, you can follow the instructions on NVIDIA's of
 
 ### 2.2) Execute the following binding script on your GPU server:
 
+:::note 
+The following two commands are to be executed from within the compute nodes which you would like to bind to the FEDML platform
+:::
+
+
+#### 2.2.1) Execute the first command to install fedml and related libraries
+
 ```bash
-sudo curl -sSf https://doc.fedml.ai/shell/bind_gpu.sh | bash && exec $SHELL && sudo curl -sSf https://doc.fedml.ai/shell/verify_installation.sh | bash
+sudo curl -sSf https://doc.fedml.ai/shell/bind_gpu.sh | bash && exec $SHELL
 ```
 
-This script will install the fedml library and all required dependencies on your GPU server.
+<details>
+<summary> What does the terminal output of successful execution of this step look like? </summary>
 
-### 2.3) Verify the environment setup on your GPU server:
+##### You should see output like below in your node terminal
 
-#### Verify the installation of fedml library on your GPU server:
+:::tip
+The precise results you see on your terminal might differ, so consider the screenshots below as mere examples to ensure it appears somewhat similar.
+:::
+
+##### Initial Log Snapshot:
+
+![Initial Log Snapshot](./static/image/cmd_1_initial_log_snapshot.png)
+
+##### End Log Snapshot:
+![End Log Snapshot](./static/image/cmd_1_end_log_snapshot.png)
+
+</details>
+
+
+#### 2.2.2) Verify the installation of fedml library on your GPU server:
 
 ```bash
-fedml env
+sudo curl -sSf https://doc.fedml.ai/shell/verify_installation_driver.sh | bash
 ```
 
 The output should look like below:
 
-```bash
-(fedml) ubuntu@fedml-a100-deploy:~$ fedml env
+<details>
+<summary> What does the terminal output of successful execution of this step look like? </summary>
 
-======== FedML (https://fedml.ai) ========
-FedML version: 0.8.26
-FedML ENV version: release
-Execution path:/home/ubuntu/miniconda3/envs/fedml/lib/python3.10/site-packages/fedml/__init__.py
-
-======== Running Environment ========
-OS: Linux-5.15.0-94-generic-x86_64-with-glibc2.35
-Hardware: x86_64
-Python version: 3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]
-PyTorch version: 2.2.1+cu121
-MPI4py is NOT installed
-
-======== CPU Configuration ========
-The CPU usage is : 0%
-Available CPU Memory: 467.3 G / 472.1867256164551G
-
-======== GPU Configuration ========
-NVIDIA GPU Info:
-Available GPU memory: 0.0 G / 0.0G
-torch_is_available = False
-device_count = 0
-No GPU devices
-
-======== Network Connection Checking ========
-The connection to https://TensorOpera.ai is OK.
-
-The connection to S3 Object Storage is OK.
-
-The connection to mqtt.fedml.ai (port:1883) is OK.
-```
-
-#### Verify the installation of fedml library on your GPU server:
-```bash
-(base) DGX-7% docker ps
-CONTAINER ID IMAGE COMMAND  CREATED  STATUS  PORTS  NAMES```
-```
-
-Execute two commands given below to re-start the docker daemon if you see the following error:
-```
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
-```
-
-```bash
-1. sudo su
-2. systemctl start docker
-````
+##### You should see output like below in your node terminal
 
 
-### 2.4) Navigate to `Share & Earn / Add GPU` page and copy one-line login command for binding your GPU servers.
+![Log Snapshot](./static/image/cmd_2_log_snapshot.png)
+
+</details>
+
+
+### 2.3) Navigate to `Share & Earn / Add GPU` page and copy one-line login command for binding your GPU servers.
 
 ![Add GPU](static/image/add_gpu.png)
 
@@ -178,6 +160,58 @@ You can also monitor your earnings on the `Share & Earn / Earnings` page:
 
 ![Earnings](static/image/earnings.png)
 
+
+## Frequently Asked Questions?
+
+<details>
+<summary> What if my node binding failed? </summary>
+
+Kindly refer to this documentation to ensure that your node possesses the necessary environment prerequisites: [Node prerequisites for binding to FEDML Platform](./share-and-earn/prerequisites)
+</details>
+
+<details>
+<summary> How to make sure my node is successfully binded to the platform? </summary>
+
+##### Verify the installation of fedml environment on your GPU server:
+```bash
+sudo wget -q https://doc.fedml.ai/shell/verify_installation.sh && sudo chmod +x verify_installation.sh && bash verify_installation.sh
+```
+
+##### The output should look like below:
+```
+✔ Miniconda is installed.
+✔ fedml is installed in the fedml conda environment.
+✔ Docker is installed.
+✔ Redis is installed.
+✔ NVIDIA Container Toolkit is installed.
+✔ All components installed successfully.
+```
+
+If any of the above components failed to install, please execute the following command to do a hard clean of fedml environment and re-try the process from the beginning:
+
+```bash
+fedml logout && sudo pkill -9 python && sudo rm -rf ~/.fedml && redis-cli flushall
+```
+
+##### Verify the node is successfully binded to platform:
+
+```bash
+ps aux | grep fedml | wc -l
+```
+
+❌ If the output of above command is anything <10, then that means the node was not binded to the platform:
+![bind_output_failure](./static/image/bind_output_failure.png)
+
+✅ Otherwise, it means node was successfully binded to the platform:
+![bind_output_success](./static/image/bind_output_success.png)
+</details>
+
+<details>
+<summary>What are the best GPUs to bind?</summary>
+H100, A100, 4090 and 3090 are in highest demand by our customers. Check here for latest details:
+<a href="https://fedml.ai/pricing" target="_blank"> https://fedml.ai/pricing</a>
+
+</details>
 
 
 
