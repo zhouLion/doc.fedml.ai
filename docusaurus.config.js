@@ -172,18 +172,6 @@ const config = {
             sidebarId: "shareAndEarn",
             position: "left",
             label: "Share & Earn"
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'storage',
-            position: 'left',
-            label: 'Storage',
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "shareAndEarn",
-            position: "left",
-            label: "Share & Earn"
           },          
           // {
           //   label: "Resources",
