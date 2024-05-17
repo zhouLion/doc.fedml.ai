@@ -5,10 +5,19 @@ This documentation website is built using [Docusaurus 2](https://docusaurus.io/)
 ### Document Structure
 
 - `docs/platform` provides docs for our MLOps platform
+<<<<<<< HEAD
 - `docs/launch` provides docs for TensorOpera®Launch
 - `docs/train` provides docs for TensorOpera®Train
 - `docs/deploy` provides docs for TensorOpera®Deploy
 - `docs/federate` provides docs for TensorOpera®Federate (reusing our existing contents from federated learning)
+=======
+- `docs/launch` provides docs for FEDML®Launch
+- `docs/train` provides docs for FEDML®Train
+- `docs/deploy` provides docs for FEDML®Deploy
+- `docs/federate` provides docs for FEDML®Federate (reusing our existing contents from federated learning)
+- `docs/workflow` provides docs for FEDML®Workflow
+- `docs/storage` provides docs for FEDML®Storage
+>>>>>>> ea0fa62 (Adding workflow as a separate tab.)
 
 # How to edit and release?
 

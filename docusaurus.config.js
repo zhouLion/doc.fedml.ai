@@ -150,10 +150,28 @@ const config = {
             label: 'Train',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'federate',
-            position: 'left',
-            label: 'Federate',
+            type: "docSidebar",
+            sidebarId: "federate",
+            position: "left",
+            label: "Federate",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "workflow",
+            position: "left",
+            label: "Workflow",
+          },          
+          {
+            type: "docSidebar",
+            sidebarId: "storage",
+            position: "left",
+            label: "Storage",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "shareAndEarn",
+            position: "left",
+            label: "Share & Earn"
           },
           {
             type: 'docSidebar',
